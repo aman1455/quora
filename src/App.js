@@ -1,7 +1,8 @@
 import React from 'react';
+import LoginComp from './components/Login/LoginComp';
 
 function App() {
-  return <h2>Hello</h2>;
+  return <LoginComp />;
 }
 
 export default App;
