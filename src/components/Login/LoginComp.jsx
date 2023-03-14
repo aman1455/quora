@@ -1,12 +1,8 @@
 import styled from 'styled-components';
-
-import { Flex, Box, Button, FormControl, FormLabel } from '@chakra-ui/react';
-import { redirect } from 'react-router-dom';
-import React from 'react';
-import { useDisclosure } from '@chakra-ui/react';
-import { useState } from 'react';
-
 import {
+  Button,
+  FormControl,
+  FormLabel,
   Modal,
   ModalOverlay,
   ModalContent,
@@ -14,25 +10,93 @@ import {
   ModalFooter,
   ModalBody,
   ModalCloseButton,
+  useDisclosure,
+  Link,
 } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-
-import { Link } from '@chakra-ui/react';
-
+import React, { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import axios from 'axios';
 const LoginComp = () => {
+  let data = useSelector(storeData => {
+    return storeData.AuthReducer;
+  });
+  let dispatch = useDispatch();
+  let navigate = useNavigate();
   const [state, setState] = useState({
     email: '',
     password: '',
   });
-  let dispatch = useDispatch();
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [error, setError] = useState(null);
   const initialRef = React.useRef();
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  useEffect(() => {
+    if (data.isAuth) {
+      navigate('/');
+    }
+  }, []);
+
   function handleChange(evt) {
     setState({ ...state, [evt.target.name]: evt.target.value });
   }
-  function handleLogin() {}
 
+  function handleLogin(evt) {
+    evt.preventDefault();
+    validateLogin();
+  }
+
+  function validateLogin() {
+    validateEmail();
+  }
+  function validateEmail() {
+    axios
+      .get(`http://localhost:8080/users?email=${state.email}`)
+      .then(json => {
+        console.log(json.data);
+        if (json.data.length > 0) {
+          validatePassword();
+        } else {
+          setError('Account does not Exist');
+          setState({
+            email: '',
+            password: '',
+          });
+        }
+      })
+      .catch(error => {
+        setError('Server Error Please Try Again');
+      });
+  }
+  function validatePassword() {
+    axios
+      .get(
+        `http://localhost:8080/users?email=${state.email}&password=${state.password}`
+      )
+      .then(json => {
+        console.log(json.data);
+        if (json.data.length > 0) {
+          dispatch({
+            type: 'authIt',
+            token: json.data[0].id,
+          });
+          setError(null);
+          setState({
+            email: '',
+            password: '',
+          });
+          navigate('/');
+        } else {
+          setError('Wrong Password');
+        }
+      })
+      .catch(error => {
+        setError('Server Error Please Try Again');
+        setState({
+          ...state,
+          password: '',
+        });
+      });
+  }
   return (
     <Container>
       <LoginForm>
@@ -151,20 +215,24 @@ const LoginComp = () => {
             <Input
               type="text"
               placeholder="Your Email"
-              // value={email}
-              // onChange={e => setEmail(e.target.value)}
+              name="email"
+              value={state.email}
+              onChange={handleChange}
             />
             <Lable>Password</Lable>
             <Input
               type="password"
               placeholder="Your Password"
-              // value={password}
-              // onChange={e => setPassword(e.target.value)}
+              name="password"
+              value={state.password}
+              onChange={handleChange}
             />
-            <FormError>formError</FormError>
+            <FormError>{error}</FormError>
             <SubContained>
               <ForgotPassword>Forgot password?</ForgotPassword>
-              <LoginButton type="submit">Login</LoginButton>
+              <LoginButton type="submit" onClick={handleLogin}>
+                Login
+              </LoginButton>
             </SubContained>
           </RightSection>
         </Form>
@@ -183,7 +251,6 @@ const LoginComp = () => {
         </Footer>
       </LoginForm>
     </Container>
-    // </Box>
   );
 };
 
