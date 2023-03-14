@@ -1,8 +1,15 @@
 const initialState = {
   isAuth: false,
-  isError: false,
+  token: '',
 };
 function AuthReducer(state = initialState, action) {
+  if (action.type === 'authIt') {
+    return {
+      ...state,
+      isAuth: true,
+      token: action.token,
+    };
+  }
   return state;
 }
 

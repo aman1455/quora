@@ -1,8 +1,7 @@
 import React from 'react';
-import LoginComp from './components/Login/LoginComp';
-
+import AllRoutes from './routes/AllRoutes';
 function App() {
-  return <LoginComp />;
+  return <AllRoutes />;
 }
 
 export default App;

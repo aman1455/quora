@@ -10,6 +10,17 @@
       "answers": [],
       "notifications": [],
       "credentials": []
+    },
+    {
+      "id": 2,
+      "email": "arshgoyal@gmail.com",
+      "password": "12345",
+      "name": "ArshG",
+      "spaces": [],
+      "questions": [],
+      "answers": [],
+      "notifications": [],
+      "credentials": []
     }
   ],
   "spaces": [],
