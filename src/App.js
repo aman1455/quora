@@ -1,7 +1,13 @@
 import React from 'react';
+import Notifications from "./componant/Notifications/Notifications"
 
 function App() {
-  return <h2>Hello</h2>;
+  return(
+    <div>
+      <Notifications/>
+    </div>
+  )
+  
 }
 
 export default App;
