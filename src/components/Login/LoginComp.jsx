@@ -17,35 +17,59 @@ import { useNavigate } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
+
+import { LoginSocialGoogle } from 'reactjs-social-login';
+
 const LoginComp = () => {
-  let data = useSelector(storeData => {
-    return storeData.AuthReducer;
-  });
   let dispatch = useDispatch();
   let navigate = useNavigate();
   const [state, setState] = useState({
     email: '',
     password: '',
   });
-  const [error, setError] = useState(null);
+
+  const [error, setError] = useState({
+    email: '',
+    password: '',
+  });
   const initialRef = React.useRef();
   const { isOpen, onOpen, onClose } = useDisclosure();
-  useEffect(() => {
-    if (data.isAuth) {
-      navigate('/');
-    }
-  }, []);
 
   function handleChange(evt) {
     setState({ ...state, [evt.target.name]: evt.target.value });
+    // console.log(state);
   }
-
   function handleLogin(evt) {
+    // console.log(state);
     evt.preventDefault();
-    validateLogin();
+    if (validateForm()) {
+      validateLogin();
+    }
+  }
+  function validateForm() {
+    console.log(state.password);
+    let err = {};
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+    if (!state.email) {
+      err.email = 'Email is Required';
+    } else if (!regex.test(state.email)) {
+      err.email = 'Invalid Email Address';
+    }
+    if (!state.password) {
+      err.password = 'Password is Required';
+    } else if (state.password.length < 4) {
+      err.password = 'Password must be of atleast 4 character';
+    }
+    if (Object.keys(err).length !== 0) {
+      setError(err);
+      return false;
+    } else {
+      return true;
+    }
   }
 
   function validateLogin() {
+    // console.log(state);
     validateEmail();
   }
   function validateEmail() {
@@ -56,7 +80,7 @@ const LoginComp = () => {
         if (json.data.length > 0) {
           validatePassword();
         } else {
-          setError('Account does not Exist');
+          setError({ password: 'Account does not Exist' });
           setState({
             email: '',
             password: '',
@@ -64,7 +88,7 @@ const LoginComp = () => {
         }
       })
       .catch(error => {
-        setError('Server Error Please Try Again');
+        setError({ password: 'Server Error Please Try Again' });
       });
   }
   function validatePassword() {
@@ -79,22 +103,81 @@ const LoginComp = () => {
             type: 'authIt',
             token: json.data[0].id,
           });
-          setError(null);
+          setError({
+            email: '',
+            password: '',
+          });
           setState({
             email: '',
             password: '',
           });
           navigate('/');
         } else {
-          setError('Wrong Password');
+          setError({ password: 'Wrong Password' });
         }
       })
       .catch(error => {
-        setError('Server Error Please Try Again');
+        setError({ password: 'Server Error Please Try Again' });
         setState({
           ...state,
           password: '',
         });
+      });
+  }
+
+  function handleSignUp(event) {
+    event.preventDefault();
+    if (validateForm()) {
+      validateSignInEmail();
+    }
+  }
+  function validateSignInEmail() {
+    axios
+      .get(`http://localhost:8080/users?email=${state.email}`)
+      .then(json => {
+        console.log(json.data);
+        if (json.data.length > 0) {
+          setError({
+            email: 'Email account already exists Can not register again',
+          });
+        } else {
+          postCredentials();
+        }
+      })
+      .catch(error => {
+        setError({ password: 'Server Error Please Try Again' });
+      });
+  }
+  function postCredentials() {
+    axios
+      .post(`http://localhost:8080/users`, {
+        email: state.email,
+        password: state.password,
+        name: state.email.match(/^([^@]*)@/)[1],
+        spaces: [],
+        questions: [],
+        answers: [],
+        notifications: [],
+        credentials: [],
+      })
+      .then(json => {
+        console.log(json.data);
+        dispatch({
+          type: 'authIt',
+          token: json.data.id,
+        });
+        setError({
+          email: '',
+          password: '',
+        });
+        setState({
+          email: '',
+          password: '',
+        });
+        navigate('/');
+      })
+      .catch(err => {
+        setError({ password: 'Server Error Please Try Again' });
       });
   }
   return (
@@ -139,8 +222,53 @@ const LoginComp = () => {
                   fill="#ea4335"
                 ></path>
               </svg>
-
-              <p>Continue with Google</p>
+              <LoginSocialGoogle
+                client_id="942148797115-krv3o6o34g938ao0roc2dmfihmr3fcaf.apps.googleusercontent.com"
+                scope="openid profile email"
+                discoveryDocs="claims_supported"
+                access_type="offline"
+                onResolve={({ provider, data }) => {
+                  console.log(
+                    data.email,
+                    data.sub,
+                    data.email.match(/^([^@]*)@/)[1]
+                  );
+                  axios
+                    .get(`http://localhost:8080/users?email=${data.email}`)
+                    .then(json => {
+                      if (json.data.length > 0) {
+                        dispatch({ type: 'authIt', token: json.data[0].id });
+                        navigate('/');
+                      } else {
+                        axios
+                          .post(`http://localhost:8080/users`, {
+                            email: data.email,
+                            password: '',
+                            name: data.email.match(/^([^@]*)@/)[1],
+                            spaces: [],
+                            questions: [],
+                            answers: [],
+                            notifications: [],
+                            credentials: [],
+                            id: data.sub,
+                          })
+                          .then(res => {
+                            console.log(res.data);
+                            dispatch({
+                              type: 'authIt',
+                              token: res.data.id,
+                            });
+                            navigate('/');
+                          });
+                      }
+                    });
+                }}
+                onReject={err => {
+                  console.log(err);
+                }}
+              >
+                <p>Continue with Google</p>
+              </LoginSocialGoogle>
             </LoginWith>
             <LoginWith>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -195,7 +323,7 @@ const LoginComp = () => {
                     bg="red.500"
                     color="white"
                     mr={3}
-                    onClick={handleLogin}
+                    onClick={handleSignUp}
                   >
                     Register
                   </Button>
@@ -219,6 +347,7 @@ const LoginComp = () => {
               value={state.email}
               onChange={handleChange}
             />
+            <FormError>{error.email}</FormError>
             <Lable>Password</Lable>
             <Input
               type="password"
@@ -227,7 +356,7 @@ const LoginComp = () => {
               value={state.password}
               onChange={handleChange}
             />
-            <FormError>{error}</FormError>
+            <FormError>{error.password}</FormError>
             <SubContained>
               <ForgotPassword>Forgot password?</ForgotPassword>
               <LoginButton type="submit" onClick={handleLogin}>
@@ -255,11 +384,6 @@ const LoginComp = () => {
 };
 
 export default LoginComp;
-
-const LogoContainer = styled.div`
-  width: fit-content;
-  margin: auto;
-`;
 
 const Container = styled.div`
   width: 100%;
@@ -341,6 +465,10 @@ const LoginWith = styled.div`
     color: #282829;
     cursor: pointer;
   }
+`;
+const LogoContainer = styled.div`
+  width: fit-content;
+  margin: auto;
 `;
 
 const SignUp = styled.div`
