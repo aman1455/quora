@@ -5,6 +5,7 @@ export default function Spaces_Page() {
     <div>
       <h1>Spaces</h1>
       
+      
     </div>
   )
 }

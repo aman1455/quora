@@ -1,4 +1,8 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import AllRoutes from './routes/AllRoutes';
+
 
 function App() {
   let dispatch = useDispatch();
