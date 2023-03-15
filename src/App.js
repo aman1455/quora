@@ -4,7 +4,7 @@ import Notifications from "./componant/Notifications/Notifications"
 function App() {
   return(
     <div>
-      <Notifications/>
+    hello
     </div>
   )
   
