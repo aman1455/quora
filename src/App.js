@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
-import AllRoutes from './routes/AllRoutes';
-import { useDispatch } from 'react-redux';
+import React from 'react';
+
 function App() {
   let dispatch = useDispatch();
   useEffect(() => {
