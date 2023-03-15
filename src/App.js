@@ -1,12 +1,18 @@
 import React from 'react';
-import Spaces_Page from './components/Spaces-Page';
 
 function App() {
-  return <div>
-    <h2>Hello</h2>
-    <Spaces_Page/>
-    </div>
-    
+  let dispatch = useDispatch();
+  useEffect(() => {
+    let data = JSON.parse(localStorage.getItem('AuthData')) || null;
+    console.log(data);
+    if (data) {
+      dispatch({
+        type: 'authIt',
+        token: data.token,
+      });
+    }
+  }, []);
+  return <AllRoutes />;
 }
 
 export default App;
