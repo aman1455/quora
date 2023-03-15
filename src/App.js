@@ -1,4 +1,5 @@
 import React from 'react';
+import Notifications from "./componant/Notifications/Notifications"
 
 function App() {
   let dispatch = useDispatch();
