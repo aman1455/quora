@@ -11,16 +11,12 @@ import {
   
 } from '@chakra-ui/react';
 import { HiHome } from 'react-icons/hi';
-import { useRef } from "react";
+// import { useRef } from "react";
 import { NavLink } from 'react-router-dom';
 import DropdownProfile from './DropdownProfile';
 import NavGlobComp from './NavGlobComp';
 function Navbar() {
-  // const cardRef = useRef('');
-  // let bottomBorder = ()=>{
-  //   cardRef.current.style.borderBottom = "2px solid red"
-    
-  // }
+ 
   let [state, setState] = useState({
     home : true,
     follow : false,
@@ -48,7 +44,7 @@ function Navbar() {
   console.log(state, "bool");
   return (
     <>
-      <HStack style={{position: "sticky" , top: "0"}} h={'6.5vh'} justifyContent={'center'} >
+      <HStack style={{position: "sticky" , top: "0"}} background="white" border="2px solid rgb(222,224,225)"  h={'6.5vh'} zIndex="200" justifyContent={'center'} >
         <Box
           display={'flex'}
           w={'72%'}
@@ -103,8 +99,7 @@ function Navbar() {
                 <path d="M8.81001 19.07H6.10001C5.69001 19.07 5.35001 18.73 5.35001 18.32V15.61C5.35001 15.2 5.69001 14.86 6.10001 14.86H8.81001C9.22001 14.86 9.56001 15.2 9.56001 15.61V18.32C9.56001 18.73 9.22001 19.07 8.81001 19.07ZM6.85001 17.57H8.06001V16.36H6.85001V17.57Z" fill="#666666" class="icon_svg-fill_as_stroke"></path>
                 <path d="M18.5 21.75H5.5C3.71 21.75 2.25 20.29 2.25 18.5V5.5C2.25 3.71 3.71 2.25 5.5 2.25H18.5C20.29 2.25 21.75 3.71 21.75 5.5V18.5C21.75 20.29 20.29 21.75 18.5 21.75ZM5.5 3.75C4.54 3.75 3.75 4.54 3.75 5.5V18.5C3.75 19.46 4.54 20.25 5.5 20.25H18.5C19.46 20.25 20.25 19.46 20.25 18.5V5.5C20.25 4.54 19.46 3.75 18.5 3.75H5.5Z" fill="#666666" class="icon_svg-fill_as_stroke"></path>
 
-
-</Icon>
+             </Icon>
               </Box>
               </Tooltip>
             </NavLink>

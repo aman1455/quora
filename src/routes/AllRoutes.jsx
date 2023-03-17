@@ -3,11 +3,7 @@ import LoginComp from '../components/Login/LoginComp';
 import PrivateRoute from './Private';
 import { Home } from './home';
 import LoginRoute from './LoginRoute';
-import Navbar from '../components/NavbarSidebar/Navbar';
-import Sidebar from "../components/NavbarSidebar/Sidebar"
-import Question from '../components/Question'
-import Notifications from '../components/Notifications/Notifications';
-import WholeMusicComp from '../components/NavbarSidebar/Music/WholeMusicComp';
+
 function AllRoutes() {
   return (
     <Routes>
@@ -26,26 +22,7 @@ function AllRoutes() {
             <Home />
           </PrivateRoute>
         }
-      /> */}
-      <Route path="/"
-        element={<><Navbar/>
-         <Sidebar/>
-         <Question/>
-         </>
-         
-        }/>
-      <Route path="/notifications"
-        element={<>
-    <Notifications/>
-         </>
-         
-        }/>
-      <Route path="/music"
-        element={<>
-    <WholeMusicComp/>
-         </>
-         
-        }/>
+
     </Routes>
   );
 }

@@ -17,7 +17,6 @@ import {
 } from '@chakra-ui/react';
 import {  SunIcon } from '@chakra-ui/icons'
 import { NavLink } from 'react-router-dom';
-// import { CiDark } from "react-icons/ci";
 function DropdownProfile() {
   return (
     <>
