@@ -1,7 +1,9 @@
 
+
 import { React, useEffect } from "react"
 import { useDispatch } from "react-redux"
 import AllRoutes from "../src/routes/AllRoutes"
+import SpacePageTop from "./components/SpacePage/SpacesPageTop"
 
 import AnswerPageApp from "./components/AnswersPage/AnswerPageApp"
 function App() {
