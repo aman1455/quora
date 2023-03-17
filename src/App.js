@@ -19,7 +19,7 @@ function App() {
   //   }
   // }, []);
   // return <AllRoutes />;
-  return <SpacePageTop />
+  return <AllRoutes />
 }
 
 export default App
