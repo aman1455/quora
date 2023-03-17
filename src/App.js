@@ -1,7 +1,7 @@
 import {React, useEffect} from 'react';
 import { useDispatch } from 'react-redux';
 import AllRoutes from '../src/routes/AllRoutes'
-import Notifications from "./componant/Notifications/Notifications"
+// import Notifications from "./componant/Notifications/Notifications"
 
 function App() {
   let dispatch = useDispatch();
