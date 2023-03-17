@@ -1,7 +1,9 @@
-import React from 'react';
-import { Box, Text, Flex, Img, Icon } from '@chakra-ui/react';
+import React, {useState} from 'react';
+import { Box, Text, Flex, Img, color } from '@chakra-ui/react';
 import CreateSpaceModal from './CreateSpaceModal';
+import { NavLink } from 'react-router-dom';
 function Sidebar() {
+
   return (
     <>
       <Box
@@ -13,32 +15,35 @@ function Sidebar() {
       >
         <Box w={'59%'}></Box>
         <Box>
-          <Flex  flexDirection={'column'} color="white">
+          <Flex flexDirection={'column'} color="white">
             <CreateSpaceModal />
 
-            <Box
-              display={'flex'}
-              alignItems={'center'}
-              w="150px"
-              bg="rgb(241,242,242)"
-              _hover={{
-                background: 'rgb(228,230,230)',
-                color: 'teal.500',
-              }}
-              p={'10px'}
-            >
-              <Img
-                w={6}
-                src={
-                  'https://qph.cf2.quoracdn.net/main-thumb-t-801-100-Sf8h894FXbQZQit0TeqDrrqS6xw6dwCQ.jpeg'
-                }
-                mr={'10px'}
-                borderRadius={'4px'}
-              />
-              <Text color={'rgb(99,100,102)'} fontSize={'14px'}>
-                Music
-              </Text>
-            </Box>
+            <NavLink to="/music"  >
+              <Box
+                display={'flex'}
+                alignItems={'center'}
+                w="150px"
+                bg="rgb(241,242,242)"
+                _hover={{
+                  background: 'rgb(228,230,230)',
+                  color: 'teal.500',
+                }}
+                p={'10px'}
+                
+              >
+                <Img
+                  w={6}
+                  src={
+                    'https://qph.cf2.quoracdn.net/main-thumb-t-801-100-Sf8h894FXbQZQit0TeqDrrqS6xw6dwCQ.jpeg'
+                  }
+                  mr={'10px'}
+                  borderRadius={'4px'}
+                />
+                <Text color={'rgb(99,100,102)'} fontSize={'14px'}>
+                  Music
+                </Text>
+              </Box>
+            </NavLink>
 
             <Box
               display={'flex'}
@@ -214,23 +219,86 @@ function Sidebar() {
                 History
               </Text>
             </Box>
-<hr/>
+            <hr />
             <Box mt={3}>
-              <Text pr={3} as={"span"}  fontSize={"12px"}  color={"rgb(147,149,152)"} >About &bull;</Text>
-              <Text pr={3} as={"span"} fontSize={"12px"}  color={"rgb(147,149,152)"}>Careers &bull;</Text>
-              <br/>
-              <Text pr={3} as={"span"} fontSize={"12px"}  color={"rgb(147,149,152)"}>Teams &bull;</Text>
-              <Text pr={3} as={"span"} fontSize={"12px"}  color={"rgb(147,149,152)"}>Privacy &bull;</Text>
-              <br/>
-              <Text pr={3} as={"span"} fontSize={"12px"}  color={"rgb(147,149,152)"}>Acceptable Use &bull;</Text>
-              <br/>
-              <Text pr={3} as={"span"} fontSize={"12px"}  color={"rgb(147,149,152)"}>Buisnesses &bull;</Text>
-              <Text pr={3} as={"span"} fontSize={"12px"}  color={"rgb(147,149,152)"}>Press &bull;</Text>
-              
-              <br/>
-              <Text pr={3} as={"span"} fontSize={"12px"}  color={"rgb(147,149,152)"}>Your Ad Choices &bull;</Text>
-              <br/>
-              <Text pr={3} as={"span"} fontSize={"12px"}  color={"rgb(147,149,152)"}>Grievance Officer &bull;</Text>
+              <Text
+                pr={3}
+                as={'span'}
+                fontSize={'12px'}
+                color={'rgb(147,149,152)'}
+              >
+                About &bull;
+              </Text>
+              <Text
+                pr={3}
+                as={'span'}
+                fontSize={'12px'}
+                color={'rgb(147,149,152)'}
+              >
+                Careers &bull;
+              </Text>
+              <br />
+              <Text
+                pr={3}
+                as={'span'}
+                fontSize={'12px'}
+                color={'rgb(147,149,152)'}
+              >
+                Teams &bull;
+              </Text>
+              <Text
+                pr={3}
+                as={'span'}
+                fontSize={'12px'}
+                color={'rgb(147,149,152)'}
+              >
+                Privacy &bull;
+              </Text>
+              <br />
+              <Text
+                pr={3}
+                as={'span'}
+                fontSize={'12px'}
+                color={'rgb(147,149,152)'}
+              >
+                Acceptable Use &bull;
+              </Text>
+              <br />
+              <Text
+                pr={3}
+                as={'span'}
+                fontSize={'12px'}
+                color={'rgb(147,149,152)'}
+              >
+                Buisnesses &bull;
+              </Text>
+              <Text
+                pr={3}
+                as={'span'}
+                fontSize={'12px'}
+                color={'rgb(147,149,152)'}
+              >
+                Press &bull;
+              </Text>
+
+              <br />
+              <Text
+                pr={3}
+                as={'span'}
+                fontSize={'12px'}
+                color={'rgb(147,149,152)'}
+              >
+                Your Ad Choices &bull;
+              </Text>
+              <br />
+              <Text
+                pr={3}
+                as={'span'}
+                fontSize={'12px'}
+                color={'rgb(147,149,152)'}
+              >
+                Grievance Officer &bull;
+              </Text>
             </Box>
           </Flex>
         </Box>
