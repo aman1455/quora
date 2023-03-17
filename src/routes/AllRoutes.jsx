@@ -3,7 +3,7 @@ import LoginComp from '../components/Login/LoginComp';
 import PrivateRoute from './Private';
 import { Home } from './home';
 import LoginRoute from './LoginRoute';
-import Spaces_Page from '../components/Spaces-Page';
+
 function AllRoutes() {
   return (
     <Routes>
@@ -15,22 +15,14 @@ function AllRoutes() {
           </LoginRoute>
         }
       />
-      <Route
+      {/* <Route
         path="/"
         element={
           <PrivateRoute>
             <Home />
           </PrivateRoute>
         }
-      />
-      <Route
-        path="/spacespage"
-        element={
-          
-           <Spaces_Page/>
-          
-        }
-      />
+
     </Routes>
   );
 }

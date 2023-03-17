@@ -471,5 +471,128 @@
 ],
 
   "questions": [],
-  "posts": []
+  "posts": [],
+  "read": [
+    {
+      "id": 1,
+      "img": "https://qph.cf2.quoracdn.net/main-thumb-2067034466-50-vygawjarwqhqisqnkckucrlpdtrsxtqe.jpeg",
+      "name": "Argyro Ntani",
+      "follow": "Follow",
+      "about": "Knows French",
+      "postdate": "Mar 9",
+      "question": "I have an earworm and I listened to the entire song. Now, I got the entire songs stuck on loop in my head. What do I do?",
+      "answer": "Maybe listen to another song you like.Also focus on something,if you have studying to do or a task that requires your full attention maybe you can take your mind off of it!either way after a while you will forget about the song, as the day passes!",
+      "viewsCount": "41 views"
+    },
+    {
+      "id": 2,
+      "img": "https://qsf.cf2.quoracdn.net/-4-images.new_grid.profile_default.png-26-688c79556f251aa0.png",
+      "name": "Charles Zigmund",
+      "follow": "Follow",
+      "about": "Studied Painting (masters) at At Various Schools",
+      "postdate": "6h",
+      "question": "I want to play music but I don't know how to begin. I can't play any instruments but I want to. What shall I do first?",
+      "answer": "Buy a keyboard. Take piano lessons from a jazz or rock instructor. Learn chords and how to use them in well-known standard songs of pop music from the Great American Songbook of the 1940s thru the rock era to the present. Don’t bother to learn to read music. Read chord charts and use chords. Learn the blues chord progression. The piano is the easiest instrument for learning chords because they have the same patterns in every octave from low to high, unlike the more difficult guitar neck. Chords, chords and more chords. Start playing tunes by ear in the right hand while playing the chords in the left. Your teacher will help you do this.",
+      "viewsCount": "41 views"
+    },
+    {
+      "id": 3,
+      "img": "https://qph.cf2.quoracdn.net/main-thumb-861527681-50-vgyvfddyrafpzmffymorycnmqwrqckeo.jpeg",
+      "name": "John Clancy",
+      "follow": "Follow",
+      "about": "Former Professional Pianist for 50 Years",
+      "postdate": "4h",
+      "question": "Why do people play piano in elevators?",
+      "answer": "I have been hired to play piano in country clubs, casinos, hotels, restaurants, private homes, but never in an elevator. How the hell would you fit a piano in an elevator? We need the room for people going up and down to different floors, not for a piano bar..",
+      "viewsCount": "12 views"
+    },
+    {
+      "id": 4,
+      "img": "https://qsf.cf2.quoracdn.net/-4-images.new_grid.profile_default.png-26-688c79556f251aa0.png",
+      "name": "Jessica2021",
+      "follow": "Follow",
+      "about": "Download songs from Amazon Music Converter and keep them",
+      "postdate": "Wed",
+      "question": "How many devices can you have on Amazon unlimited music?",
+      "answer": "If it is an Amazon unlimited family plan, it can support up to six people to use it online at the same time, and everyone can have their personalized recommendations for listening preferences. If you only have an Amazon Unlimited Personal plan, it's only for you. Tip: If you want to download Amazon songs for offline listening, as an Amazon Music Unlimited subscriber, you can download your favorite tracks directly through the Amazon Music app. But if you want to listen to these songs offline after the subscription expires, you need to use an effective tool like BotoNote Amazon Music Converter, which can help you download songs directly to your computer instead of saving them as cache files. At the same time, it will retain the original sound quality of the song, so you don't need to worry about the problem of sound quality loss. Finally, with BotoNote Amazon Music Converter, you can choose to convert songs to more common audio formats such as AAC/WAV/MP3/ALAC/FLAC/AIFF, so that you can play your favorite music on more devices.",
+      "viewsCount": "20 views"
+    },
+    {
+      "id": 5,
+      "img": "https://qph.cf2.quoracdn.net/main-thumb-1885248260-50-ojolszwkzbtsegeygractvmrxcbdnlau.jpeg",
+      "name": "Sophia Windy",
+      "follow": "Follow",
+      "about": "Music heals heart.",
+      "postdate": "Wed",
+      "question": "How long can you keep music on Amazon Prime Music?",
+      "answer": "You can keep the downloaded music as long as you have valid subscription. You cannot play the download offline once you unsubscribe. So if you can to keep it forever, you may need some help like TuneBoto Amazon Music Converter.",
+      "viewsCount": "20 views"
+    },
+    {
+      "id": 6,
+      "img": "https://qph.cf2.quoracdn.net/main-thumb-210546490-50-ywnbtbdvzhutrysjpaihrpdoydghjeyh.jpeg",
+      "name": "Musicians at Church",
+      "follow": "Follow",
+      "about": "Answered by Donald A. Mills",
+      "postdate": "Wed",
+      "question": "What are some best practices for selecting and arranging music for worship services, and how can you ensure that the selections are appropriate and meaningful for the congregation?",
+      "answer": "I enjoy writing arrangements for church. Some of our most beautiful tunes originate in the church. (Think “Amazing Grace”.) Most of my church arrangements are more appropriate for the more experienced choir and choir director, rather than for the congregation. Congregational singers usually sing the melody in unison, with accompaniment, though singers with experience are often heard singing a harmony line. Experienced choirs generally sing the parts with accompaniment, including soprano, alto, tenor and bass while the congregation listens. The experienced choir may occasionally sing a cappella (no musical instruments).",
+      "viewsCount": "18 views"
+    },
+    {
+      "id": 7,
+      "img": "https://qph.cf2.quoracdn.net/main-thumb-2118108439-50-cbyvwiwnadkgqwutdxdrhrsmbccpibhp.jpeg",
+      "name": "Jotdan",
+      "follow": "Follow",
+      "about": "Marketing at FabFigures (2019–present)",
+      "postdate": "Tue",
+      "question": "Which is more difficult to learn, kalimba or flute?",
+      "answer": "Both kalimba and flute require dedicated practice to learn, but the level of difficulty may vary depending on the individual's musical background and natural aptitude.Kalimba is a relatively simple instrument to learn as it consists of a wooden board with metal tines that are plucked to create musical notes. The kalimba is an excellent instrument for beginners who want to start playing music without having to learn complex musical theories or read sheet music. Kalimbas are also very portable, making them a great instrument for people who are always on the go.On the other hand, the flute is a more complex instrument that requires a great deal of skill and practice to master. The flute requires the player to learn how to create different pitches by blowing air across the mouthpiece while using their fingers to change the length of the air column. Additionally, the flute requires the player to learn sheet music and music theory to be able to play it effectively Overall, both kalimba and flute can be challenging to learn, but the level of difficulty ultimately depends on the individual's skill level and dedication to practice.If you're interested in learning how to play the kalimba, I recommend checking out Kookalimba. Kookalimba is a great brand that offers high-quality kalimbas that are perfect for beginners and experienced players alike. They have a wide variety of kalimbas to choose from, and their customer service is excellent. So, if you're looking to start playing the kalimba, I highly recommend checking out Kookalimba!",
+      "viewsCount": "22 views"
+    },
+    {
+      "id": 7,
+      "img": "https://qsf.cf2.quoracdn.net/-4-images.new_grid.profile_default.png-26-688c79556f251aa0.png",
+      "name": "Charles Zigmund",
+      "follow": "Follow",
+      "about": "Experienced and well-read in Art and Music history",
+      "postdate": "Wed",
+      "question": "When playing a new music score, I tend to memorize the piece as I go, only to not use the sheet when I play final. Should I keep practicing this way or learn to play while reading the music?",
+      "answer": "If you want to maximize your chances of being employed, and not only in classical music surroundings, superior sight reading is a valuable skill. For example, musicians in film studios are expected to sight read perfectly the first time they see a score, without rehearsal. So to broaden your employability, why not practice reading even of scores you know?",
+      "viewsCount": "28 views"
+    },
+    {
+      "id": 8,
+      "img": "https://qph.cf2.quoracdn.net/main-thumb-1437172024-50-jlsluvrrsnykjzbuddioxwvakeixrowq.jpeg",
+      "name": "Audiophrenic",
+      "follow": "Follow",
+      "about": "Certification in Music Production, Berklee College of Music (Graduated 2013)",
+      "postdate": "Wed",
+      "question": "Do the people who make loops for trap songs also get included in producer credits for each track? Ex. whoever made the loops for Stargazing by Travis Scott?",
+      "answer": "Most of the time, the people who make loops for trap songs do get included in producer credits for each track. This is because the loops are a crucial factor in the overall sound of the track, and producers need to be acknowledged for their contributions. Creators of the loops are often credited alongside the artist, the main producer, and any other contributing producers.When it comes to loop creation specifically, it is important to understand that there are many different types of loops and a wide variety of methods used to create them. Some producers, such as Travis Scott, make their own loops using audio programs, while others may use pre-made loops from sample packs or other sources.It is important to note that even if an artist has used a pre-made loop, they still get credited as a producer. This is because they still had to choose the loop and manipulate it in order to fit their desired sound.",
+      "viewsCount": "21 views"
+    },
+    {
+      "id": 9,
+      "img": "https://qph.cf2.quoracdn.net/main-thumb-1784350677-50-gkwefrngztilyenejqtswlcqhjpzzazh.jpeg",
+      "name": "Lizzie N",
+      "follow": "Follow",
+      "about": "Mar 10",
+      "postdate": "",
+      "question": "What are some good angry and sad songs?",
+      "answer": "fat funny friend ~ sad abcdefu ~ angry class fight ~ angry happier than ever edit ~ angry and sad 10 things i hate about you ~ angry haha thats really all i know ♡",
+      "viewsCount": ""
+    },
+    {
+      "id": 10,
+      "img": "https://qph.cf2.quoracdn.net/main-thumb-2112661874-50-avegynaynyihgenivcsianhntwlogmzh.jpeg",
+      "name": "J.",
+      "follow": "Follow",
+      "about": "Lives in Indiana (2002–present)",
+      "postdate": "6h",
+      "question": "Is Gorillaz phase 7 over?",
+      "answer": "No, phase 7 is not over. I’ve literally checked the Gorillaz wiki it says that it’s still present from last year to now, so no it hasn’t ended. Phase 8 probably wouldn’t happen until another couple of years from now, I’m assuming around two or three years from now. So maybe then phase 7 will end but no, it’s not over right now it’s literally just begun. Hard telling what this phase will bring but there have been some bangers.",
+      "viewsCount": "32 views"
+    }
+  ]
 }
