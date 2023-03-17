@@ -17,7 +17,7 @@ function App() {
   //   }
   // }, []);
   // return <AllRoutes />;
-  return <AnswerPageApp />
+  return <AllRoutes />
 }
 
 export default App

@@ -107,7 +107,7 @@ function Navbar() {
             <NavLink to="/answer">
             <Tooltip hasArrow bg='white' fontSize={"12px"} textAlign={"center"} borderRadius={"20px"} p={"10px"} color='black' label="Answer" aria-label='A tooltip'>
               <Box
-                // border={'2px solid red'}
+                
                 w="40px"
                 h="45px"
                 onClick={borderSetting3}

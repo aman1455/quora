@@ -8,6 +8,7 @@ import Sidebar from "../components/NavbarAndSidebar/Sidebar"
 import Question from '../components/Question'
 import Notifications from '../components/Notifications/Notifications';
 import Music from '../components/NavbarAndSidebar/SidebarOptions/Music';
+import AnswerPageApp from '../components/AnswersPage/AnswerPageApp';
 function AllRoutes() {
   return (
     <Routes>
@@ -40,9 +41,15 @@ function AllRoutes() {
          </>
          
         }/>
-      <Route path="/music"
+      <Route path="/topic/music"
         element={<>
     <Music/>
+         </>
+         
+        }/>
+      <Route path="/answer"
+        element={<>
+    <AnswerPageApp/>
          </>
          
         }/>
