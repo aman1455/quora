@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Text, Flex, Img, Icon } from '@chakra-ui/react';
 import CreateSpaceModal from './CreateSpaceModal';
+import { NavLink } from 'react-router-dom';
 function Sidebar() {
   return (
     <>
@@ -15,7 +16,7 @@ function Sidebar() {
         <Box>
           <Flex flexDirection={'column'} color="white">
             <CreateSpaceModal />
-
+<NavLink to="/music">
             <Box
               display={'flex'}
               alignItems={'center'}
@@ -39,7 +40,7 @@ function Sidebar() {
                 Music
               </Text>
             </Box>
-
+</NavLink>
             <Box
               display={'flex'}
               alignItems={'center'}
