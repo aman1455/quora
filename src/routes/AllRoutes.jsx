@@ -3,11 +3,11 @@ import LoginComp from '../components/Login/LoginComp';
 import PrivateRoute from './Private';
 import { Home } from './home';
 import LoginRoute from './LoginRoute';
-import Navbar from '../components/NavbarSidebar/Navbar';
-import Sidebar from "../components/NavbarSidebar/Sidebar"
+import Navbar from '../components/NavbarAndSidebar/Navbar';
+import Sidebar from "../components/NavbarAndSidebar/Sidebar"
 import Question from '../components/Question'
 import Notifications from '../components/Notifications/Notifications';
-import WholeMusicComp from '../components/NavbarSidebar/Music/WholeMusicComp';
+import Music from '../components/NavbarAndSidebar/SidebarOptions/Music';
 function AllRoutes() {
   return (
     <Routes>
@@ -42,7 +42,7 @@ function AllRoutes() {
         }/>
       <Route path="/music"
         element={<>
-    <WholeMusicComp/>
+    <Music/>
          </>
          
         }/>
