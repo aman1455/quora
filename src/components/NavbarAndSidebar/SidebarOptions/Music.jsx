@@ -10,12 +10,12 @@ function Music() {
     <>
       <Navbar />
 
-      <Flex >
+      <Flex bg="rgb(241,242,242)">
         <Sidebar />
         <Box  w={'25%'}></Box> 
         <Flex  w={'75%'}>
 
-          <MidSectionMusic />
+        <MidSectionMusic />
         </Flex>
       </Flex>
     </>

@@ -11,7 +11,7 @@ function EachCard() {
         let jsondata = await data.json();
         setPost(jsondata)
         console.log(jsondata, "data");
-    } 
+    }
  
   return (
     <>
