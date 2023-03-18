@@ -1,0 +1,18 @@
+.twerk_bottom{
+  background-color: red;
+  transition: all 0.5s ease-in-out;
+  height: 0;
+}
+.twerk_bottom_toggle{ 
+  bottom: 0px;
+  height: 50px;
+}
+/* Increase the height of the editor container */
+.ql-container {
+  height: 200px;
+}
+
+/* Increase the font size of the editor content */
+.ql-editor {
+  font-size: 16px;
+}
