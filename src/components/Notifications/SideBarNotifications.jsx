@@ -54,7 +54,7 @@ export const SideBarNotifications = () => {
 const SideBar = styled.div`
     width: 10.875rem;
     margin-right: 2rem;
-    margin-top: 4.07rem;
+    margin-top: 2.07rem;
     font-size: var(--primary-small-label-font-size);
     .heading {
         min-height: 1.625rem;

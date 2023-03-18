@@ -18,7 +18,7 @@ function Sidebar() {
           <Flex flexDirection={'column'} color="white">
             <CreateSpaceModal />
 
-            <NavLink to="/music"  >
+            <NavLink to="/topic/music"  style={({isActive})=>({color: isActive ? "red" : "rgb(99,100,102)"})}>
               <Box
                 display={'flex'}
                 alignItems={'center'}
@@ -33,13 +33,13 @@ function Sidebar() {
               >
                 <Img
                   w={6}
-                  src={
+                  src={  
                     'https://qph.cf2.quoracdn.net/main-thumb-t-801-100-Sf8h894FXbQZQit0TeqDrrqS6xw6dwCQ.jpeg'
                   }
                   mr={'10px'}
                   borderRadius={'4px'}
                 />
-                <Text color={'rgb(99,100,102)'} fontSize={'14px'}>
+                <Text   fontSize={'14px'}>
                   Music
                 </Text>
               </Box>

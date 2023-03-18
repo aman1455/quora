@@ -1,13 +1,16 @@
-import { Box, Flex, GridItem, HStack, Grid } from "@chakra-ui/react"
-import RightBar from "./RightBar"
+import { Box} from "@chakra-ui/react"
 import AnswerPageSideBar from "./Answer page"
 import MiddleBar from "./MiddleBar"
+import Navbar from "../NavbarAndSidebar/Navbar"
 function AnswerPageApp() {
   return (
-    <Box w="100%" bg="#f1f2f2">
+    <>
+  <Navbar/>
+    <Box pt="30px" w="100%" bg="#f1f2f2">
       <AnswerPageSideBar />
       <MiddleBar />
     </Box>
+    </>
   )
 }
 

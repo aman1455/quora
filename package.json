@@ -13,6 +13,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^3.11.0",
+    "react-quill": "^2.0.0",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.9.0",
     "react-scripts": "5.0.1",
@@ -20,6 +21,7 @@
     "reactjs-social-login": "^2.6.2",
     "read-more-react": "^1.0.10",
     "redux": "^4.2.1",
+    "style-loader": "^3.3.2",
     "styled-components": "^5.3.9"
   },
   "scripts": {

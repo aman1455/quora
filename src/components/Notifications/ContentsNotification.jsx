@@ -109,7 +109,7 @@ export const ContentsNotification = () => {
 };
 
 const Container = styled.div`
-    margin-top: 4.07rem;
+    margin-top: 2.07rem;
     margin-left: rem;
     width: 35.75rem;
     .heading {
