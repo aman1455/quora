@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components"
 import {
   Button,
   FormControl,
@@ -12,141 +12,141 @@ import {
   ModalCloseButton,
   useDisclosure,
   Link,
-} from '@chakra-ui/react';
-import { useNavigate } from 'react-router-dom';
-import React, { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import axios from 'axios';
+} from "@chakra-ui/react"
+import { useNavigate } from "react-router-dom"
+import React, { useState, useEffect } from "react"
+import { useDispatch, useSelector } from "react-redux"
+import axios from "axios"
 
-import { LoginSocialGoogle } from 'reactjs-social-login';
+import { LoginSocialGoogle } from "reactjs-social-login"
 
 const LoginComp = () => {
-  let dispatch = useDispatch();
-  let navigate = useNavigate();
+  let dispatch = useDispatch()
+  let navigate = useNavigate()
   const [state, setState] = useState({
-    email: '',
-    password: '',
-  });
+    email: "",
+    password: "",
+  })
 
   const [error, setError] = useState({
-    email: '',
-    password: '',
-  });
-  const initialRef = React.useRef();
-  const { isOpen, onOpen, onClose } = useDisclosure();
+    email: "",
+    password: "",
+  })
+  const initialRef = React.useRef()
+  const { isOpen, onOpen, onClose } = useDisclosure()
 
   function handleChange(evt) {
-    setState({ ...state, [evt.target.name]: evt.target.value });
+    setState({ ...state, [evt.target.name]: evt.target.value })
     // console.log(state);
   }
   function handleLogin(evt) {
     // console.log(state);
-    evt.preventDefault();
+    evt.preventDefault()
     if (validateForm()) {
-      validateLogin();
+      validateLogin()
     }
   }
   function validateForm() {
-    console.log(state.password);
-    let err = {};
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+    console.log(state.password)
+    let err = {}
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i
     if (!state.email) {
-      err.email = 'Email is Required';
+      err.email = "Email is Required"
     } else if (!regex.test(state.email)) {
-      err.email = 'Invalid Email Address';
+      err.email = "Invalid Email Address"
     }
     if (!state.password) {
-      err.password = 'Password is Required';
+      err.password = "Password is Required"
     } else if (state.password.length < 4) {
-      err.password = 'Password must be of atleast 4 character';
+      err.password = "Password must be of atleast 4 character"
     }
     if (Object.keys(err).length !== 0) {
-      setError(err);
-      return false;
+      setError(err)
+      return false
     } else {
-      return true;
+      return true
     }
   }
 
   function validateLogin() {
     // console.log(state);
-    validateEmail();
+    validateEmail()
   }
   function validateEmail() {
     axios
       .get(`http://localhost:8080/users?email=${state.email}`)
-      .then(json => {
-        console.log(json.data);
+      .then((json) => {
+        console.log(json.data)
         if (json.data.length > 0) {
-          validatePassword();
+          validatePassword()
         } else {
-          setError({ password: 'Account does not Exist' });
+          setError({ password: "Account does not Exist" })
           setState({
-            email: '',
-            password: '',
-          });
+            email: "",
+            password: "",
+          })
         }
       })
-      .catch(error => {
-        setError({ password: 'Server Error Please Try Again' });
-      });
+      .catch((error) => {
+        setError({ password: "Server Error Please Try Again" })
+      })
   }
   function validatePassword() {
     axios
       .get(
         `http://localhost:8080/users?email=${state.email}&password=${state.password}`
       )
-      .then(json => {
-        console.log(json.data);
+      .then((json) => {
+        console.log(json.data)
         if (json.data.length > 0) {
           dispatch({
-            type: 'authIt',
+            type: "authIt",
             token: json.data[0].id,
-          });
+          })
           setError({
-            email: '',
-            password: '',
-          });
+            email: "",
+            password: "",
+          })
           setState({
-            email: '',
-            password: '',
-          });
-          navigate('/');
+            email: "",
+            password: "",
+          })
+          navigate("/")
         } else {
-          setError({ password: 'Wrong Password' });
+          setError({ password: "Wrong Password" })
         }
       })
-      .catch(error => {
-        setError({ password: 'Server Error Please Try Again' });
+      .catch((error) => {
+        setError({ password: "Server Error Please Try Again" })
         setState({
           ...state,
-          password: '',
-        });
-      });
+          password: "",
+        })
+      })
   }
 
   function handleSignUp(event) {
-    event.preventDefault();
+    event.preventDefault()
     if (validateForm()) {
-      validateSignInEmail();
+      validateSignInEmail()
     }
   }
   function validateSignInEmail() {
     axios
       .get(`http://localhost:8080/users?email=${state.email}`)
-      .then(json => {
-        console.log(json.data);
+      .then((json) => {
+        console.log(json.data)
         if (json.data.length > 0) {
           setError({
-            email: 'Email account already exists Can not register again',
-          });
+            email: "Email account already exists Can not register again",
+          })
         } else {
-          postCredentials();
+          postCredentials()
         }
       })
-      .catch(error => {
-        setError({ password: 'Server Error Please Try Again' });
-      });
+      .catch((error) => {
+        setError({ password: "Server Error Please Try Again" })
+      })
   }
   function postCredentials() {
     axios
@@ -160,25 +160,25 @@ const LoginComp = () => {
         notifications: [],
         credentials: [],
       })
-      .then(json => {
-        console.log(json.data);
+      .then((json) => {
+        console.log(json.data)
         dispatch({
-          type: 'authIt',
+          type: "authIt",
           token: json.data.id,
-        });
+        })
         setError({
-          email: '',
-          password: '',
-        });
+          email: "",
+          password: "",
+        })
         setState({
-          email: '',
-          password: '',
-        });
-        navigate('/');
+          email: "",
+          password: "",
+        })
+        navigate("/")
       })
-      .catch(err => {
-        setError({ password: 'Server Error Please Try Again' });
-      });
+      .catch((err) => {
+        setError({ password: "Server Error Please Try Again" })
+      })
   }
   return (
     <Container>
@@ -231,40 +231,42 @@ const LoginComp = () => {
                   console.log(
                     data.email,
                     data.sub,
-                    data.email.match(/^([^@]*)@/)[1]
-                  );
+                    data.email.match(/^([^@]*)@/)[1],
+                    data
+                  )
                   axios
                     .get(`http://localhost:8080/users?email=${data.email}`)
-                    .then(json => {
+                    .then((json) => {
                       if (json.data.length > 0) {
-                        dispatch({ type: 'authIt', token: json.data[0].id });
-                        navigate('/');
+                        dispatch({ type: "authIt", token: json.data[0].id })
+                        navigate("/")
                       } else {
                         axios
                           .post(`http://localhost:8080/users`, {
                             email: data.email,
-                            password: '',
+                            password: "",
                             name: data.email.match(/^([^@]*)@/)[1],
                             spaces: [],
                             questions: [],
                             answers: [],
                             notifications: [],
                             credentials: [],
-                            id: data.sub,
+                            id: Number(data.sub),
+                            avatar: data.picture,
                           })
-                          .then(res => {
-                            console.log(res.data);
+                          .then((res) => {
+                            console.log(res.data)
                             dispatch({
-                              type: 'authIt',
+                              type: "authIt",
                               token: res.data.id,
-                            });
-                            navigate('/');
-                          });
+                            })
+                            navigate("/")
+                          })
                       }
-                    });
+                    })
                 }}
-                onReject={err => {
-                  console.log(err);
+                onReject={(err) => {
+                  console.log(err)
                 }}
               >
                 <p>Continue with Google</p>
@@ -332,9 +334,9 @@ const LoginComp = () => {
               </ModalContent>
             </Modal>
             <Policy>
-              By continuing you indicate that you agree to Quora’s{' '}
-              <Link color="blue.500">Terms of Service</Link> and{' '}
-              <Link color="blue.500">Privacy Policy.</Link>{' '}
+              By continuing you indicate that you agree to Quora’s{" "}
+              <Link color="blue.500">Terms of Service</Link> and{" "}
+              <Link color="blue.500">Privacy Policy.</Link>{" "}
             </Policy>
           </LeftSection>
           <RightSection>
@@ -380,10 +382,10 @@ const LoginComp = () => {
         </Footer>
       </LoginForm>
     </Container>
-  );
-};
+  )
+}
 
-export default LoginComp;
+export default LoginComp
 
 const Container = styled.div`
   width: 100%;
@@ -395,7 +397,7 @@ const Container = styled.div`
   display: grid;
   place-items: center;
   background-size=cover;
-`;
+`
 
 const LoginForm = styled.div`
   width: 700px;
@@ -404,7 +406,7 @@ const LoginForm = styled.div`
   background: #fff;
   border-radius: 5px;
   /* background: #ffffff99; */
-`;
+`
 
 const Logo = styled.div`
   text-align: center;
@@ -420,25 +422,25 @@ const Logo = styled.div`
     transform: translateY(-20px);
     font-size: 15px;
   }
-`;
+`
 
 const Form = styled.div`
   border-bottom: 1px solid #e6e6e6;
   height: 330px;
   display: flex;
   align-items: center;
-`;
+`
 
 const RightSection = styled.div`
   /* border: 1px solid #e6e6e6; */
   width: 50%;
   height: 90%;
   padding: 0 25px;
-`;
+`
 
 const LeftSection = styled(RightSection)`
   border-right: 1px solid #e6e6e6;
-`;
+`
 
 const LoginWith = styled.div`
   display: flex;
@@ -465,11 +467,11 @@ const LoginWith = styled.div`
     color: #282829;
     cursor: pointer;
   }
-`;
+`
 const LogoContainer = styled.div`
   width: fit-content;
   margin: auto;
-`;
+`
 
 const SignUp = styled.div`
   text-align: center;
@@ -488,7 +490,7 @@ const SignUp = styled.div`
   }
 
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     border-bottom: 1px solid #e6e6e6;
@@ -496,14 +498,14 @@ const SignUp = styled.div`
     bottom: -10px;
     cursor: default;
   }
-`;
+`
 
 const Policy = styled.p`
   color: #939598;
   font-size: 13px;
   width: 95%;
   line-height: 1.3;
-`;
+`
 
 const Title = styled.p`
   font-size: 15px;
@@ -511,14 +513,14 @@ const Title = styled.p`
   padding: 3px 0 10px 0;
   border-bottom: 1px solid #e6e6e6;
   margin-bottom: 20px;
-`;
+`
 
 const Lable = styled.p`
   font-weight: bold;
   font-size: 13px;
   margin-bottom: 5px;
   padding-left: 1.5px;
-`;
+`
 
 const Input = styled.input`
   width: 100%;
@@ -540,21 +542,21 @@ const Input = styled.input`
     border: 1px solid blue;
     outline: none;
   }
-`;
+`
 
 const FormError = styled.div`
   color: red;
   font-size: 10px;
   margin-top: -20px;
   margin-bottom: 20px;
-`;
+`
 
 const SubContained = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: -10px;
-`;
+`
 
 const LoginButton = styled.button`
   width: 30%;
@@ -570,7 +572,7 @@ const LoginButton = styled.button`
   &:hover {
     opacity: 0.8;
   }
-`;
+`
 
 const ForgotPassword = styled.p`
   font-size: 14px;
@@ -579,11 +581,11 @@ const ForgotPassword = styled.p`
   margin-bottom: 10px;
   cursor: pointer;
   padding-left: 2px;
-`;
+`
 
 const Footer = styled.div`
   height: 117px;
-`;
+`
 
 const Languages = styled.div`
   height: 50%;
@@ -600,7 +602,7 @@ const Languages = styled.div`
     cursor: pointer;
 
     &:after {
-      content: '❯';
+      content: "❯";
       position: absolute;
       font-size: 16px;
       color: black;
@@ -609,7 +611,7 @@ const Languages = styled.div`
       cursor: default;
     }
   }
-`;
+`
 
 const About = styled.div`
   height: 50%;
@@ -627,7 +629,7 @@ const About = styled.div`
     cursor: pointer;
   }
   & p span::after {
-    content: '';
+    content: "";
     width: 100%;
     position: absolute;
     border-bottom: 1px solid #282829;
@@ -640,4 +642,4 @@ const About = styled.div`
   & p span:hover::after {
     opacity: 1;
   }
-`;
+`

@@ -1,7 +1,4 @@
-import { Box } from "@chakra-ui/react";
-export default function Post()
-{
-  return(
-    
-  )
+import { Box } from "@chakra-ui/react"
+export default function Post() {
+  return <></>
 }

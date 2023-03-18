@@ -5,10 +5,12 @@ import { Home } from "./home"
 import LoginRoute from "./LoginRoute"
 import Navbar from "../components/NavbarAndSidebar/Navbar"
 import Sidebar from "../components/NavbarAndSidebar/Sidebar"
-import Question from "../components/Question"
+import Question from "../components/QuestionPage/Question"
 import Notifications from "../components/Notifications/Notifications"
 import Music from "../components/NavbarAndSidebar/SidebarOptions/Music"
 import AnswerPageApp from "../components/AnswersPage/AnswerPageApp"
+import Profile from "../components/Profile/profile"
+import DetailsPage from "../components/DetailsPage/DetailsPage"
 function AllRoutes() {
   return (
     <Routes>
@@ -20,46 +22,55 @@ function AllRoutes() {
           </LoginRoute>
         }
       />
-      {/* <Route
-        path="/"
+      <Route
+        path="/answer/:id"
         element={
           <PrivateRoute>
-            <Home />
+            <DetailsPage />
           </PrivateRoute>
         }
-      /> */}
+      />
+
       <Route
         path="/"
         element={
-          <>
+          <PrivateRoute>
             <Navbar />
             <Sidebar />
             <Question />
-          </>
+          </PrivateRoute>
         }
       />
       <Route
         path="/notifications"
         element={
-          <>
+          <PrivateRoute>
             <Notifications />
-          </>
+          </PrivateRoute>
         }
       />
       <Route
         path="/topic/music"
         element={
-          <>
+          <PrivateRoute>
             <Music />
-          </>
+          </PrivateRoute>
         }
       />
       <Route
         path="/answer"
         element={
-          <>
+          <PrivateRoute>
             <AnswerPageApp />
-          </>
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/profile"
+        element={
+          <PrivateRoute>
+            <Profile />
+          </PrivateRoute>
         }
       />
     </Routes>
