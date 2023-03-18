@@ -17,9 +17,7 @@ import DropdownProfile from './DropdownProfile';
 import NavGlobComp from './NavGlobComp';
 function Navbar() {
  
-  // let [state, setState] = useState({
- 
-  // });
+  let [state, setState] = useState(false);
 
 
 
@@ -43,7 +41,7 @@ function Navbar() {
           </Box>
 
           <Box display={'flex'} width={'25%'} justifyContent={'space-between'}>
-            <NavLink to="/" style={({isActive})=>({color: isActive ? "rgb(185,43,39)" : "rgb(99,100,102)"})}>
+            <NavLink to="/"  >
             <Tooltip hasArrow bg='white' fontSize={"12px"} textAlign={"center"} w={"70px"} borderRadius={"20px"} p={"10px"} color='black' label="Home" aria-label='A tooltip'>
            
               <Box   w="40px" h="45px" >
