@@ -56,7 +56,11 @@ export default function Question() {
   let AuthData = useSelector((storeData) => {
     return storeData.AuthReducer
   })
+  let UserData = useSelector((sData) => {
+    return sData.UserReducer
+  })
   console.log(AuthData)
+  console.log(UserData)
   function TextEditor({ value, onChange }) {
     return <ReactQuill value={value} onChange={onChange} />
   }
@@ -182,6 +186,10 @@ export default function Question() {
     e.preventDefault()
     saveDataToDb2({
       userId: Number(JSON.parse(localStorage.getItem("AuthData")).token),
+      userName: UserData.name,
+      userImage:
+        UserData.avatar ||
+        "https://www.google.com/imgres?imgurl=https%3A%2F%2Fimgv3.fotor.com%2Fimages%2Fblog-cover-image%2F10-profile-picture-ideas-to-make-you-stand-out.jpg&tbnid=Sftxv-XsWOqEQM&vet=12ahUKEwjOl6md_-X9AhWZ5nMBHbMKCHIQMygTegUIARCEAg..i&imgrefurl=https%3A%2F%2Fwww.fotor.com%2Fblog%2Fprofile-picture-ideas%2F&docid=ZDKJjCOmeX62ZM&w=4500&h=2532&q=profile%20photo&ved=2ahUKEwjOl6md_-X9AhWZ5nMBHbMKCHIQMygTegUIARCEAg",
       post: posttext,
       imageUrl: imageUrl,
       date: Date(),
