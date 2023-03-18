@@ -4,67 +4,38 @@
       "id": 1,
       "email": "arshgoyal188@gmail.com",
       "password": "123456",
-      "name": "arshgoyal188",
-      "spaces": [],
-      "questions": [],
-      "answers": [],
-      "notifications": [],
-      "credentials": []
+      "name": "arshgoyal188"
     },
     {
       "email": "arshgoyal2707@gmail.com",
       "password": "123456",
       "name": "arshgoyal2707",
-      "spaces": [],
-      "questions": [],
-      "answers": [],
-      "notifications": [],
-      "credentials": [],
       "id": 2
     },
     {
       "email": "shgdhsghd@gmail.com",
       "password": "45679",
       "name": "shgdhsghd",
-      "spaces": [],
-      "questions": [],
-      "answers": [],
-      "notifications": [],
-      "credentials": [],
       "id": 4
     },
     {
       "email": "arshgoyal@gmail.com",
       "password": "123456",
       "name": "arshgoyal",
-      "spaces": [],
-      "questions": [],
-      "answers": [],
-      "notifications": [],
-      "credentials": [],
       "id": 5
     },
     {
       "email": "gahjghjk@gmail.com",
       "password": "123456",
       "name": "gahjghjk",
-      "spaces": [],
-      "questions": [],
-      "answers": [],
-      "notifications": [],
-      "credentials": [],
       "id": 6
     },
     {
       "email": "arshgoyal459@gmail.com",
       "password": "",
       "name": "arshgoyal459",
-      "spaces": [],
-      "questions": [],
-      "answers": [],
-      "notifications": [],
-      "credentials": [],
-      "id": "101479065886207950592"
+      "id": 101479065886207950000,
+      "avatar": "https://lh3.googleusercontent.com/a/AGNmyxbLX1p5Ybxzskl2CmfmGTTKfX7sqmP_98xhxMZ8=s96-c"
     }
   ],
   "Spaces_Books": [
@@ -75,205 +46,186 @@
       "Description": "ONLY MENTIONS ABOUT THE BOOKS THAT INFLUENCED YOU (+COMICS & MEMES R INCLUDED 2)"
     },
     {
-        "id": 2,
-        "name": "Book Summary And Book Recommendatio",
-        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-2631417-1035x207-mtbvxzygoqehcpmbyncxyfrlwridxajn.jpeg",
-        "Description": "Here you can have a book summary and recommendations of some of the great books"
-      },
-      
-      {
-        "id": 3,
-        "name": "Book summary 📚📒📔📕📓📝",
-        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1606727-1035x207-gnyahayqvusflwmmuugfcdrozutrhrol.jpeg",
-        "Description": "The space is about book summary ..brief overview of any kind of book."
-      },
-      {
-        "id": 4,
-        "name": "Book Store",
-        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1577994-1035x207-jutbdclwjjwxjvjwufszfsunlnlocgix.jpeg",
-        "Description": "Discover your next favorite book and connect with other book lovers in our Book"
-      },
-      {
-        "id": 5,
-        "name": "Your Writing",
-        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1591652-1035x207-ckrfmocbtcgtkglrbuxljoplgvpkzopo.jpeg",
-        "Description": "Keep Reading • Keep Writing • Keep Learning!"
-      },
-      {
-        "id": 6,
-        "name": "Creative-Writing Skills",
-        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1748732-1035x207-behkhtueqhdekzqzrkjtqnvgbeeydvua.jpeg",
-        "Description": "Writing Ideas/Tips/Skills/Best ways/Methods/Master writing Skills"
-      },
-      {
-        "id": 7,
-        "name": "Novels wheels",
-        "image": "Writing Ideas/Tips/Skills/Best ways/Methods/Master writing Skills",
-        "Description": "Here, you'll find helpful tips on writing & much more gossips related to books."
-      },
-      {
-        "id": 8,
-        "name": "books and bookshelves",
-        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-2396055-1035x207-rqmizrrnyynawieutogboeikwhhjnprv.jpeg",
-        "Description": "Fiction genre, Fans of fantasy, science fiction, horror,romance books,history"
-      },
-      {
-        "id": 9,
-        "name": "Book That You Like",
-        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1616412-1035x207-bkpmlucacateezfqsvyrenkxozovszyd.jpeg",
-        "Description": "Just the collection of books that you like."
-      },
-      {
-        "id": 10,
-        "name": "Books Review",
-        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1625854-1035x207-onehvtqfikyxufkwgeugewtrikcmaenm.jpeg",
-        "Description": "This space is to share and talk about the Books Review & your recommendations"
-      }
-],"Spaces_Music": [
-  {
-    "id": 1,
-    "name": "Music and Songs",
-    "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1577210-1035x207-snmbtbuytqjqmksuqpuwvonddyytisqq.jpeg",
-    "Description": "Browse hundreds artists, composers, and curated playlists"
-  },
-
-  {
-    "id": 2,
-    "name": "Music Home",
-    "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1589853-1035x207-xoynlerlvnkhnwsoqxpvwvnexwkzbodc.jpeg",
-    "Description": "1)Music Lovers HOME 2)Latest Music updates 3) World's Best Music Albums Display"
-  },
-
-  {
-    "id": 3,
-    "name": "The Songs Of Life",
-    "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1588708-1035x207-ouepakzzoxbnimfdcfkjwiokxulkkaet.jpeg",
-    "Description": "Life is a musical journey, sing along my friend - there is no dead end!!!"
-  },
-
-  {
-    "id": 4,
-    "name": "ðŸŽ¼Groove InnðŸŽ¶ðŸŽµ",
-    "image": "https://qph.cf2.quoracdn.net/main-custom-tc-2821042-1035x207-dzpnklbvydaqfluydpxppuuacltfdcpe.jpeg",
-    "Description": "Sharing their best music to make it reach out to others playlists!!!!"
-  },
-
-  {
-    "id": 5,
-    "name": "BLACKPINK in your areaa",
-    "image": "https://qph.cf2.quoracdn.net/main-custom-tc-2275817-1035x207-zkohmibkbbtldjzpyerxgaqnbrmkchsu.jpeg",
-    "Description": "Anything related to BLACKPINK!"
-  },
-
-  {
-    "id": 6,
-    "name": "YouTube â™§ promote",
-    "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1897021-1035x207-airxydaekihjlyhlqavwufokxbndjxtd.jpeg",
-    "Description": "You can promote your YouTube videos and channel."
-  },
-
-  {
-    "id": 7,
-    "name": "BTS ARMY WORLD ðŸ’œ",
-    "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1754808-1035x207-uddswjpepdeqeruojbvsiwlcfbmxcljy.jpeg",
-    "Description": "Hey army welcome to the world of BTS."
-  },
-
-  {
-    "id": 8,
-    "name": "Bollywood Music",
-    "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1641693-1035x207-dxjowcfshylonyojviqetrspsayqsvyu.jpeg",
-    "Description": "All Bollywood - Music/Songs/Golden old Hits/Latest Songs/Heart touching songs"
-  },
-
-  {
-    "id": 9,
-    "name": "Taehyung ~ My Scenery 💕",
-    "image": "https://qph.cf2.quoracdn.net/main-custom-tc-2234448-1035x207-qcqrinwegmizptntlvgndgexvvzouvmk.jpeg",
-    "Description": "ʟᴏᴠᴇ ʟɪᴋᴇ ʏᴏᴜ'ᴠᴇ ɴᴇᴠᴇʀ ʟᴏᴠᴇᴅ ʙᴇꜰᴏʀᴇ~ ᴋɪᴍ ᴛᴀᴇʜʏᴜɴɢ"
-  },
-
-  {
-    "id": 10,
-    "name": "YouTube",
-    "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1578964-1035x207-tolpfsjlrjkeerjlldnpjejsfxmqilcs.jpeg",
-    "Description": "All about YouTube. Share anything interesting & entertaining realted to YouTube."
-  }
-],
-"Spaces_Science": [
-  {
-    "id": 1,
-    "name": "Physics Only",
-    "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1575985-1035x207-peplttvjlbypohgwveqmehzisbvmpswj.jpeg",
-    "Description": "Space for all Physics Lover."
-  },
-
-  {
+      "id": 2,
+      "name": "Book Summary And Book Recommendatio",
+      "image": "https://qph.cf2.quoracdn.net/main-custom-tc-2631417-1035x207-mtbvxzygoqehcpmbyncxyfrlwridxajn.jpeg",
+      "Description": "Here you can have a book summary and recommendations of some of the great books"
+    },
+    {
+      "id": 3,
+      "name": "Book summary 📚📒📔📕📓📝",
+      "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1606727-1035x207-gnyahayqvusflwmmuugfcdrozutrhrol.jpeg",
+      "Description": "The space is about book summary ..brief overview of any kind of book."
+    },
+    {
+      "id": 4,
+      "name": "Book Store",
+      "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1577994-1035x207-jutbdclwjjwxjvjwufszfsunlnlocgix.jpeg",
+      "Description": "Discover your next favorite book and connect with other book lovers in our Book"
+    },
+    {
+      "id": 5,
+      "name": "Your Writing",
+      "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1591652-1035x207-ckrfmocbtcgtkglrbuxljoplgvpkzopo.jpeg",
+      "Description": "Keep Reading • Keep Writing • Keep Learning!"
+    },
+    {
+      "id": 6,
+      "name": "Creative-Writing Skills",
+      "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1748732-1035x207-behkhtueqhdekzqzrkjtqnvgbeeydvua.jpeg",
+      "Description": "Writing Ideas/Tips/Skills/Best ways/Methods/Master writing Skills"
+    },
+    {
+      "id": 7,
+      "name": "Novels wheels",
+      "image": "Writing Ideas/Tips/Skills/Best ways/Methods/Master writing Skills",
+      "Description": "Here, you'll find helpful tips on writing & much more gossips related to books."
+    },
+    {
+      "id": 8,
+      "name": "books and bookshelves",
+      "image": "https://qph.cf2.quoracdn.net/main-custom-tc-2396055-1035x207-rqmizrrnyynawieutogboeikwhhjnprv.jpeg",
+      "Description": "Fiction genre, Fans of fantasy, science fiction, horror,romance books,history"
+    },
+    {
+      "id": 9,
+      "name": "Book That You Like",
+      "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1616412-1035x207-bkpmlucacateezfqsvyrenkxozovszyd.jpeg",
+      "Description": "Just the collection of books that you like."
+    },
+    {
+      "id": 10,
+      "name": "Books Review",
+      "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1625854-1035x207-onehvtqfikyxufkwgeugewtrikcmaenm.jpeg",
+      "Description": "This space is to share and talk about the Books Review & your recommendations"
+    }
+  ],
+  "Spaces_Music": [
+    {
+      "id": 1,
+      "name": "Music and Songs",
+      "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1577210-1035x207-snmbtbuytqjqmksuqpuwvonddyytisqq.jpeg",
+      "Description": "Browse hundreds artists, composers, and curated playlists"
+    },
+    {
+      "id": 2,
+      "name": "Music Home",
+      "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1589853-1035x207-xoynlerlvnkhnwsoqxpvwvnexwkzbodc.jpeg",
+      "Description": "1)Music Lovers HOME 2)Latest Music updates 3) World's Best Music Albums Display"
+    },
+    {
+      "id": 3,
+      "name": "The Songs Of Life",
+      "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1588708-1035x207-ouepakzzoxbnimfdcfkjwiokxulkkaet.jpeg",
+      "Description": "Life is a musical journey, sing along my friend - there is no dead end!!!"
+    },
+    {
+      "id": 4,
+      "name": "ðŸŽ¼Groove InnðŸŽ¶ðŸŽµ",
+      "image": "https://qph.cf2.quoracdn.net/main-custom-tc-2821042-1035x207-dzpnklbvydaqfluydpxppuuacltfdcpe.jpeg",
+      "Description": "Sharing their best music to make it reach out to others playlists!!!!"
+    },
+    {
+      "id": 5,
+      "name": "BLACKPINK in your areaa",
+      "image": "https://qph.cf2.quoracdn.net/main-custom-tc-2275817-1035x207-zkohmibkbbtldjzpyerxgaqnbrmkchsu.jpeg",
+      "Description": "Anything related to BLACKPINK!"
+    },
+    {
+      "id": 6,
+      "name": "YouTube â™§ promote",
+      "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1897021-1035x207-airxydaekihjlyhlqavwufokxbndjxtd.jpeg",
+      "Description": "You can promote your YouTube videos and channel."
+    },
+    {
+      "id": 7,
+      "name": "BTS ARMY WORLD ðŸ’œ",
+      "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1754808-1035x207-uddswjpepdeqeruojbvsiwlcfbmxcljy.jpeg",
+      "Description": "Hey army welcome to the world of BTS."
+    },
+    {
+      "id": 8,
+      "name": "Bollywood Music",
+      "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1641693-1035x207-dxjowcfshylonyojviqetrspsayqsvyu.jpeg",
+      "Description": "All Bollywood - Music/Songs/Golden old Hits/Latest Songs/Heart touching songs"
+    },
+    {
+      "id": 9,
+      "name": "Taehyung ~ My Scenery 💕",
+      "image": "https://qph.cf2.quoracdn.net/main-custom-tc-2234448-1035x207-qcqrinwegmizptntlvgndgexvvzouvmk.jpeg",
+      "Description": "ʟᴏᴠᴇ ʟɪᴋᴇ ʏᴏᴜ'ᴠᴇ ɴᴇᴠᴇʀ ʟᴏᴠᴇᴅ ʙᴇꜰᴏʀᴇ~ ᴋɪᴍ ᴛᴀᴇʜʏᴜɴɢ"
+    },
+    {
+      "id": 10,
+      "name": "YouTube",
+      "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1578964-1035x207-tolpfsjlrjkeerjlldnpjejsfxmqilcs.jpeg",
+      "Description": "All about YouTube. Share anything interesting & entertaining realted to YouTube."
+    }
+  ],
+  "Spaces_Science": [
+    {
+      "id": 1,
+      "name": "Physics Only",
+      "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1575985-1035x207-peplttvjlbypohgwveqmehzisbvmpswj.jpeg",
+      "Description": "Space for all Physics Lover."
+    },
+    {
       "id": 2,
       "name": "Physics problems & soln.",
       "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1753732-1035x207-fhhcnyrdecbgedfobogubbvxblthqzrs.jpeg",
       "Description": "Here you can learn, practice and solve physics problems theory and Numerical ."
     },
-
     {
       "id": 3,
       "name": "NEET UG Aspirants-Tips & Tricks",
       "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1935569-1035x207-cbkycrdyrxiaxgvceuhtfooidtcgjrlh.jpeg",
       "Description": "Here we share important tips, tricks and strategies to crack NEET UG "
     },
-
     {
       "id": 4,
       "name": "Chemistry",
       "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1583775-1035x207-juwwdacthhbydhwgswpetvcyyoyvcitk.jpeg",
       "Description": "All about chemistry knowledge sharing and update"
     },
-
     {
       "id": 5,
       "name": "",
       "image": "",
       "Description": ""
     },
-
     {
       "id": 6,
       "name": "Physics in a netshell",
       "image": "https://qsf.cf2.quoracdn.net/-4-ans_frontend_assets.images.tribes.defaults.space_banner_yellow.png-26-0cad087b263ce130.png",
       "Description": "Some interesting fact about science and it's psychology"
     },
-
     {
       "id": 7,
       "name": "Sanatan dhara",
       "image": "https://qph.cf2.quoracdn.net/main-custom-tc-3676192-1035x207-agbrolqwmjhvfuacndwwxcezsiknhnmu.jpeg",
       "Description": "Sanatan"
     },
-
     {
       "id": 8,
       "name": "Chemistry Point",
       "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1700077-1035x207-mkyaahfkagdghophaiekcnikhkwazbpx.jpeg",
       "Description": "Here I ask or answer chemistry questions. Chemistry Topics, Formulas, Reaction."
-      
     },
-
     {
       "id": 9,
       "name": "PHYSICS-musings",
       "image": "https://qsf.cf2.quoracdn.net/-4-ans_frontend_assets.images.tribes.defaults.space_banner_pink.png-26-f43043a77377c880.png",
       "Description": "Theory and experiments in Physics"
     },
-
     {
       "id": 10,
       "name": "Ravikant Bhagat's Space",
       "image": "https://qph.cf2.quoracdn.net/main-custom-tc-3754731-1035x207-zcisfoksrlhgenizjtxxxipzfxuucyqt.jpeg",
       "Description": "Ask anything"
     }
-],
-"Spaces_Health":[
-  {
+  ],
+  "Spaces_Health": [
+    {
       "id": 1,
       "name": "Weight Loss Challenge ",
       "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1627140-1035x207-dehthqtgumqszuxeevknepzocfyowgrr.jpeg",
@@ -332,82 +284,72 @@
       "name": "Acupressure & Ayurvedic Remedies",
       "image": "https://qph.cf2.quoracdn.net/main-custom-tc-3375635-1035x207-nmxtjakthpxmnvheslybhkwgoisdafto.jpeg",
       "Description": "Hi, My name is Renu and I am a Acupressure Doctor."
-    } 
-   
-],
-"Spaces_Food": [
-  {
-    "id": 1,
-    "name": "Quick Recipes",
-    "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1711141-1035x207-uynbemqwnfakwmbxqwbtwezxjhqilxcs.jpeg",
-    "Description": "Recipes which are simple and fast to cook."
-  },
-
-  {
+    }
+  ],
+  "Spaces_Food": [
+    {
+      "id": 1,
+      "name": "Quick Recipes",
+      "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1711141-1035x207-uynbemqwnfakwmbxqwbtwezxjhqilxcs.jpeg",
+      "Description": "Recipes which are simple and fast to cook."
+    },
+    {
       "id": 2,
       "name": "Foods of India!",
       "image": "https://qph.cf2.quoracdn.net/main-custom-tc-455106-1035x207-fyfbxvtmrraqmqlmwqbngljzewrhiyvh.jpeg",
       "Description": "A space that helps you to find out new dishes and restaurants to hang out......."
     },
-
     {
       "id": 3,
       "name": "COOKING-Tips/Hacks",
       "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1638258-1035x207-uguumkfuvrverpfojrqmiltqikazizkt.jpeg",
       "Description": "Know bout every Food/how to cook any FOOD ON THE PLANET (Posts gets added daily)"
     },
-
     {
       "id": 4,
       "name": "Recipes adda",
       "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1590183-1035x207-lxilffmoeliqovrthzbikougjcfbdxyh.jpeg",
       "Description": "Cant be a youtuber? Be a quoran. Post your recipes and tips and queries."
     },
-
     {
       "id": 5,
       "name": "Explore Indian food",
       "image": "https://qsf.cf2.quoracdn.net/-4-ans_frontend_assets.images.tribes.defaults.space_banner_green.png-26-f0b46f18277322da.png",
       "Description": "share your food recipes, cooking tips"
     },
-
     {
       "id": 6,
       "name": "Food Question",
       "image": "https://qsf.cf2.quoracdn.net/-4-ans_frontend_assets.images.tribes.defaults.space_banner_gray.png-26-1f9c20337a735e4b.png",
       "Description": "This channel is about another or various types of food. Keep Supporting."
     },
-
     {
       "id": 7,
       "name": "All Health Information",
       "image": "https://qph.cf2.quoracdn.net/main-custom-tc-3214605-1035x207-itmfvhxdgmkssnrzbgcylernituaxxlt.jpeg",
       "Description": "Various tips to keep the body healthy and well."
     },
-
     {
       "id": 8,
       "name": "Hamida Khan's Space",
       "image": "https://qsf.cf2.quoracdn.net/-4-ans_frontend_assets.images.tribes.defaults.space_banner_pink.png-26-f43043a77377c880.png",
       "Description": "All type post health,nature,food,hair loss,jokes everything."
     },
-
     {
       "id": 9,
       "name": "Food and Recipes Tips",
       "image": "https://qph.cf2.quoracdn.net/main-custom-tc-3546896-1035x207-lnijvtcmbtqgchcdxhxffyzvdxbfzkde.jpeg",
       "Description": "This space is all about food and recipes Tips."
     },
-
     {
       "id": 10,
       "name": "Indian Food Recipes",
       "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1656666-1035x207-rllyzvdzlqgrjduenzeljlbkiycusjdw.jpeg",
       "Description": "Join this space to get daily updates and info regarding Indian Food Recipes"
     }
-],
-"Spaces_Movies":[
-  {
+  ],
+  "Spaces_Movies": [
+    {
       "id": 1,
       "name": "BOLLYWOOD EXPRESS",
       "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1612758-320x64-fcmxvxeleskmmltytvochkhnrwuvftsp.jpeg",
@@ -467,11 +409,91 @@
       "image": "https://qph.cf2.quoracdn.net/main-custom-tc-3789694-1035x207-fstqzkcptejmimbtersohiikfaouvnbu.jpeg",
       "Description": "MEME - KNOWLEDGE - TIPS - ENTERTAINMENT - ENJOY 😎😜"
     }
-
-],
-
-  "questions": [],
-  "posts": [],
+  ],
+  "questions": [
+    {
+      "userId": 101479065886207950000,
+      "question": "Hello",
+      "date": "",
+      "id": 1
+    },
+    {
+      "userId": 101479065886207950000,
+      "question": "Hi",
+      "date": "",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "question": "Hi arsh",
+      "date": "",
+      "id": 3
+    }
+  ],
+  "answers": [
+    {
+      "userId": 1,
+      "questionId": 3,
+      "answer": "Hello",
+      "id": 1
+    },
+    {
+      "userId": 101479065886207950000,
+      "questionId": 2,
+      "answer": "Hello",
+      "id": 2
+    },
+    {
+      "userId": 101479065886207950000,
+      "questionId": 2,
+      "answer": "Hello",
+      "id": 3
+    },
+    {
+      "userId": 101479065886207950000,
+      "questionId": 2,
+      "answer": "Hello",
+      "id": 4
+    },
+    {
+      "userId": 101479065886207950000,
+      "questionId": 2,
+      "answer": "Hello",
+      "id": 5
+    },
+    {
+      "userId": 101479065886207950000,
+      "questionId": 3,
+      "answer": "Hello User 1",
+      "id": 6
+    },
+    {
+      "userId": 101479065886207950000,
+      "questionId": 1,
+      "answer": "Hi Bhai",
+      "id": 7
+    }
+  ],
+  "posts": [
+    {
+      "userId": 101479065886207950000,
+      "userName": "arshgoyal459",
+      "userImage": "https://lh3.googleusercontent.com/a/AGNmyxbLX1p5Ybxzskl2CmfmGTTKfX7sqmP_98xhxMZ8=s96-c",
+      "post": "<p><strong>Hello guys how are you all</strong></p>",
+      "imageUrl": "",
+      "date": "Sat Mar 18 2023 22:56:48 GMT+0530 (India Standard Time)",
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "userName": "arshgoyal188",
+      "userImage": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fimgv3.fotor.com%2Fimages%2Fblog-cover-image%2F10-profile-picture-ideas-to-make-you-stand-out.jpg&tbnid=Sftxv-XsWOqEQM&vet=12ahUKEwjOl6md_-X9AhWZ5nMBHbMKCHIQMygTegUIARCEAg..i&imgrefurl=https%3A%2F%2Fwww.fotor.com%2Fblog%2Fprofile-picture-ideas%2F&docid=ZDKJjCOmeX62ZM&w=4500&h=2532&q=profile%20photo&ved=2ahUKEwjOl6md_-X9AhWZ5nMBHbMKCHIQMygTegUIARCEAg",
+      "post": "<p>Hi guys How are you</p>",
+      "imageUrl": "",
+      "date": "Sat Mar 18 2023 22:58:40 GMT+0530 (India Standard Time)",
+      "id": 2
+    }
+  ],
   "read": [
     {
       "id": 1,
