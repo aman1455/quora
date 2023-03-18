@@ -1,8 +1,8 @@
-import { Route, Routes } from 'react-router-dom';
-import LoginComp from '../components/Login/LoginComp';
-import PrivateRoute from './Private';
-import { Home } from './home';
-import LoginRoute from './LoginRoute';
+import { Route, Routes } from "react-router-dom"
+import LoginComp from "../components/Login/LoginComp"
+import PrivateRoute from "./Private"
+import { Home } from "./home"
+import LoginRoute from "./LoginRoute"
 
 function AllRoutes() {
   return (
@@ -21,9 +21,8 @@ function AllRoutes() {
           <PrivateRoute>
             <Home />
           </PrivateRoute>
-        }
-
+        }*/}
     </Routes>
-  );
+  )
 }
-export default AllRoutes;
+export default AllRoutes
