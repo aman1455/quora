@@ -22,17 +22,17 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Card, Text, Box, Flex, Icon, IconButton } from "@chakra-ui/react";
 function DetailsPage() {
-  let { id } = useParams();
-  console.log(id);
-  let url = `http://localhost:8080/questions/${id}/?_embed=answers&_embed=acomments`;
-  let dispatch = useDispatch();
+  let { id } = useParams()
+  // console.log(id)
+  let url = `http://localhost:8080/questions/${id}/?_embed=answers&_embed=acomments`
+  let dispatch = useDispatch()
   useEffect(() => {
     axios
       .get(
         `http://localhost:8080/questions/${id}?_embed=answers&_embed=acomments`
       )
       .then((res) => {
-        console.log(res.data);
+        // console.log(res.data)
         dispatch({
           type: "Answers",
           payload: res.data,
@@ -45,12 +45,11 @@ function DetailsPage() {
   let userReducer = useSelector((storeData) => {
     return storeData.UserReducer
   })
-  console.log(data, "hello");
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const initialRef = React.useRef(null);
-  let [tA, setTA] = useState("");
-  let [tAC, setTAC] = useState("");
-
+  // console.log(data, "hello")
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const initialRef = React.useRef(null)
+  let [tA, setTA] = useState("")
+  let [tAC, setTAC] = useState("")
   function handleAnswerClick(e) {
     axios
       .post("http://localhost:8080/answers", {
@@ -59,9 +58,9 @@ function DetailsPage() {
         answer: tA,
       })
       .then((res) => {
-        console.log(res.data);
-        setTA("");
-      });
+        // console.log(res.data)
+        setTA("")
+      })
   }
   function handleCommentClick(e) {
     axios
@@ -72,8 +71,8 @@ function DetailsPage() {
         answer: tAC,
       })
       .then((res) => {
-        console.log(res.data);
-        setTAC("");
+        // console.log(res.data)
+        setTAC("")
         axios
           .get(
             `http://localhost:8080/questions/${id}?_embed=answers&_embed=acomments`
@@ -82,10 +81,10 @@ function DetailsPage() {
             dispatch({
               type: "Answers",
               payload: res.data,
-            });
-            console.log(res.data);
-          });
-      });
+            })
+            // console.log(res.data)
+          })
+      })
   }
 
   return (
@@ -394,8 +393,8 @@ function DetailsPage() {
                 placeholder="Enter Your Answer"
                 value={tA}
                 onChange={(e) => {
-                  setTA(e.target.value);
-                  console.log(e.target.name);
+                  setTA(e.target.value)
+                  console.log(e.target.name)
                 }}
               />
             </FormControl>
@@ -437,7 +436,7 @@ function DetailsPage() {
                       value={tAC}
                       onChange={(e) => {
                         setTAC(e.target.value)
-                        console.log(e.target.name)
+                        // console.log(e.target.name)
                       }}
                     />
                   </FormControl>

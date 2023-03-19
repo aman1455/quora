@@ -33,6 +33,7 @@ import {
   RepeatIcon,
   TriangleDownIcon,
 } from "@chakra-ui/icons"
+import { useSelector, useDispatch } from "react-redux"
 function formatDate(dateString) {
   const date = new Date(dateString)
   const options = {
@@ -46,17 +47,30 @@ function formatDate(dateString) {
 
 function Post() {
   const [posts, setPosts] = useState([])
+  let data = useSelector((sData) => {
+    return sData.PostReducer
+  })
+  let dispatch = useDispatch()
 
   useEffect(() => {
-    fetch(`http://localhost:${process.env.REACT_APP_JSON_SERVER_PORT}/posts`)
+    fetch(
+      `http://localhost:${process.env.REACT_APP_JSON_SERVER_PORT}/posts?_embed=pcomments&_embed=pupvotes&_embed=pdownvotes`
+    )
       .then((response) => response.json())
-      .then((data) => setPosts(data))
-  }, [])
+      .then((data) => {
+        // console.log(data, "This is Posts")
+        setPosts(data)
+        dispatch({
+          type: "post_data",
+          payload: data,
+        })
+      })
+  }, [data])
 
   return (
-    <Box maxW="30%" mx="auto">
+    <Box maxW="40%" mx="auto">
       {posts.map((post) => (
-        <Postcard post={post} />
+        <Postcard post={post} posts={posts} setPosts={setPosts} />
       ))}
     </Box>
   )

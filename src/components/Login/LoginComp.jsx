@@ -47,7 +47,7 @@ const LoginComp = () => {
     }
   }
   function validateForm() {
-    console.log(state.password)
+    // console.log(state.password)
     let err = {}
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i
     if (!state.email) {
@@ -76,7 +76,7 @@ const LoginComp = () => {
     axios
       .get(`http://localhost:8080/users?email=${state.email}`)
       .then((json) => {
-        console.log(json.data)
+        // console.log(json.data)
         if (json.data.length > 0) {
           validatePassword()
         } else {
@@ -97,7 +97,7 @@ const LoginComp = () => {
         `http://localhost:8080/users?email=${state.email}&password=${state.password}`
       )
       .then((json) => {
-        console.log(json.data)
+        // console.log(json.data)
         if (json.data.length > 0) {
           dispatch({
             type: "authIt",
@@ -135,7 +135,7 @@ const LoginComp = () => {
     axios
       .get(`http://localhost:8080/users?email=${state.email}`)
       .then((json) => {
-        console.log(json.data)
+        // console.log(json.data)
         if (json.data.length > 0) {
           setError({
             email: "Email account already exists Can not register again",
@@ -145,10 +145,11 @@ const LoginComp = () => {
         }
       })
       .catch((error) => {
-        setError({ password: "Server Error Please Try Again" })
+        setError({ password: "Server Error Please Try Again " })
       })
   }
   function postCredentials() {
+    console.log(state.email.match(/^([^@]*)@/)[1])
     axios
       .post(`http://localhost:8080/users`, {
         email: state.email,
@@ -171,8 +172,8 @@ const LoginComp = () => {
         })
         navigate("/")
       })
-      .catch((err) => {
-        setError({ password: "Server Error Please Try Again" })
+      .catch((errors) => {
+        setError({ password: "Server Error Please Try Again in POST" })
       })
   }
   return (
@@ -223,12 +224,12 @@ const LoginComp = () => {
                 discoveryDocs="claims_supported"
                 access_type="offline"
                 onResolve={({ provider, data }) => {
-                  console.log(
-                    data.email,
-                    data.sub,
-                    data.email.match(/^([^@]*)@/)[1],
-                    data
-                  )
+                  // console.log(
+                  //   data.email,
+                  //   data.sub,
+                  //   data.email.match(/^([^@]*)@/)[1],
+                  //   data
+                  // )
                   axios
                     .get(`http://localhost:8080/users?email=${data.email}`)
                     .then((json) => {
@@ -241,11 +242,11 @@ const LoginComp = () => {
                             email: data.email,
                             password: "",
                             name: data.email.match(/^([^@]*)@/)[1],
-                            id: Number(data.sub),
+                            id: Number(data.sub.substring(0, 3)),
                             avatar: data.picture,
                           })
                           .then((res) => {
-                            console.log(res.data)
+                            // console.log(res.data)
                             dispatch({
                               type: "authIt",
                               token: res.data.id,

@@ -8,6 +8,7 @@ import {
   Button,
   Textarea,
 } from "@chakra-ui/react"
+import CustomModal from "./customModal"
 import { CloseIcon } from "@chakra-ui/icons"
 import { BiEdit } from "react-icons/bi"
 import RightBar from "./RightBar"
@@ -37,32 +38,32 @@ function MiddleBar() {
   let navigate = useNavigate()
   const { isOpen, onOpen, onClose } = useDisclosure()
   const initialRef = React.useRef(null)
+  let [Questiondata, setQuestionData] = useState([])
   let dispatch = useDispatch()
   let [tA, setTA] = useState("")
   let data = useSelector((storeData) => {
     return storeData.AuthReducer
   })
-  
-  let userReducer = useSelector((storeData) => {
-    return storeData.UserReducer
-  })
-  console.log(userReducer.name, "userReducer");
-  let Questiondata = useSelector((storeData) => {
-    return storeData.QuestionReducer
-  })
-  // const style = { Modal: { sizes: { xl: { Content: { maxWidth: "56rem" }, }, }, }, };
-  useEffect(() => {
-    // `http://localhost:8080/users/${Number(data.token)}/?_embed=questions`
+  // let Questiondata = useSelector((storeData) => {
+  //   return storeData.QuestionReducer
+  // })
+
+  function updateQuestions() {
     axios.get(`http://localhost:8080/questions?_embed=answers`).then((res) => {
-      console.log(res.data)
+      // console.log(res.data)
       dispatch({
         type: "Question_Data",
         payload: res.data,
       })
+      setQuestionData(res.data)
     })
+  }
+  useEffect(() => {
+    updateQuestions()
   }, [])
 
   function handleAnswerClick(e) {
+    console.log(e.target.name)
     axios
       .post("http://localhost:8080/answers", {
         userId: Number(data.token),
@@ -72,9 +73,10 @@ function MiddleBar() {
       .then((res) => {
         console.log(res.data)
         setTA("")
+        updateQuestions()
       })
   }
-  console.log(Questiondata)
+  // console.log(Questiondata)
   let foc = useRef(null)
   return (
     <Box display="flex">
@@ -197,75 +199,14 @@ function MiddleBar() {
                   </Box>
                   <Box display="flex" justifyContent="space-between" mt={3}>
                     <Box>
-                      <Button
-                        colorScheme="blackAlpha"
-                        variant="outline"
-                        borderRadius="20px"
-                        borderColor={"rgb(224,224,224)"}
-                        onClick={onOpen}
-                        color="rgb(99,100,102)"
-                      >
-                      <Icon  boxSize={6}>
-                      <g stroke-width="1.5" fill="none" fill-rule="evenodd"><path d="M18.571 5.429h0a2 2 0 0 1 0 2.828l-9.9 9.9-4.24 1.416 1.412-4.245 9.9-9.9h0a2 2 0 0 1 2.828 0Z" class="icon_svg-stroke" stroke="#666" stroke-linecap="round" stroke-linejoin="round"></path><path class="icon_svg-fill_as_stroke" fill="#666" d="m4.429 19.571 2.652-.884-1.768-1.768z"></path><path d="M14.5 19.5h5v-5m-10-10h-5v5" class="icon_svg-stroke" stroke="#666" stroke-linecap="round" stroke-linejoin="round"></path></g>
-                      </Icon>
-                        Answer
-                      </Button>
-                      <Modal
-                        initialFocusRef={initialRef}
-                        isOpen={isOpen}
-                        onClose={onClose}
-                        isCentered
-                        size="lg"
-                        h="200vh"
-                        
-                      >
-                        <ModalOverlay />
-                        <ModalContent >
-                          <Flex mt="20px" alignItems={"center"} pl="17px" w={"60%"}>
-                         <Box>
-                         <Img borderRadius={30} h={"50px"} w={"50px"} src={userReducer.avatar}/>
-                         </Box> 
-                          <Box ml={"10px"}> <Text fontWeight={"bold"}>{userReducer.name}</Text>
-                          <Button mt={"5px"} borderColor="rgb(224,224,224)" borderRadius={30} size="sm" rightIcon={<FiChevronRight boxSize={6}/>} colorScheme='rgb(99,100,102)' variant='outline'>Choose credential</Button>
-                          </Box>
-                          </Flex>
-                          <ModalCloseButton />
-                          <ModalBody pb={6}>
-                            <FormControl>
-                              <FormLabel fontWeight={"bold"} fontSize="20px">{e.question}</FormLabel>
-                              <Textarea
-                                ref={initialRef}
-                                placeholder="Write Your Answer"
-                                value={tA}
-                                name={e.id}
-                                onChange={(e) => {
-                                  setTA(e.target.value)
-                                  console.log(e.target.name)
-                                }}
-                              />
-                              
-                            </FormControl>
-                          </ModalBody>
-                          <ModalFooter>
-                            <Button
-                              name={e.id}
-                              colorScheme="blue"
-                              mr={3}
-                              onClick={(e) => {
-                                handleAnswerClick(e)
-                                onClose(e)
-                              }}
-                              borderRadius="20px"
-                              pl="20px"
-                              pr="20px"
-                              
-                            >
-                              Post
-                            </Button>
-                           
-                          </ModalFooter>
-                        </ModalContent>
-                      </Modal>
+                      <CustomModal
+                        e={e}
+                        showModalButtonText={"Answer"}
+                        modalHeader={"Enter Your Answer"}
+                        tA={tA}
+                        setTA={setTA}
+                        handleAnswerClick={handleAnswerClick}
+                      />
                       &nbsp; &nbsp;
 
                       <Button

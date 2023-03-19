@@ -25,8 +25,8 @@ function AnswerCard() {
   return (
     <>
     <div>
-    <Text>NArayan</Text>
-    {/* <Center>
+    {/* <Text>NArayan</Text> */}
+    <Center>
 
     <Text fontSize={"20px"} fontWeight={"bold"} color={"rgb(99,100,102)"} pb={"10px"} pt={"10px"}>Total Answers {data.answers.length}</Text>
     </Center>
@@ -183,7 +183,7 @@ function AnswerCard() {
           </Card>
           </Center>
         );
-      })} */}
+      })}
     </div>
   </>
   )
