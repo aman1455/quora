@@ -16,6 +16,8 @@ import Post from "../components/Postpage/Post"
 import SpacePageComp from "../components/SpacePage/SpacePageComp"
 import AnswerCard from "../components/DetailsPage/AnswerCard"
 import Allcompdetails from "../components/DetailsPage/Allcompdetails"
+import PageNotFound from "../components/PageNotFound/PageNotFound"
+// import Notifications from "../components/Notifications/Notifications"
 function AllRoutes() {
   let [state, setState] = useState(true)
   return (
@@ -89,6 +91,15 @@ function AllRoutes() {
           </PrivateRoute>
         }
       />
+      <Route
+        path="*"
+        element={
+          // <PrivateRoute>
+            <PageNotFound />
+          // </PrivateRoute>
+        }
+      />
+     
     </Routes>
   )
 }

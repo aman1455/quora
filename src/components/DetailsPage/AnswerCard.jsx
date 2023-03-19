@@ -9,11 +9,10 @@ import {
   Box,
   Img,
   Flex,
-  Text,
-  Center,
-} from "@chakra-ui/react"
-import { useDispatch, useSelector } from "react-redux"
-import ReadMore from "../NavbarAndSidebar/SidebarOptions/ReadMore"
+  Text,Center
+} from "@chakra-ui/react";
+import {  useSelector } from "react-redux";
+import ReadMore from '../NavbarAndSidebar/SidebarOptions/ReadMore';
 function AnswerCard() {
   let data = useSelector((sdata) => {
     return sdata.AnswerReducer

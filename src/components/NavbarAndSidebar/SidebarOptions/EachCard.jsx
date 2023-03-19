@@ -11,8 +11,10 @@ import {
   Text,
 } from "@chakra-ui/react"
 import ReadMore from "./ReadMore"
+import { Skeleton, SkeletonCircle, SkeletonText } from '@chakra-ui/react'
 function EachCard() {
   let [post, setPost] = useState([])
+  let [isLoading, setLoading] = useState(false)
   useEffect(() => {
     fetchdata()
   }, [])
@@ -20,6 +22,10 @@ function EachCard() {
     let data = await fetch("http://localhost:8080/read")
     let jsondata = await data.json()
     setPost(jsondata)
+    setTimeout(()=>{
+      
+      setLoading(true)
+    },3000)
     // console.log(jsondata, "data");
   }
 
@@ -28,13 +34,16 @@ function EachCard() {
       <div>
         {post.map((e) => {
           return (
+           
             <Card border="1px solid rgb(222,224,225)" w={"70%"} mb="15px">
+            <Skeleton isLoaded={isLoading}  >
               <Flex mt="15px">
                 <Box ml="17px" mr="10px" w={"7%"}>
                   <Img borderRadius="25px" src={e.img} w={"100%"} />
                 </Box>
                 <Box w="100%">
                   <Flex alignItems="center">
+                   
                     <Text
                       pr="10px"
                       fontWeight="bold"
@@ -81,22 +90,27 @@ function EachCard() {
                   </Button>
                 </Box>
               </Flex>
+              </Skeleton>
               <CardBody>
+              <Skeleton isLoaded={isLoading} >
                 <Text fontWeight="bold" pb={2}>
                   {e.question}
                 </Text>
 
+                </Skeleton>
+                <Skeleton isLoaded={isLoading}>
                 <Text>{e.answer}</Text>
                 <ReadMore text={e.answer} />
-
-                <Text mt="10px" color="rgb(147,149,152)">
+                </Skeleton>
+                <Skeleton isLoaded={isLoading} ><Text mt="10px" color="rgb(147,149,152)">
                   {e.viewsCount}
-                </Text>
+                </Text></Skeleton>
+                
               </CardBody>
-
               {/* <CardFooter> */}
               <Box>
                 {/* rgb(222,224,225) */}
+                <Skeleton isLoaded={isLoading}  >
                 <Stack direction="row">
                   <Box
                     borderRadius="20px"
@@ -180,9 +194,11 @@ function EachCard() {
                     </Icon>
                   </Button>
                 </Stack>
+                </Skeleton>
               </Box>
               {/* </CardFooter> */}
             </Card>
+            
           )
         })}
       </div>
