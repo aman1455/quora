@@ -57,10 +57,11 @@ export function formatDate(dateString) {
   return date.toLocaleDateString(undefined, options)
 }
 
-export default function Postcard({ post, setPosts, posts }) {
+export default function Postcard({ post, setPosts, posts, state, setState }) {
   let [tAC, setTAC] = useState("")
   const { isOpen, onOpen, onClose } = useDisclosure()
   let [upvoteCount, setUpVoteCount] = useState(0)
+  let [downvoteCount, setDownVoteCount] = useState(0)
   const initialRef = React.useRef(null)
   const [upvote, setUpvote] = useState(false)
   const [downvote, setDownvote] = useState(false)
@@ -71,6 +72,7 @@ export default function Postcard({ post, setPosts, posts }) {
   })
   useEffect(() => {
     upvoteFinder()
+    // downvoteFinder()
   }, [posts])
   useEffect(() => {
     axios
@@ -78,9 +80,18 @@ export default function Postcard({ post, setPosts, posts }) {
         `http://localhost:8080/pupvotes?postId=${post.id}&userId=${AuthData.token}`
       )
       .then((res) => {
-        setUpvote(res.data[0].upvote)
+        setUpvote(res.data[0].upvote || false)
       })
   }, [])
+  // useEffect(() => {
+  //   axios
+  //     .get(
+  //       `http://localhost:8080/pdownvotes?postId=${post.id}&userId=${AuthData.token}`
+  //     )
+  //     .then((res) => {
+  //       setDownvote(res.data[0].downvote || false)
+  //     })
+  // }, [])
 
   function updatePosts() {
     axios
@@ -92,7 +103,10 @@ export default function Postcard({ post, setPosts, posts }) {
           type: "post_data",
           payload: res.data,
         })
+        // console.log(downvoteCount)
         setPosts(res.data)
+        setState(!state)
+
         // console.log(res.data, "This is inside Card")
       })
   }
@@ -143,6 +157,49 @@ export default function Postcard({ post, setPosts, posts }) {
   }
   function handledownvote() {
     setDownvote(!downvote)
+    // axios
+    //   .get(
+    //     `http://localhost:8080/pdownvotes?postId=${post.id}&userId=${AuthData.token}`
+    //   )
+    //   .then((res) => {
+    //     // console.log(res.data)
+    //     if (res.data.length === 1) {
+    //       if (res.data[0].upvote) {
+    //         axios
+    //           .patch(`http://localhost:8080/pdownvotes/${res.data[0].id}`, {
+    //             // userId: Number(post.userId),
+    //             // postId: Number(post.id),
+    //             downvote: false,
+    //           })
+    //           .then(() => {
+    //             setDownvote(false)
+    //             updatePosts()
+    //           })
+    //       } else {
+    //         axios
+    //           .patch(`http://localhost:8080/pdownvotes/${res.data[0].id}`, {
+    //             // userId: Number(post.userId),
+    //             // postId: Number(post.id),
+    //             downvote: true,
+    //           })
+    //           .then(() => {
+    //             setDownvote(true)
+    //             updatePosts()
+    //           })
+    //       }
+    //     } else {
+    //       axios
+    //         .post(`http://localhost:8080/pdownvotes`, {
+    //           userId: Number(AuthData.token),
+    //           postId: Number(post.id),
+    //           downvote: true,
+    //         })
+    //         .then(() => {
+    //           setDownvote(true)
+    //           updatePosts()
+    //         })
+    //     }
+    //   })
   }
   function handleExpandClick(postId) {
     setExpandedPost((prevExpandedPostId) =>
@@ -194,6 +251,22 @@ export default function Postcard({ post, setPosts, posts }) {
         // console.log(count)
       })
   }
+  // function downvoteFinder() {
+  //   axios
+  //     .get(`http://localhost:8080/posts/${post.id}?_embed=pdownvotes`)
+  //     .then((res) => {
+  //       let count = 0
+  //       // console.log(res.data, "Inside Upvote finder")
+  //       res.data.pdownvotes.forEach((e, i) => {
+  //         if (e.downvote === true) {
+  //           count++
+  //           // console.log(count)
+  //         }
+  //       })
+  //       setDownVoteCount(count)
+  //       // console.log(count)
+  //     })
+  // }
   return (
     <Box key={post.id} p="2" shadow="md" borderWidth="1px" marginTop="2">
       <Flex direction="column" gap="2">
@@ -295,6 +368,7 @@ export default function Postcard({ post, setPosts, posts }) {
                       d="m12 20 9-11h-6V4H9v5H3z"
                     />
                   </Icon>
+                  {downvoteCount}
                 </Button>
               </Box>
               <Button
