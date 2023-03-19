@@ -1,100 +1,58 @@
-import React from "react"
-import {
-  Flex,
-  Box,
-  Spacer,
-  Heading,
-  Text,
-  Button,
-  Stack,
-  Card,
-  CardHeader,
-  Divider,
-  Center,
-} from "@chakra-ui/react"
-import { PlusSquareIcon, EmailIcon } from "@chakra-ui/icons"
-import { useDispatch } from "react-redux"
-
+import React from "react";
+import { Box, Flex, Text, Button,Divider, Center, grid} from "@chakra-ui/react";
+import {GrAddCircle} from "react-icons/gr"
+import {AiOutlineCompass,AiOutlineMail} from "react-icons/ai"
 export default function SpacesPageTop() {
   return (
-    <Box bg="#f1f2f2">
-      <Flex
-        paddingLeft="7%"
-        paddingTop="3%"
-        paddingRight="7%"
-        bg="#f1f2f2"
-        boxShadow="sm"
+    <Flex margin="auto" justifyContent={"center"} gap="80px">
+      <Box
+        backgroundImage="url('https://qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.tribes.tribe_welcome_banner_full.png-26-64d500fd69494b66.png')"
+        backgroundSize="contain"
+      backgroundPosition="right"
+      backgroundRepeat="no-repeat"
+        width="40%"
+        height="120px"
+        boxShadow={"sm"}
+        // margin="auto"
+        marginTop="4"
+        paddingLeft="2"
       >
-        <Box bg="white" w="75%" h="150px" boxShadow="sm" p={5}>
-          <Flex
-            box-sizing="border-box"
-            backgroundImage="url('https://qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.tribes.tribe_welcome_banner_full.png-26-64d500fd69494b66.png')"
-            bgPosition="right bottom"
-            backgroundSize="350px 120px"
-            backgroundRepeat="no-repeat"
-          >
-            <Box>
-              <Text fontSize="xl" fontWeight="medium" marginTop="10px">
-                Welcome to Spaces!
-              </Text>
-              <Text fontSize="sm" color="#636466">
-                Follow Spaces to explore your interests on Quora.
-              </Text>
-              <Stack direction="row" spacing={4} paddingTop="20px">
-                <Button
-                  leftIcon={<PlusSquareIcon color="#2e69ff" />}
-                  colorScheme="blue"
-                  variant="outline"
-                  borderRadius="20"
-                  height="28px"
-                >
-                  Create a Space
-                </Button>
-                <Button
-                  leftIcon={<PlusSquareIcon color="#2e69ff" />}
-                  colorScheme="blue"
-                  variant="outline"
-                  borderRadius="20"
-                  height="28px"
-                >
-                  Discover Spaces
-                </Button>
-              </Stack>
-            </Box>
+        <Flex gap={4} direction="column">
+        <Text fontSize="xl" fontWeight="bold">Welcome to Spaces!</Text>
+        <Text>Follow Spaces to explore your interests on Quora.</Text>
+        </Flex>
+        <Flex gap={2} marginTop="2">
+          <Button size="sm" variant="outline" borderRadius={30} color="blue" borderColor={"blue"}>
+            <Flex gap="2">
+              <GrAddCircle size={"15"} color="blue"/>
+              <Text fontWeight={"semibold"}>Create a Space</Text>
+            </Flex>
+          </Button>
+          <Button size="sm" variant="outline" borderRadius={30} color="blue" borderColor={"blue"}>
+            <Flex gap="2">
+              <AiOutlineCompass size={"15"}/>
+              <Text fontWeight={"semibold"}>Discover Spaces</Text>
+            </Flex>
+          </Button>
+        </Flex>
+      </Box>
+      <Box boxShadow={"sm"} bg={"ffffff"} width="10%" marginTop="4"  p="1">
+        <Text color="#282829">Pending Invites</Text>
+        <Divider></Divider>
+        <Box
+         w="100%" 
+         height={"20"}
+        display="flex"
+      justifyContent="center"
+      alignItems="center">
+          <Flex direction={"column"}>
+          <Box margin={"auto"}>
+          <AiOutlineMail color="#939598"/>
+          </Box>
+          <Text color="#939598" fontWeight={"light"}>No Invites</Text>
           </Flex>
         </Box>
-        <Spacer />
-        <Card bg="white" w="22%" h="150px">
-          <Box h="30px" display={"flex"} alignItems="center">
-            <Box pl={4}>
-              <Text fontSize="15px" color="#282829" fontWeight="500">
-                Pending Invites
-              </Text>
-            </Box>
-          </Box>
-          <Divider orientation="horizontal" color="gray" />
-          <Center paddingTop="30px" display={"grid"}>
-            <Box display="flex" flexDirection={"column"}>
-              <Box w="50px" display="grid">
-                <Box m="auto">
-                  <EmailIcon color="gray" />
-                </Box>
-              </Box>
-              <Text color="gray" fontSize="13px">
-                No invites
-              </Text>
-            </Box>
-          </Center>
-        </Card>
-      </Flex>
-      <Box bg="#f1f2f2">
-        <Heading as="h4" size="md" paddingTop="30px">
-          Discover Spaces
-        </Heading>
-        <Text fontSize="sm" fontWeight="medium" paddingTop="15px">
-          Spaces you might like
-        </Text>
       </Box>
-    </Box>
-  )
+    </Flex>
+  );
 }

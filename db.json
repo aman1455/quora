@@ -22,6 +22,380 @@
       "id": 102
     }
   ],
+  "Spaces": {
+    "Spaces_Books": [
+      {
+        "id": 1,
+        "name": "Books that influenced You",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1586670-1035x207-yakgmjqqvwyhvizdudzejxykynxvhwwq.jpeg",
+        "Description": "ONLY MENTIONS ABOUT THE BOOKS THAT INFLUENCED YOU (+COMICS & MEMES R INCLUDED 2)"
+      },
+      {
+        "id": 2,
+        "name": "Book Summary And Book Recommendatio",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-2631417-1035x207-mtbvxzygoqehcpmbyncxyfrlwridxajn.jpeg",
+        "Description": "Here you can have a book summary and recommendations of some of the great books"
+      },
+      {
+        "id": 3,
+        "name": "Book summary 📚📒📔📕📓📝",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1606727-1035x207-gnyahayqvusflwmmuugfcdrozutrhrol.jpeg",
+        "Description": "The space is about book summary ..brief overview of any kind of book."
+      },
+      {
+        "id": 4,
+        "name": "Book Store",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1577994-1035x207-jutbdclwjjwxjvjwufszfsunlnlocgix.jpeg",
+        "Description": "Discover your next favorite book and connect with other book lovers in our Book"
+      },
+      {
+        "id": 5,
+        "name": "Your Writing",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1591652-1035x207-ckrfmocbtcgtkglrbuxljoplgvpkzopo.jpeg",
+        "Description": "Keep Reading • Keep Writing • Keep Learning!"
+      },
+      {
+        "id": 6,
+        "name": "Creative-Writing Skills",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1748732-1035x207-behkhtueqhdekzqzrkjtqnvgbeeydvua.jpeg",
+        "Description": "Writing Ideas/Tips/Skills/Best ways/Methods/Master writing Skills"
+      },
+      {
+        "id": 7,
+        "name": "Novels wheels",
+        "image": "Writing Ideas/Tips/Skills/Best ways/Methods/Master writing Skills",
+        "Description": "Here, you'll find helpful tips on writing & much more gossips related to books."
+      },
+      {
+        "id": 8,
+        "name": "books and bookshelves",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-2396055-1035x207-rqmizrrnyynawieutogboeikwhhjnprv.jpeg",
+        "Description": "Fiction genre, Fans of fantasy, science fiction, horror,romance books,history"
+      },
+      {
+        "id": 9,
+        "name": "Book That You Like",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1616412-1035x207-bkpmlucacateezfqsvyrenkxozovszyd.jpeg",
+        "Description": "Just the collection of books that you like."
+      },
+      {
+        "id": 10,
+        "name": "Books Review",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1625854-1035x207-onehvtqfikyxufkwgeugewtrikcmaenm.jpeg",
+        "Description": "This space is to share and talk about the Books Review & your recommendations"
+      }
+    ],
+    "Spaces_Music": [
+      {
+        "id": 1,
+        "name": "Music and Songs",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1577210-1035x207-snmbtbuytqjqmksuqpuwvonddyytisqq.jpeg",
+        "Description": "Browse hundreds artists, composers, and curated playlists"
+      },
+      {
+        "id": 2,
+        "name": "Music Home",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1589853-1035x207-xoynlerlvnkhnwsoqxpvwvnexwkzbodc.jpeg",
+        "Description": "1)Music Lovers HOME 2)Latest Music updates 3) World's Best Music Albums Display"
+      },
+      {
+        "id": 3,
+        "name": "The Songs Of Life",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1588708-1035x207-ouepakzzoxbnimfdcfkjwiokxulkkaet.jpeg",
+        "Description": "Life is a musical journey, sing along my friend - there is no dead end!!!"
+      },
+      {
+        "id": 4,
+        "name": "ðŸŽ¼Groove InnðŸŽ¶ðŸŽµ",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-2821042-1035x207-dzpnklbvydaqfluydpxppuuacltfdcpe.jpeg",
+        "Description": "Sharing their best music to make it reach out to others playlists!!!!"
+      },
+      {
+        "id": 5,
+        "name": "BLACKPINK in your areaa",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-2275817-1035x207-zkohmibkbbtldjzpyerxgaqnbrmkchsu.jpeg",
+        "Description": "Anything related to BLACKPINK!"
+      },
+      {
+        "id": 6,
+        "name": "YouTube â™§ promote",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1897021-1035x207-airxydaekihjlyhlqavwufokxbndjxtd.jpeg",
+        "Description": "You can promote your YouTube videos and channel."
+      },
+      {
+        "id": 7,
+        "name": "BTS ARMY WORLD ðŸ’œ",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1754808-1035x207-uddswjpepdeqeruojbvsiwlcfbmxcljy.jpeg",
+        "Description": "Hey army welcome to the world of BTS."
+      },
+      {
+        "id": 8,
+        "name": "Bollywood Music",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1641693-1035x207-dxjowcfshylonyojviqetrspsayqsvyu.jpeg",
+        "Description": "All Bollywood - Music/Songs/Golden old Hits/Latest Songs/Heart touching songs"
+      },
+      {
+        "id": 9,
+        "name": "Taehyung ~ My Scenery 💕",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-2234448-1035x207-qcqrinwegmizptntlvgndgexvvzouvmk.jpeg",
+        "Description": "ʟᴏᴠᴇ ʟɪᴋᴇ ʏᴏᴜ'ᴠᴇ ɴᴇᴠᴇʀ ʟᴏᴠᴇᴅ ʙᴇꜰᴏʀᴇ~ ᴋɪᴍ ᴛᴀᴇʜʏᴜɴɢ"
+      },
+      {
+        "id": 10,
+        "name": "YouTube",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1578964-1035x207-tolpfsjlrjkeerjlldnpjejsfxmqilcs.jpeg",
+        "Description": "All about YouTube. Share anything interesting & entertaining realted to YouTube."
+      }
+    ],
+    "Spaces_Science": [
+      {
+        "id": 1,
+        "name": "Physics Only",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1575985-1035x207-peplttvjlbypohgwveqmehzisbvmpswj.jpeg",
+        "Description": "Space for all Physics Lover."
+      },
+      {
+        "id": 2,
+        "name": "Physics problems & soln.",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1753732-1035x207-fhhcnyrdecbgedfobogubbvxblthqzrs.jpeg",
+        "Description": "Here you can learn, practice and solve physics problems theory and Numerical ."
+      },
+      {
+        "id": 3,
+        "name": "NEET UG Aspirants-Tips & Tricks",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1935569-1035x207-cbkycrdyrxiaxgvceuhtfooidtcgjrlh.jpeg",
+        "Description": "Here we share important tips, tricks and strategies to crack NEET UG "
+      },
+      {
+        "id": 4,
+        "name": "Chemistry",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1583775-1035x207-juwwdacthhbydhwgswpetvcyyoyvcitk.jpeg",
+        "Description": "All about chemistry knowledge sharing and update"
+      },
+      {
+        "id": 5,
+        "name": "",
+        "image": "",
+        "Description": ""
+      },
+      {
+        "id": 6,
+        "name": "Physics in a netshell",
+        "image": "https://qsf.cf2.quoracdn.net/-4-ans_frontend_assets.images.tribes.defaults.space_banner_yellow.png-26-0cad087b263ce130.png",
+        "Description": "Some interesting fact about science and it's psychology"
+      },
+      {
+        "id": 7,
+        "name": "Sanatan dhara",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-3676192-1035x207-agbrolqwmjhvfuacndwwxcezsiknhnmu.jpeg",
+        "Description": "Sanatan"
+      },
+      {
+        "id": 8,
+        "name": "Chemistry Point",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1700077-1035x207-mkyaahfkagdghophaiekcnikhkwazbpx.jpeg",
+        "Description": "Here I ask or answer chemistry questions. Chemistry Topics, Formulas, Reaction."
+      },
+      {
+        "id": 9,
+        "name": "PHYSICS-musings",
+        "image": "https://qsf.cf2.quoracdn.net/-4-ans_frontend_assets.images.tribes.defaults.space_banner_pink.png-26-f43043a77377c880.png",
+        "Description": "Theory and experiments in Physics"
+      },
+      {
+        "id": 10,
+        "name": "Ravikant Bhagat's Space",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-3754731-1035x207-zcisfoksrlhgenizjtxxxipzfxuucyqt.jpeg",
+        "Description": "Ask anything"
+      }
+    ],
+    "Spaces_Health": [
+      {
+        "id": 1,
+        "name": "Weight Loss Challenge ",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1627140-1035x207-dehthqtgumqszuxeevknepzocfyowgrr.jpeg",
+        "Description": "Weight Loss Challenge in 30 days"
+      },
+      {
+        "id": 2,
+        "name": "Nurses_Room 🩺",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1909868-1035x207-qfvrhrhkqgtgmlenyfionflmnpadhpdw.jpeg",
+        "Description": "A bunch of medicos on quora! ⛑️"
+      },
+      {
+        "id": 3,
+        "name": "Healthy And Happiness Tips",
+        "image": "https://qsf.cf2.quoracdn.net/-4-ans_frontend_assets.images.tribes.defaults.space_banner_green.png-26-f0b46f18277322da.png",
+        "Description": "Welcome To Healthy And Happiness Tips for Your Healthy and happiness Journey."
+      },
+      {
+        "id": 4,
+        "name": "NUTRITION AND HEALTH",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1583357-1035x207-bwyugwvllguodofclpwtiyxanoqptasz.jpeg",
+        "Description": "Anything related to nutrition and health"
+      },
+      {
+        "id": 5,
+        "name": "Aepit Health & fitness",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-3700413-1035x207-lyzcybifnwhdwcrncgamuictykzzgogw.jpeg",
+        "Description": "Health is overall well-being, while fitness is physical ability. Both are import"
+      },
+      {
+        "id": 6,
+        "name": "Healthful Wealth",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-3751603-320x64-uyyllyaalkrwqlndgzdakdsiaybwehng.jpeg",
+        "Description": "Investing in your health today will pay dividends for a lifetime."
+      },
+      {
+        "id": 7,
+        "name": "Health and Fitness",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1577209-320x64-hlngalcgmcrdyiqosublcqmsloozdfxx.jpeg",
+        "Description": "Healthy living advocates sharing fitness & wellness tips"
+      },
+      {
+        "id": 8,
+        "name": "Healthy tricks",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-3662755-320x64-kudyumpgkamnzyhgsiaatnzzklisamje.jpeg",
+        "Description": "Health and fitness"
+      },
+      {
+        "id": 9,
+        "name": "Rajinder Kumar",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1831443-320x64-juhsiyocfsmsmmwonbnbpxexbqoitxrk.jpeg",
+        "Description": "Health and wellness"
+      },
+      {
+        "id": 10,
+        "name": "Acupressure & Ayurvedic Remedies",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-3375635-1035x207-nmxtjakthpxmnvheslybhkwgoisdafto.jpeg",
+        "Description": "Hi, My name is Renu and I am a Acupressure Doctor."
+      }
+    ],
+    "Spaces_Food": [
+      {
+        "id": 1,
+        "name": "Quick Recipes",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1711141-1035x207-uynbemqwnfakwmbxqwbtwezxjhqilxcs.jpeg",
+        "Description": "Recipes which are simple and fast to cook."
+      },
+      {
+        "id": 2,
+        "name": "Foods of India!",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-455106-1035x207-fyfbxvtmrraqmqlmwqbngljzewrhiyvh.jpeg",
+        "Description": "A space that helps you to find out new dishes and restaurants to hang out......."
+      },
+      {
+        "id": 3,
+        "name": "COOKING-Tips/Hacks",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1638258-1035x207-uguumkfuvrverpfojrqmiltqikazizkt.jpeg",
+        "Description": "Know bout every Food/how to cook any FOOD ON THE PLANET (Posts gets added daily)"
+      },
+      {
+        "id": 4,
+        "name": "Recipes adda",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1590183-1035x207-lxilffmoeliqovrthzbikougjcfbdxyh.jpeg",
+        "Description": "Cant be a youtuber? Be a quoran. Post your recipes and tips and queries."
+      },
+      {
+        "id": 5,
+        "name": "Explore Indian food",
+        "image": "https://qsf.cf2.quoracdn.net/-4-ans_frontend_assets.images.tribes.defaults.space_banner_green.png-26-f0b46f18277322da.png",
+        "Description": "share your food recipes, cooking tips"
+      },
+      {
+        "id": 6,
+        "name": "Food Question",
+        "image": "https://qsf.cf2.quoracdn.net/-4-ans_frontend_assets.images.tribes.defaults.space_banner_gray.png-26-1f9c20337a735e4b.png",
+        "Description": "This channel is about another or various types of food. Keep Supporting."
+      },
+      {
+        "id": 7,
+        "name": "All Health Information",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-3214605-1035x207-itmfvhxdgmkssnrzbgcylernituaxxlt.jpeg",
+        "Description": "Various tips to keep the body healthy and well."
+      },
+      {
+        "id": 8,
+        "name": "Hamida Khan's Space",
+        "image": "https://qsf.cf2.quoracdn.net/-4-ans_frontend_assets.images.tribes.defaults.space_banner_pink.png-26-f43043a77377c880.png",
+        "Description": "All type post health,nature,food,hair loss,jokes everything."
+      },
+      {
+        "id": 9,
+        "name": "Food and Recipes Tips",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-3546896-1035x207-lnijvtcmbtqgchcdxhxffyzvdxbfzkde.jpeg",
+        "Description": "This space is all about food and recipes Tips."
+      },
+      {
+        "id": 10,
+        "name": "Indian Food Recipes",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1656666-1035x207-rllyzvdzlqgrjduenzeljlbkiycusjdw.jpeg",
+        "Description": "Join this space to get daily updates and info regarding Indian Food Recipes"
+      }
+    ],
+    "Spaces_Movies": [
+      {
+        "id": 1,
+        "name": "BOLLYWOOD EXPRESS",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1612758-320x64-fcmxvxeleskmmltytvochkhnrwuvftsp.jpeg",
+        "Description": "This space is about the Hindi film industry. For the entire film culture of In"
+      },
+      {
+        "id": 2,
+        "name": "Movies & TV series review",
+        "image": "https://qsf.cf2.quoracdn.net/-4-ans_frontend_assets.images.tribes.defaults.space_banner_blue.png-26-4eaf49a49fb008b5.png",
+        "Description": "Get all unbiased reviews of Movies & TV series"
+      },
+      {
+        "id": 3,
+        "name": "Netflix Nerds",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-2081788-1035x207-nfpjzmlpveeuyhuyzxoozylypsszvflr.jpeg",
+        "Description": "Let's together binge watch and review some amazing shows and movies here!"
+      },
+      {
+        "id": 4,
+        "name": "Fun with shubham",
+        "image": "https://qsf.cf2.quoracdn.net/-4-ans_frontend_assets.images.tribes.defaults.space_banner_purple.png-26-393b83ec10df6ce9.png",
+        "Description": "Memes, Bollywood & Hollywood movies"
+      },
+      {
+        "id": 5,
+        "name": "Abhishek Rajpoot 2",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-3852316-1035x207-ujjnjlarvgtlbbnmqnlonsfaptvthtxl.jpeg",
+        "Description": "Hey buddy I am providing some information about movie and other online news"
+      },
+      {
+        "id": 6,
+        "name": "Movies full knowledge",
+        "image": "https://qsf.cf2.quoracdn.net/-4-ans_frontend_assets.images.tribes.defaults.space_banner_yellow.png-26-0cad087b263ce130.png",
+        "Description": "Bollywood south Hollywood"
+      },
+      {
+        "id": 7,
+        "name": "QUOTES: thought provoking",
+        "image": "https://qsf.cf2.quoracdn.net/-4-ans_frontend_assets.images.tribes.defaults.space_banner_pink.png-26-f43043a77377c880.png",
+        "Description": "Collection of thought provoking quotes"
+      },
+      {
+        "id": 8,
+        "name": "YouTube ♧ promote",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1897021-1035x207-airxydaekihjlyhlqavwufokxbndjxtd.jpeg",
+        "Description": "You can promote your YouTube videos and channel."
+      },
+      {
+        "id": 9,
+        "name": "Hero Styles",
+        "image": "https://qsf.cf2.quoracdn.net/-4-ans_frontend_assets.images.tribes.defaults.space_banner_purple.png-26-393b83ec10df6ce9.png",
+        "Description": "Hero Styles Image Free Download & Fast Download in Telegram (Hero Styles images)"
+      },
+      {
+        "id": 10,
+        "name": "Memes Chat",
+        "image": "https://qph.cf2.quoracdn.net/main-custom-tc-3789694-1035x207-fstqzkcptejmimbtersohiikfaouvnbu.jpeg",
+        "Description": "MEME - KNOWLEDGE - TIPS - ENTERTAINMENT - ENJOY 😎😜"
+      }
+    ]
+  },
   "acomments": [],
   "questions": [
     {
@@ -115,5 +489,128 @@
       "id": 1
     }
   ],
-  "pdownvotes": []
+  "pdownvotes": [],
+  "read": [
+    {
+      "id": 1,
+      "img": "https://qph.cf2.quoracdn.net/main-thumb-2067034466-50-vygawjarwqhqisqnkckucrlpdtrsxtqe.jpeg",
+      "name": "Argyro Ntani",
+      "follow": "Follow",
+      "about": "Knows French",
+      "postdate": "Mar 9",
+      "question": "I have an earworm and I listened to the entire song. Now, I got the entire songs stuck on loop in my head. What do I do?",
+      "answer": "Maybe listen to another song you like.Also focus on something,if you have studying to do or a task that requires your full attention maybe you can take your mind off of it!either way after a while you will forget about the song, as the day passes!",
+      "viewsCount": "41 views"
+    },
+    {
+      "id": 2,
+      "img": "https://qsf.cf2.quoracdn.net/-4-images.new_grid.profile_default.png-26-688c79556f251aa0.png",
+      "name": "Charles Zigmund",
+      "follow": "Follow",
+      "about": "Studied Painting (masters) at At Various Schools",
+      "postdate": "6h",
+      "question": "I want to play music but I don't know how to begin. I can't play any instruments but I want to. What shall I do first?",
+      "answer": "Buy a keyboard. Take piano lessons from a jazz or rock instructor. Learn chords and how to use them in well-known standard songs of pop music from the Great American Songbook of the 1940s thru the rock era to the present. Don’t bother to learn to read music. Read chord charts and use chords. Learn the blues chord progression. The piano is the easiest instrument for learning chords because they have the same patterns in every octave from low to high, unlike the more difficult guitar neck. Chords, chords and more chords. Start playing tunes by ear in the right hand while playing the chords in the left. Your teacher will help you do this.",
+      "viewsCount": "41 views"
+    },
+    {
+      "id": 3,
+      "img": "https://qph.cf2.quoracdn.net/main-thumb-861527681-50-vgyvfddyrafpzmffymorycnmqwrqckeo.jpeg",
+      "name": "John Clancy",
+      "follow": "Follow",
+      "about": "Former Professional Pianist for 50 Years",
+      "postdate": "4h",
+      "question": "Why do people play piano in elevators?",
+      "answer": "I have been hired to play piano in country clubs, casinos, hotels, restaurants, private homes, but never in an elevator. How the hell would you fit a piano in an elevator? We need the room for people going up and down to different floors, not for a piano bar..",
+      "viewsCount": "12 views"
+    },
+    {
+      "id": 4,
+      "img": "https://qsf.cf2.quoracdn.net/-4-images.new_grid.profile_default.png-26-688c79556f251aa0.png",
+      "name": "Jessica2021",
+      "follow": "Follow",
+      "about": "Download songs from Amazon Music Converter and keep them",
+      "postdate": "Wed",
+      "question": "How many devices can you have on Amazon unlimited music?",
+      "answer": "If it is an Amazon unlimited family plan, it can support up to six people to use it online at the same time, and everyone can have their personalized recommendations for listening preferences. If you only have an Amazon Unlimited Personal plan, it's only for you. Tip: If you want to download Amazon songs for offline listening, as an Amazon Music Unlimited subscriber, you can download your favorite tracks directly through the Amazon Music app. But if you want to listen to these songs offline after the subscription expires, you need to use an effective tool like BotoNote Amazon Music Converter, which can help you download songs directly to your computer instead of saving them as cache files. At the same time, it will retain the original sound quality of the song, so you don't need to worry about the problem of sound quality loss. Finally, with BotoNote Amazon Music Converter, you can choose to convert songs to more common audio formats such as AAC/WAV/MP3/ALAC/FLAC/AIFF, so that you can play your favorite music on more devices.",
+      "viewsCount": "20 views"
+    },
+    {
+      "id": 5,
+      "img": "https://qph.cf2.quoracdn.net/main-thumb-1885248260-50-ojolszwkzbtsegeygractvmrxcbdnlau.jpeg",
+      "name": "Sophia Windy",
+      "follow": "Follow",
+      "about": "Music heals heart.",
+      "postdate": "Wed",
+      "question": "How long can you keep music on Amazon Prime Music?",
+      "answer": "You can keep the downloaded music as long as you have valid subscription. You cannot play the download offline once you unsubscribe. So if you can to keep it forever, you may need some help like TuneBoto Amazon Music Converter.",
+      "viewsCount": "20 views"
+    },
+    {
+      "id": 6,
+      "img": "https://qph.cf2.quoracdn.net/main-thumb-210546490-50-ywnbtbdvzhutrysjpaihrpdoydghjeyh.jpeg",
+      "name": "Musicians at Church",
+      "follow": "Follow",
+      "about": "Answered by Donald A. Mills",
+      "postdate": "Wed",
+      "question": "What are some best practices for selecting and arranging music for worship services, and how can you ensure that the selections are appropriate and meaningful for the congregation?",
+      "answer": "I enjoy writing arrangements for church. Some of our most beautiful tunes originate in the church. (Think “Amazing Grace”.) Most of my church arrangements are more appropriate for the more experienced choir and choir director, rather than for the congregation. Congregational singers usually sing the melody in unison, with accompaniment, though singers with experience are often heard singing a harmony line. Experienced choirs generally sing the parts with accompaniment, including soprano, alto, tenor and bass while the congregation listens. The experienced choir may occasionally sing a cappella (no musical instruments).",
+      "viewsCount": "18 views"
+    },
+    {
+      "id": 7,
+      "img": "https://qph.cf2.quoracdn.net/main-thumb-2118108439-50-cbyvwiwnadkgqwutdxdrhrsmbccpibhp.jpeg",
+      "name": "Jotdan",
+      "follow": "Follow",
+      "about": "Marketing at FabFigures (2019–present)",
+      "postdate": "Tue",
+      "question": "Which is more difficult to learn, kalimba or flute?",
+      "answer": "Both kalimba and flute require dedicated practice to learn, but the level of difficulty may vary depending on the individual's musical background and natural aptitude.Kalimba is a relatively simple instrument to learn as it consists of a wooden board with metal tines that are plucked to create musical notes. The kalimba is an excellent instrument for beginners who want to start playing music without having to learn complex musical theories or read sheet music. Kalimbas are also very portable, making them a great instrument for people who are always on the go.On the other hand, the flute is a more complex instrument that requires a great deal of skill and practice to master. The flute requires the player to learn how to create different pitches by blowing air across the mouthpiece while using their fingers to change the length of the air column. Additionally, the flute requires the player to learn sheet music and music theory to be able to play it effectively Overall, both kalimba and flute can be challenging to learn, but the level of difficulty ultimately depends on the individual's skill level and dedication to practice.If you're interested in learning how to play the kalimba, I recommend checking out Kookalimba. Kookalimba is a great brand that offers high-quality kalimbas that are perfect for beginners and experienced players alike. They have a wide variety of kalimbas to choose from, and their customer service is excellent. So, if you're looking to start playing the kalimba, I highly recommend checking out Kookalimba!",
+      "viewsCount": "22 views"
+    },
+    {
+      "id": 7,
+      "img": "https://qsf.cf2.quoracdn.net/-4-images.new_grid.profile_default.png-26-688c79556f251aa0.png",
+      "name": "Charles Zigmund",
+      "follow": "Follow",
+      "about": "Experienced and well-read in Art and Music history",
+      "postdate": "Wed",
+      "question": "When playing a new music score, I tend to memorize the piece as I go, only to not use the sheet when I play final. Should I keep practicing this way or learn to play while reading the music?",
+      "answer": "If you want to maximize your chances of being employed, and not only in classical music surroundings, superior sight reading is a valuable skill. For example, musicians in film studios are expected to sight read perfectly the first time they see a score, without rehearsal. So to broaden your employability, why not practice reading even of scores you know?",
+      "viewsCount": "28 views"
+    },
+    {
+      "id": 8,
+      "img": "https://qph.cf2.quoracdn.net/main-thumb-1437172024-50-jlsluvrrsnykjzbuddioxwvakeixrowq.jpeg",
+      "name": "Audiophrenic",
+      "follow": "Follow",
+      "about": "Certification in Music Production, Berklee College of Music (Graduated 2013)",
+      "postdate": "Wed",
+      "question": "Do the people who make loops for trap songs also get included in producer credits for each track? Ex. whoever made the loops for Stargazing by Travis Scott?",
+      "answer": "Most of the time, the people who make loops for trap songs do get included in producer credits for each track. This is because the loops are a crucial factor in the overall sound of the track, and producers need to be acknowledged for their contributions. Creators of the loops are often credited alongside the artist, the main producer, and any other contributing producers.When it comes to loop creation specifically, it is important to understand that there are many different types of loops and a wide variety of methods used to create them. Some producers, such as Travis Scott, make their own loops using audio programs, while others may use pre-made loops from sample packs or other sources.It is important to note that even if an artist has used a pre-made loop, they still get credited as a producer. This is because they still had to choose the loop and manipulate it in order to fit their desired sound.",
+      "viewsCount": "21 views"
+    },
+    {
+      "id": 9,
+      "img": "https://qph.cf2.quoracdn.net/main-thumb-1784350677-50-gkwefrngztilyenejqtswlcqhjpzzazh.jpeg",
+      "name": "Lizzie N",
+      "follow": "Follow",
+      "about": "Mar 10",
+      "postdate": "",
+      "question": "What are some good angry and sad songs?",
+      "answer": "fat funny friend ~ sad abcdefu ~ angry class fight ~ angry happier than ever edit ~ angry and sad 10 things i hate about you ~ angry haha thats really all i know ♡",
+      "viewsCount": ""
+    },
+    {
+      "id": 10,
+      "img": "https://qph.cf2.quoracdn.net/main-thumb-2112661874-50-avegynaynyihgenivcsianhntwlogmzh.jpeg",
+      "name": "J.",
+      "follow": "Follow",
+      "about": "Lives in Indiana (2002–present)",
+      "postdate": "6h",
+      "question": "Is Gorillaz phase 7 over?",
+      "answer": "No, phase 7 is not over. I’ve literally checked the Gorillaz wiki it says that it’s still present from last year to now, so no it hasn’t ended. Phase 8 probably wouldn’t happen until another couple of years from now, I’m assuming around two or three years from now. So maybe then phase 7 will end but no, it’s not over right now it’s literally just begun. Hard telling what this phase will bring but there have been some bangers.",
+      "viewsCount": "32 views"
+    }
+  ]
 }
