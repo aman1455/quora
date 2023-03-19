@@ -5,7 +5,6 @@ import {
   Flex,
   Img,
   Icon,
-  Heading,
   Button,
   Textarea,
 } from "@chakra-ui/react"
@@ -19,7 +18,6 @@ import {
   Modal,
   ModalOverlay,
   ModalContent,
-  ModalHeader,
   ModalFooter,
   ModalBody,
   ModalCloseButton,
@@ -29,12 +27,9 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
-  MenuItemOption,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuDivider,
   Portal,
 } from "@chakra-ui/react"
+import { FiChevronRight } from "react-icons/fi";
 import { useNavigate } from "react-router-dom"
 import axios from "axios"
 import { useEffect, useState } from "react"
@@ -88,17 +83,17 @@ function MiddleBar() {
       <Box w="26%"></Box>
       <Box
         // ml="400px"
-        pl="20px"
+        border="1px solid rgb(222,224,225)"
+        pl="16px"
         pr="20px"
         display={"flex"}
         flexDirection="column"
         boxShadow="rgba(0, 0, 0, 0.04) 0px 1px 1px 0px"
         bg={"white"}
         width={"45%"}
-        // h={"100vh"}
-        // overflow="auto"
+       
       >
-        {/* <Box w={"59%"}></Box> */}
+     
         <Box
           display="flex"
           alignContent="center"
@@ -115,8 +110,9 @@ function MiddleBar() {
             placeItems="center"
             mt="auto"
             mb="auto"
+           
           >
-            <Icon viewBox="0 0 24 24" boxSize={4}>
+            <Icon  viewBox="0 0 24 24" boxSize={4}>
               <path
                 stroke="#fff"
                 strokeWidth="1.5"
@@ -140,6 +136,7 @@ function MiddleBar() {
         <Box>
           <Flex flexDirection={"column"}>
             {Questiondata.map((e, i) => {
+              console.log(e, "datajjj")
               return (
                 <Box
                   key={i}
@@ -152,6 +149,8 @@ function MiddleBar() {
                       onClick={() => {
                         navigate(`/answer/${e.id}`)
                       }}
+                     
+                      
                     >
                       <Text
                         color="#282829"
@@ -168,6 +167,7 @@ function MiddleBar() {
                       borderRadius="100%"
                       w="40px"
                       h="40px"
+                     
                       _hover={{
                         background: "rgb(228,230,230)",
                       }}
@@ -180,6 +180,7 @@ function MiddleBar() {
                   <Box>
                     <Box as="span" color={"#939598"} fontSize="13px">
                       <Box
+                       
                         as="span"
                         _hover={{ textDecoration: "underline" }}
                         fontWeight="bold"
@@ -207,9 +208,10 @@ function MiddleBar() {
                         handleAnswerClick={handleAnswerClick}
                       />
                       &nbsp; &nbsp;
+
                       <Button
                         leftIcon={
-                          <Icon viewBox="0 0 24 24">
+                          <Icon boxSize={6}>
                             <g
                               class="icon_svg-stroke"
                               stroke="#666"
@@ -230,13 +232,15 @@ function MiddleBar() {
                         }
                         bg="#fff"
                         borderRadius="20px"
+                        color="rgb(99,100,102)"
                       >
                         Follow
                       </Button>
                       &nbsp; &nbsp;
+
                       <Button
                         leftIcon={
-                          <Icon viewBox="0 0 24 24">
+                          <Icon boxSize={6}>
                             <g fill="none" fill-rule="evenodd">
                               <path
                                 d="m11.828 9.314 3.9-3.9a2 2 0 1 1 2.828 2.829l-3.9 3.9m-3.535 3.535-2.464 2.464-4.241 1.416 1.412-4.244 2.465-2.465"
@@ -263,14 +267,17 @@ function MiddleBar() {
                         }
                         bg="#fff"
                         borderRadius="20px"
+                        color="rgb(99,100,102)"
                       >
                         Pass
                       </Button>
                       &nbsp; &nbsp;
                     </Box>
+
+                    
                     <Box>
                       <Button bg="#fff" borderRadius="20px">
-                        <Icon viewBox="0 0 24 24">
+                        <Icon boxSize={6}>
                           <path
                             d="m12 20 9-11h-6V4H9v5H3z"
                             class="icon_svg-stroke icon_svg-fill"
@@ -285,7 +292,7 @@ function MiddleBar() {
                       <Menu>
                         <MenuButton>
                           <Button bg="#fff" borderRadius="100%">
-                            <Icon viewBox="0 0 24 24">
+                            <Icon boxSize={6}>
                               <path
                                 d="M11.25 11.25a1.06 1.06 0 1 0 1.5 1.5 1.06 1.06 0 0 0-1.5-1.5Zm-7 0a1.06 1.06 0 1 0 1.5 1.5 1.06 1.06 0 0 0-1.5-1.5Zm14 0a1.06 1.06 0 1 0 1.5 1.5 1.06 1.06 0 0 0-1.5-1.5Z"
                                 class="icon_svg-stroke"
