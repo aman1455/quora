@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom"
 import LoginComp from "../components/Login/LoginComp"
 import PrivateRoute from "./Private"
+import { useState } from "react"
 import { Home } from "./home"
 import LoginRoute from "./LoginRoute"
 import Navbar from "../components/NavbarAndSidebar/Navbar"
@@ -16,6 +17,7 @@ import SpacePageComp from "../components/SpacePage/SpacePageComp"
 import AnswerCard from "../components/DetailsPage/AnswerCard"
 import Allcompdetails from "../components/DetailsPage/Allcompdetails"
 function AllRoutes() {
+  let [state, setState] = useState(true)
   return (
     <Routes>
       <Route
@@ -50,8 +52,8 @@ function AllRoutes() {
           <PrivateRoute>
             <Navbar />
             <Sidebar />
-            <Question />
-            <Post />
+            <Question state={state} setState={setState} />
+            <Post state={state} setState={setState} />
           </PrivateRoute>
         }
       />
