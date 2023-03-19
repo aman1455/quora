@@ -20,9 +20,9 @@ function Navbar() {
   let dispatch = useDispatch()
   useEffect(() => {
     let IdData = JSON.parse(localStorage.getItem("AuthData")).token
-    console.log(IdData + "Hello")
+    // console.log(IdData + "Hello")
     axios.get(`http://localhost:8080/users/${IdData}`).then((res) => {
-      console.log(res.data)
+      // console.log(res.data)
       dispatch({
         type: "user_data",
         payload: res.data,

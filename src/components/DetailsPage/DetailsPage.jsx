@@ -21,7 +21,7 @@ import { useDispatch, useSelector } from "react-redux"
 
 function DetailsPage() {
   let { id } = useParams()
-  console.log(id)
+  // console.log(id)
   let url = `http://localhost:8080/questions/${id}/?_embed=answers&_embed=acomments`
   let dispatch = useDispatch()
   useEffect(() => {
@@ -30,7 +30,7 @@ function DetailsPage() {
         `http://localhost:8080/questions/${id}?_embed=answers&_embed=acomments`
       )
       .then((res) => {
-        console.log(res.data)
+        // console.log(res.data)
         dispatch({
           type: "Answers",
           payload: res.data,
@@ -40,7 +40,7 @@ function DetailsPage() {
   let data = useSelector((sdata) => {
     return sdata.AnswerReducer
   })
-  console.log(data, "hello")
+  // console.log(data, "hello")
   const { isOpen, onOpen, onClose } = useDisclosure()
   const initialRef = React.useRef(null)
   let [tA, setTA] = useState("")
@@ -53,7 +53,7 @@ function DetailsPage() {
         answer: tA,
       })
       .then((res) => {
-        console.log(res.data)
+        // console.log(res.data)
         setTA("")
       })
   }
@@ -66,7 +66,7 @@ function DetailsPage() {
         answer: tAC,
       })
       .then((res) => {
-        console.log(res.data)
+        // console.log(res.data)
         setTAC("")
         axios
           .get(
@@ -77,7 +77,7 @@ function DetailsPage() {
               type: "Answers",
               payload: res.data,
             })
-            console.log(res.data)
+            // console.log(res.data)
           })
       })
   }
@@ -99,7 +99,7 @@ function DetailsPage() {
                 value={tA}
                 onChange={(e) => {
                   setTA(e.target.value)
-                  console.log(e.target.name)
+                  // console.log(e.target.name)
                 }}
               />
             </FormControl>
@@ -141,7 +141,7 @@ function DetailsPage() {
                       value={tAC}
                       onChange={(e) => {
                         setTAC(e.target.value)
-                        console.log(e.target.name)
+                        // console.log(e.target.name)
                       }}
                     />
                   </FormControl>

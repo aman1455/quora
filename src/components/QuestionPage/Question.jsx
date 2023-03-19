@@ -51,6 +51,7 @@ import { useDisclosure } from "@chakra-ui/react"
 import { Icon, createIcon } from "@chakra-ui/react"
 import { Divider } from "@chakra-ui/react"
 import { useSelector, useDispatch } from "react-redux"
+import { formatDate } from "../Postpage/Postcard"
 
 export default function Question() {
   let dispatch = useDispatch()
@@ -61,8 +62,8 @@ export default function Question() {
   let UserData = useSelector((sData) => {
     return sData.UserReducer
   })
-  console.log(AuthData)
-  console.log(UserData)
+  // console.log(AuthData)
+  // console.log(UserData)
   function TextEditor({ value, onChange }) {
     return <ReactQuill value={value} onChange={onChange} />
   }
@@ -107,20 +108,20 @@ export default function Question() {
   const { isOpen, onToggle } = useDisclosure()
   const sexyLagraTha = useRef()
   const handleTextChange = (value) => {
-    console.log("efgh", value)
+    // console.log("efgh", value)
     setText(value)
   }
   const handleTextChangePost = (value) => {
-    console.log("efgh", value)
+    // console.log("efgh", value)
     setPostText(value)
   }
   const twerkBottomMenu = () => {
-    console.log("xxx", sexyLagraTha.current.classList)
+    // console.log("xxx", sexyLagraTha.current.classList)
     sexyLagraTha.current.classList.toggle("twerk_bottom_toggle")
   }
   const handleImageUpload = (event) => {
     setDate(Date())
-    console.log(event.target)
+    // console.log(event.target)
     const file = event.target.files[0]
     const reader = new FileReader()
     reader.onloadend = () => {
@@ -143,7 +144,7 @@ export default function Question() {
     )
       .then((response) => response.json())
       .then((data) => {
-        console.log(data)
+        // console.log(data)
       })
       .catch((error) => console.error(error))
   }
@@ -168,7 +169,7 @@ export default function Question() {
             })
           })
       })
-      .catch((error) => console.error(error))
+    // .catch((error) => console.error(error))
   }
 
   const handleTabChange = (index) => {
@@ -192,7 +193,7 @@ export default function Question() {
     saveDataToDb1({
       userId: Number(JSON.parse(localStorage.getItem("AuthData")).token),
       question: text,
-      date: Date(),
+      date: formatDate(Date()),
     })
 
     handleCloseModal()
@@ -207,9 +208,9 @@ export default function Question() {
         "https://www.google.com/imgres?imgurl=https%3A%2F%2Fimgv3.fotor.com%2Fimages%2Fblog-cover-image%2F10-profile-picture-ideas-to-make-you-stand-out.jpg&tbnid=Sftxv-XsWOqEQM&vet=12ahUKEwjOl6md_-X9AhWZ5nMBHbMKCHIQMygTegUIARCEAg..i&imgrefurl=https%3A%2F%2Fwww.fotor.com%2Fblog%2Fprofile-picture-ideas%2F&docid=ZDKJjCOmeX62ZM&w=4500&h=2532&q=profile%20photo&ved=2ahUKEwjOl6md_-X9AhWZ5nMBHbMKCHIQMygTegUIARCEAg",
       post: posttext,
       imageUrl: imageUrl,
-      date: Date(),
-      comment:0,
-      share:0,
+      date: formatDate(Date()),
+      comment: 0,
+      share: 0,
     })
     setImageUrl("")
     handleCloseModal()
@@ -218,11 +219,11 @@ export default function Question() {
     setIsOpe(false)
   }
   const handlemenuchange = (e) => {
-    console.log(e)
+    // console.log(e)
     setMenui(e)
   }
   return (
-    <Box p="4" m="auto" w="30%" shadow="md" borderWidth="1px" marginTop="2">
+    <Box p="4" m="auto" w="40%" shadow="md" borderWidth="1px" marginTop="2">
       <Flex direction="column" gap="1">
         <Flex gap="2">
           <Avatar
@@ -396,7 +397,7 @@ export default function Question() {
                           focusBorderColor="transparent"
                           value={text}
                           onChange={(e) => {
-                            console.log("abcd", e.target.value)
+                            // console.log("abcd", e.target.value)
                             handleTextChange(e.target.value)
                           }}
                         ></Textarea>

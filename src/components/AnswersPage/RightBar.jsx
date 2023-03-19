@@ -109,14 +109,14 @@ function RightBar() {
             borderRadius="10px"
             _hover={{ background: "rgb(228,230,230)" }}
           >
-            <Text _hover={{ textDecoration: "underline" }}>Electronics</Text>
+            <Text _hover={{ textDecoration: "underline" }}>Mechanical</Text>
           </Box>
           <Box
             p="10px"
             borderRadius="10px"
             _hover={{ background: "rgb(228,230,230)" }}
           >
-            <Text _hover={{ textDecoration: "underline" }}>Electronics</Text>
+            <Text _hover={{ textDecoration: "underline" }}>Music</Text>
           </Box>
         </Flex>
       </Box>

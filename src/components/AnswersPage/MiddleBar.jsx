@@ -9,6 +9,7 @@ import {
   Button,
   Textarea,
 } from "@chakra-ui/react"
+import CustomModal from "./customModal"
 import { CloseIcon } from "@chakra-ui/icons"
 import { BiEdit } from "react-icons/bi"
 import RightBar from "./RightBar"
@@ -42,27 +43,32 @@ function MiddleBar() {
   let navigate = useNavigate()
   const { isOpen, onOpen, onClose } = useDisclosure()
   const initialRef = React.useRef(null)
+  let [Questiondata, setQuestionData] = useState([])
   let dispatch = useDispatch()
   let [tA, setTA] = useState("")
   let data = useSelector((storeData) => {
     return storeData.AuthReducer
   })
-  let Questiondata = useSelector((storeData) => {
-    return storeData.QuestionReducer
-  })
+  // let Questiondata = useSelector((storeData) => {
+  //   return storeData.QuestionReducer
+  // })
 
-  useEffect(() => {
-    // `http://localhost:8080/users/${Number(data.token)}/?_embed=questions`
+  function updateQuestions() {
     axios.get(`http://localhost:8080/questions?_embed=answers`).then((res) => {
-      console.log(res.data)
+      // console.log(res.data)
       dispatch({
         type: "Question_Data",
         payload: res.data,
       })
+      setQuestionData(res.data)
     })
+  }
+  useEffect(() => {
+    updateQuestions()
   }, [])
 
   function handleAnswerClick(e) {
+    console.log(e.target.name)
     axios
       .post("http://localhost:8080/answers", {
         userId: Number(data.token),
@@ -72,9 +78,10 @@ function MiddleBar() {
       .then((res) => {
         console.log(res.data)
         setTA("")
+        updateQuestions()
       })
   }
-  console.log(Questiondata)
+  // console.log(Questiondata)
   let foc = useRef(null)
   return (
     <Box display="flex">
@@ -191,59 +198,14 @@ function MiddleBar() {
                   </Box>
                   <Box display="flex" justifyContent="space-between" mt={3}>
                     <Box>
-                      <Button
-                        leftIcon={<BiEdit />}
-                        colorScheme="blackAlpha"
-                        variant="outline"
-                        borderRadius="20px"
-                        onClick={onOpen}
-                      >
-                        Answer
-                      </Button>
-                      <Modal
-                        initialFocusRef={initialRef}
-                        isOpen={isOpen}
-                        onClose={onClose}
-                      >
-                        <ModalOverlay />
-                        <ModalContent>
-                          <ModalHeader>Create your account</ModalHeader>
-                          <ModalCloseButton />
-                          <ModalBody pb={6}>
-                            <FormControl>
-                              <FormLabel>{e.question}</FormLabel>
-                              <Textarea
-                                ref={initialRef}
-                                placeholder="Enter Your Answer"
-                                value={tA}
-                                name={e.id}
-                                onChange={(e) => {
-                                  setTA(e.target.value)
-                                  console.log(e.target.name)
-                                }}
-                              />
-                              {/* <Input
-                                ref={initialRef}
-                                placeholder="First name"
-                              /> */}
-                            </FormControl>
-                          </ModalBody>
-                          <ModalFooter>
-                            <Button
-                              name={e.id}
-                              colorScheme="blue"
-                              mr={3}
-                              onClick={(e) => {
-                                handleAnswerClick(e)
-                                onClose(e)
-                              }}
-                            >
-                              Save
-                            </Button>
-                            <Button onClick={onClose}>Cancel</Button>
-                          </ModalFooter>
-                        </ModalContent>
-                      </Modal>
+                      <CustomModal
+                        e={e}
+                        showModalButtonText={"Answer"}
+                        modalHeader={"Enter Your Answer"}
+                        tA={tA}
+                        setTA={setTA}
+                        handleAnswerClick={handleAnswerClick}
+                      />
                       &nbsp; &nbsp;
                       <Button
                         leftIcon={
