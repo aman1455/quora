@@ -2,6 +2,7 @@
 import { ContentsNotification } from "./ContentsNotification";
 import { SideBarNotifications } from "./SideBarNotifications";
 import Navbar from "../NavbarAndSidebar/Navbar";
+import Sidebar from '../NavbarAndSidebar/Sidebar'
  const Notifications = () => {
     return (
         <>

@@ -11,7 +11,7 @@ import {
   Flex,
   Text,Center
 } from "@chakra-ui/react";
-import { useDispatch, useSelector } from "react-redux";
+import {  useSelector } from "react-redux";
 import ReadMore from '../NavbarAndSidebar/SidebarOptions/ReadMore';
 function AnswerCard() {
     let data = useSelector((sdata) => {
