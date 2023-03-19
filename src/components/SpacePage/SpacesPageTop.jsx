@@ -1,82 +1,100 @@
 import React from "react"
 import {
-  Box,
   Flex,
-  VStack,
-  Image,
-  Icon,
+  Box,
+  Spacer,
   Heading,
   Text,
   Button,
+  Stack,
+  Card,
+  CardHeader,
+  Divider,
+  Center,
 } from "@chakra-ui/react"
-import ReadMoreReact from "read-more-react"
+import { PlusSquareIcon, EmailIcon } from "@chakra-ui/icons"
+import { useDispatch } from "react-redux"
 
-function SpacesPageTop() {
+export default function SpacesPageTop() {
   return (
-    <></>
-    // <Box
-    //   w="100%"
-    //   h="35vh"
-    //   display="flex"
-    //   direction="column"
-    //   alignItems="flex-end"
-    //   justifyContent={"center"}
-    //   border="1px solid red"
-    // >
-    //   <Box w="75%" border="1px solid red" filter="blur">
-    //     <Box mb={2}>
-    //       <Heading fontSize="27px">HTML CSS and JavaScript</Heading>
-    //     </Box>
-    //     <Box mb={2}>
-    //       <Text fontSize="13px">
-    //         Here we learn HTML, CSS and JavaScript with cool projects✨
-    //       </Text>
-    //     </Box>
-    //     <Box
-    //       mb={2}
-    //       display="flex"
-    //       justifyContent="space-between"
-    //       align="center"
-    //     >
-    //       <Box fontSize="13px">
-    //         43 Contributors 5.6K followers22 posts in the last week
-    //       </Box>
-    //       <Box display="flex" align="center">
-    //         <Box mr={3}>
-    //           <Icon viewBox="0 0 24 24">
-    //             <path
-    //               stroke-width="1.5"
-    //               stroke="#666"
-    //               fill="none"
-    //               d="M5 14a2 2 0 1 1 0-4 2 2 0 0 1 0 4Zm7 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4Zm7 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z"
-    //             />
-    //           </Icon>
-    //         </Box>
-    //         <Box>
-    //           <Button
-    //             leftIcon={
-    //               <Icon viewBox="0 0 24 24">
-    //                 <path
-    //                   stroke="#666"
-    //                   stroke-width="1.5"
-    //                   fill="none"
-    //                   stroke-linecap="round"
-    //                   stroke-linejoin="round"
-    //                   d="M13.5 19.5h-6a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v6M8 12.5v-4h4v4H8zM14.5 9H16h-1.5zm0 3H16h-1.5zM8 15.5h8-8zm9 4h5M19.5 17v5"
-    //                 ></path>
-    //               </Icon>
-    //             }
-    //             colorScheme="teal"
-    //             variant="outline"
-    //           >
-    //             Follow Space
-    //           </Button>
-    //         </Box>
-    //       </Box>
-    //     </Box>
-    //   </Box>
-    // </Box>
+    <Box bg="#f1f2f2">
+      <Flex
+        paddingLeft="7%"
+        paddingTop="3%"
+        paddingRight="7%"
+        bg="#f1f2f2"
+        boxShadow="sm"
+      >
+        <Box bg="white" w="75%" h="150px" boxShadow="sm" p={5}>
+          <Flex
+            box-sizing="border-box"
+            backgroundImage="url('https://qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.tribes.tribe_welcome_banner_full.png-26-64d500fd69494b66.png')"
+            bgPosition="right bottom"
+            backgroundSize="350px 120px"
+            backgroundRepeat="no-repeat"
+          >
+            <Box>
+              <Text fontSize="xl" fontWeight="medium" marginTop="10px">
+                Welcome to Spaces!
+              </Text>
+              <Text fontSize="sm" color="#636466">
+                Follow Spaces to explore your interests on Quora.
+              </Text>
+              <Stack direction="row" spacing={4} paddingTop="20px">
+                <Button
+                  leftIcon={<PlusSquareIcon color="#2e69ff" />}
+                  colorScheme="blue"
+                  variant="outline"
+                  borderRadius="20"
+                  height="28px"
+                >
+                  Create a Space
+                </Button>
+                <Button
+                  leftIcon={<PlusSquareIcon color="#2e69ff" />}
+                  colorScheme="blue"
+                  variant="outline"
+                  borderRadius="20"
+                  height="28px"
+                >
+                  Discover Spaces
+                </Button>
+              </Stack>
+            </Box>
+          </Flex>
+        </Box>
+        <Spacer />
+        <Card bg="white" w="22%" h="150px">
+          <Box h="30px" display={"flex"} alignItems="center">
+            <Box pl={4}>
+              <Text fontSize="15px" color="#282829" fontWeight="500">
+                Pending Invites
+              </Text>
+            </Box>
+          </Box>
+          <Divider orientation="horizontal" color="gray" />
+          <Center paddingTop="30px" display={"grid"}>
+            <Box display="flex" flexDirection={"column"}>
+              <Box w="50px" display="grid">
+                <Box m="auto">
+                  <EmailIcon color="gray" />
+                </Box>
+              </Box>
+              <Text color="gray" fontSize="13px">
+                No invites
+              </Text>
+            </Box>
+          </Center>
+        </Card>
+      </Flex>
+      <Box bg="#f1f2f2">
+        <Heading as="h4" size="md" paddingTop="30px">
+          Discover Spaces
+        </Heading>
+        <Text fontSize="sm" fontWeight="medium" paddingTop="15px">
+          Spaces you might like
+        </Text>
+      </Box>
+    </Box>
   )
 }
-
-export default SpacesPageTop

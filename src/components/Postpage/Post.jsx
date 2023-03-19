@@ -48,9 +48,14 @@ function Post() {
   const [posts, setPosts] = useState([])
 
   useEffect(() => {
-    fetch(`http://localhost:${process.env.REACT_APP_JSON_SERVER_PORT}/posts`)
+    fetch(
+      `http://localhost:${process.env.REACT_APP_JSON_SERVER_PORT}/posts?_embed=pcomments`
+    )
       .then((response) => response.json())
-      .then((data) => setPosts(data))
+      .then((data) => {
+        console.log(data)
+        setPosts(data)
+      })
   }, [])
 
   return (

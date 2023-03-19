@@ -1,8 +1,7 @@
 import { React, useEffect, useState } from "react"
 import { useDispatch } from "react-redux"
 import AllRoutes from "../src/routes/AllRoutes"
-import SpacePageTop from "./components/SpacePage/SpacesPageTop"
-import Spaces_Page from "./components/Spaces-Page"
+
 import Question from "./components/QuestionPage/Question"
 import axios from "axios"
 
