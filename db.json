@@ -1,51 +1,28 @@
 {
   "users": [
     {
-      "id": 1,
-      "email": "arshgoyal188@gmail.com",
-      "password": "123456",
-      "name": "arshgoyal188"
-    },
-    {
       "email": "arshgoyal2707@gmail.com",
       "password": "123456",
       "name": "arshgoyal2707",
+      "avatar": "https://lh3.googleusercontent.com/a/AGNmyxbLX1p5Ybxzskl2CmfmGTTKfX7sqmP_98xhxMZ8=s96-c",
       "id": 2
-    },
-    {
-      "email": "shgdhsghd@gmail.com",
-      "password": "45679",
-      "name": "shgdhsghd",
-      "id": 4
-    },
-    {
-      "email": "arshgoyal@gmail.com",
-      "password": "123456",
-      "name": "arshgoyal",
-      "id": 5
-    },
-    {
-      "email": "gahjghjk@gmail.com",
-      "password": "123456",
-      "name": "gahjghjk",
-      "id": 6
     },
     {
       "email": "arshgoyal459@gmail.com",
       "password": "",
       "name": "arshgoyal459",
-      "id": 101479065886207950000,
+      "id": 101,
       "avatar": "https://lh3.googleusercontent.com/a/AGNmyxbLX1p5Ybxzskl2CmfmGTTKfX7sqmP_98xhxMZ8=s96-c"
     },
     {
-      "email": "narayandutta2208@gmail.com",
-      "password": "",
-      "name": "narayandutta2208",
-      "id": 115875582956189680000,
-      "avatar": "https://lh3.googleusercontent.com/a/AGNmyxbA8EubN3e4R8M2NXWJFshIaYnOQPocMV_kMSPH=s96-c"
+      "email": "arshgoyal188@gmail.com",
+      "password": "123456",
+      "name": "arshgoyal188",
+      "avatar": "https://lh3.googleusercontent.com/a/AGNmyxbLX1p5Ybxzskl2CmfmGTTKfX7sqmP_98xhxMZ8=s96-c",
+      "id": 102
     }
   ],
-  "Spaces":{
+  "Spaces": {
     "Spaces_Books": [
       {
         "id": 1,
@@ -419,144 +396,100 @@
       }
     ]
   },
-  "acomments": [
-    {
-      "userId": 101479065886207950000,
-      "questionId": 2,
-      "answerId": 5,
-      "answer": "Hello Brother",
-      "id": 1
-    },
-    {
-      "userId": 101479065886207950000,
-      "questionId": 2,
-      "answerId": 5,
-      "answer": "Hi brooo",
-      "id": 2
-    }
-  ],
+  "acomments": [],
   "questions": [
     {
-      "userId": 101479065886207950000,
-      "question": "Hello",
-      "date": "",
+      "userId": 102,
+      "question": "Question 1-user 1",
+      "date": "Sun Mar 19 2023 21:17:26 GMT+0530 (India Standard Time)",
       "id": 1
     },
     {
-      "userId": 101479065886207950000,
-      "question": "Hi",
-      "date": "",
+      "userId": 102,
+      "question": "Question 2 -user 1",
+      "date": "Sun Mar 19 2023 21:18:30 GMT+0530 (India Standard Time)",
       "id": 2
     },
     {
-      "userId": 1,
-      "question": "Hi arsh",
-      "date": "",
+      "userId": 102,
+      "question": "Question 3-user 1\n",
+      "date": "Sun Mar 19 2023 21:29:49 GMT+0530 (India Standard Time)",
       "id": 3
     },
     {
-      "userId": 1,
-      "question": "Hello Narayan",
-      "date": "Sun Mar 19 2023 00:06:57 GMT+0530 (India Standard Time)",
+      "userId": 102,
+      "question": "Question 4-user 1",
+      "date": "Sun, Mar 19, 2023",
       "id": 4
     }
   ],
   "answers": [
     {
-      "userId": 1,
-      "questionId": 3,
-      "answer": "Hello",
+      "userId": 102,
+      "questionId": 2,
+      "answer": "Question 2-user 1- answer 1",
       "id": 1
     },
     {
-      "userId": 101479065886207950000,
-      "questionId": 2,
-      "answer": "Hello",
+      "userId": 102,
+      "questionId": 1,
+      "answer": "question 1-user 1-answer 1",
       "id": 2
     },
     {
-      "userId": 101479065886207950000,
-      "questionId": 2,
-      "answer": "Hello",
+      "userId": 102,
+      "questionId": 1,
+      "answer": "Question1 -answer 3",
       "id": 3
     },
     {
-      "userId": 101479065886207950000,
+      "userId": 102,
       "questionId": 2,
-      "answer": "Hello",
+      "answer": "Question 2-answer 2",
       "id": 4
-    },
-    {
-      "userId": 101479065886207950000,
-      "questionId": 2,
-      "answer": "Hello",
-      "id": 5
-    },
-    {
-      "userId": 101479065886207950000,
-      "questionId": 3,
-      "answer": "Hello User 1",
-      "id": 6
-    },
-    {
-      "userId": 101479065886207950000,
-      "questionId": 1,
-      "answer": "Hi Bhai",
-      "id": 7
     }
   ],
   "posts": [
     {
-      "userId": 101479065886207950000,
-      "userName": "arshgoyal459",
+      "userId": 102,
+      "userName": "arshgoyal188",
       "userImage": "https://lh3.googleusercontent.com/a/AGNmyxbLX1p5Ybxzskl2CmfmGTTKfX7sqmP_98xhxMZ8=s96-c",
-      "post": "<p><strong>Hello guys how are you all</strong></p>",
-      "imageUrl": "https://i1.sndcdn.com/avatars-si5mohNGXHKIGaVN-yJQm4Q-t500x500.jpg",
-      "date": "Sat Mar 18 2023 22:56:48 GMT+0530 (India Standard Time)",
-      "comment": "30",
-      "share": "4",
+      "post": "<p>Hello</p>",
+      "imageUrl": "",
+      "date": "Sun, Mar 19, 2023",
+      "comment": 0,
+      "share": 0,
       "id": 1
     },
     {
-      "userId": 1,
+      "userId": 102,
       "userName": "arshgoyal188",
-      "userImage": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fimgv3.fotor.com%2Fimages%2Fblog-cover-image%2F10-profile-picture-ideas-to-make-you-stand-out.jpg&tbnid=Sftxv-XsWOqEQM&vet=12ahUKEwjOl6md_-X9AhWZ5nMBHbMKCHIQMygTegUIARCEAg..i&imgrefurl=https%3A%2F%2Fwww.fotor.com%2Fblog%2Fprofile-picture-ideas%2F&docid=ZDKJjCOmeX62ZM&w=4500&h=2532&q=profile%20photo&ved=2ahUKEwjOl6md_-X9AhWZ5nMBHbMKCHIQMygTegUIARCEAg",
-      "post": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac urna quis mauris malesuada dignissim. Vestibulum vitae eros ut est pellentesque suscipit. Aliquam malesuada nisi id erat vulputate, ac finibus nunc pellentesque. Sed maximus mi ut tristique malesuada. Vivamus sit amet sapien ut nulla faucibus consectetur. Donec blandit eget metus at tincidunt. In lobortis risus non risus elementum, a ullamcorper ante vehicula. Sed sollicitudin elit at risus lobortis bibendum. Duis sollicitudin ex id enim dictum, ac luctus felis ultrices. Nam pretium pharetra ipsum id consectetur.</p>",
-      "imageUrl": "https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/kamado-nezuko-plays-with-butterfly-demon-slayer-kimetsu-no-yaiba-emeziyo.jpg",
-      "date": "Sat Mar 18 2023 22:58:40 GMT+0530 (India Standard Time)",
-      "comment": "30",
-      "share": "4",
+      "userImage": "https://lh3.googleusercontent.com/a/AGNmyxbLX1p5Ybxzskl2CmfmGTTKfX7sqmP_98xhxMZ8=s96-c",
+      "post": "<p>Post 2</p>",
+      "imageUrl": "",
+      "date": "Sun, Mar 19, 2023",
+      "comment": 0,
+      "share": 0,
       "id": 2
-    },
-    {
-      "userId": 1,
-      "userName": "arshgoyal188",
-      "userImage": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fimgv3.fotor.com%2Fimages%2Fblog-cover-image%2F10-profile-picture-ideas-to-make-you-stand-out.jpg&tbnid=Sftxv-XsWOqEQM&vet=12ahUKEwjOl6md_-X9AhWZ5nMBHbMKCHIQMygTegUIARCEAg..i&imgrefurl=https%3A%2F%2Fwww.fotor.com%2Fblog%2Fprofile-picture-ideas%2F&docid=ZDKJjCOmeX62ZM&w=4500&h=2532&q=profile%20photo&ved=2ahUKEwjOl6md_-X9AhWZ5nMBHbMKCHIQMygTegUIARCEAg",
-      "post": "<p>Hello</p>",
-      "imageUrl": "",
-      "date": "Sat Mar 18 2023 23:52:06 GMT+0530 (India Standard Time)",
-      "id": 3
-    },
-    {
-      "userId": 1,
-      "userName": "arshgoyal188",
-      "userImage": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fimgv3.fotor.com%2Fimages%2Fblog-cover-image%2F10-profile-picture-ideas-to-make-you-stand-out.jpg&tbnid=Sftxv-XsWOqEQM&vet=12ahUKEwjOl6md_-X9AhWZ5nMBHbMKCHIQMygTegUIARCEAg..i&imgrefurl=https%3A%2F%2Fwww.fotor.com%2Fblog%2Fprofile-picture-ideas%2F&docid=ZDKJjCOmeX62ZM&w=4500&h=2532&q=profile%20photo&ved=2ahUKEwjOl6md_-X9AhWZ5nMBHbMKCHIQMygTegUIARCEAg",
-      "post": "<p>Hello</p>",
-      "imageUrl": "",
-      "date": "Sat Mar 18 2023 23:52:42 GMT+0530 (India Standard Time)",
-      "id": 4
-    },
-    {
-      "userId": 1,
-      "userName": "arshgoyal188",
-      "userImage": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fimgv3.fotor.com%2Fimages%2Fblog-cover-image%2F10-profile-picture-ideas-to-make-you-stand-out.jpg&tbnid=Sftxv-XsWOqEQM&vet=12ahUKEwjOl6md_-X9AhWZ5nMBHbMKCHIQMygTegUIARCEAg..i&imgrefurl=https%3A%2F%2Fwww.fotor.com%2Fblog%2Fprofile-picture-ideas%2F&docid=ZDKJjCOmeX62ZM&w=4500&h=2532&q=profile%20photo&ved=2ahUKEwjOl6md_-X9AhWZ5nMBHbMKCHIQMygTegUIARCEAg",
-      "post": "<p>Hello</p>",
-      "imageUrl": "",
-      "date": "Sat Mar 18 2023 23:52:55 GMT+0530 (India Standard Time)",
-      "id": 5
     }
   ],
-  "pcomments": [],
+  "pcomments": [
+    {
+      "userId": 102,
+      "postId": 1,
+      "commment": "H1",
+      "id": 1
+    }
+  ],
+  "pupvotes": [
+    {
+      "userId": 102,
+      "postId": 1,
+      "upvote": false,
+      "id": 1
+    }
+  ],
+  "pdownvotes": [],
   "read": [
     {
       "id": 1,

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react"
 import {
   Card,
   Icon,
@@ -9,19 +9,19 @@ import {
   Img,
   Flex,
   Text,
-} from "@chakra-ui/react";
-import ReadMore from "./ReadMore";
+} from "@chakra-ui/react"
+import ReadMore from "./ReadMore"
 function EachCard() {
-  let [post, setPost] = useState([]);
+  let [post, setPost] = useState([])
   useEffect(() => {
-    fetchdata();
-  }, []);
+    fetchdata()
+  }, [])
   let fetchdata = async () => {
-    let data = await fetch("http://localhost:8080/read");
-    let jsondata = await data.json();
-    setPost(jsondata);
-    console.log(jsondata, "data");
-  };
+    let data = await fetch("http://localhost:8080/read")
+    let jsondata = await data.json()
+    setPost(jsondata)
+    // console.log(jsondata, "data");
+  }
 
   return (
     <>
@@ -87,8 +87,8 @@ function EachCard() {
                 </Text>
 
                 <Text>{e.answer}</Text>
-                <ReadMore  text={e.answer}/>
-                    
+                <ReadMore text={e.answer} />
+
                 <Text mt="10px" color="rgb(147,149,152)">
                   {e.viewsCount}
                 </Text>
@@ -183,11 +183,11 @@ function EachCard() {
               </Box>
               {/* </CardFooter> */}
             </Card>
-          );
+          )
         })}
       </div>
     </>
-  );
+  )
 }
 
-export default EachCard;
+export default EachCard
