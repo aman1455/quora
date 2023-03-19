@@ -501,6 +501,36 @@
       "questionId": 1,
       "answer": "Hi Bhai",
       "id": 7
+    },
+    {
+      "userId": 115875582956189680000,
+      "questionId": 4,
+      "answer": "",
+      "id": 8
+    },
+    {
+      "userId": 115875582956189680000,
+      "questionId": 4,
+      "answer": "Hinduism is a Bottom-Up built religion, while Christianity, Islam, and Buddhism are all Top-Down built religions.\n\nWhat I mean is, Hinduism does not have one founding Messiah, Prophet, or Enlightened master. Its roots are from many many masters, Tribes, cultures, and so on.\n\nSo there is no point in hunting down the First temple! From time immemorial till today one would find countless such temples where diversified worship had taken place.",
+      "id": 9
+    },
+    {
+      "userId": 115875582956189680000,
+      "questionId": 4,
+      "answer": "Hinduism is a Bottom-Up built religion, while Christianity, Islam, and Buddhism are all Top-Down built religions.\n\nWhat I mean is, Hinduism does not have one founding Messiah, Prophet, or Enlightened master. Its roots are from many many masters, Tribes, cultures, and so on.\n\nSo there is no point in hunting down the First temple! From time immemorial till today one would find countless such temples where diversified worship had taken place.",
+      "id": 10
+    },
+    {
+      "userId": 115875582956189680000,
+      "questionId": 4,
+      "answer": "Hinduism is a Bottom-Up built religion, while Christianity, Islam, and Buddhism are all Top-Down built religions.\n\nWhat I mean is, Hinduism does not have one founding Messiah, Prophet, or Enlightened master. Its roots are from many many masters, Tribes, cultures, and so on.\n\nSo there is no point in hunting down the First temple! From time immemorial till today one would find countless such temples where diversified worship had taken place.",
+      "id": 11
+    },
+    {
+      "userId": 101479065886207950000,
+      "questionId": 1,
+      "answer": "hgfytf",
+      "id": 12
     }
   ],
   "posts": [
@@ -511,8 +541,8 @@
       "post": "<p><strong>Hello guys how are you all</strong></p>",
       "imageUrl": "https://i1.sndcdn.com/avatars-si5mohNGXHKIGaVN-yJQm4Q-t500x500.jpg",
       "date": "Sat Mar 18 2023 22:56:48 GMT+0530 (India Standard Time)",
-      "comment":"30",
-      "share":"4",
+      "comment": "30",
+      "share": "4",
       "id": 1
     },
     {
@@ -522,8 +552,8 @@
       "post": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac urna quis mauris malesuada dignissim. Vestibulum vitae eros ut est pellentesque suscipit. Aliquam malesuada nisi id erat vulputate, ac finibus nunc pellentesque. Sed maximus mi ut tristique malesuada. Vivamus sit amet sapien ut nulla faucibus consectetur. Donec blandit eget metus at tincidunt. In lobortis risus non risus elementum, a ullamcorper ante vehicula. Sed sollicitudin elit at risus lobortis bibendum. Duis sollicitudin ex id enim dictum, ac luctus felis ultrices. Nam pretium pharetra ipsum id consectetur.</p>",
       "imageUrl": "https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/kamado-nezuko-plays-with-butterfly-demon-slayer-kimetsu-no-yaiba-emeziyo.jpg",
       "date": "Sat Mar 18 2023 22:58:40 GMT+0530 (India Standard Time)",
-      "comment":"30",
-      "share":"4",
+      "comment": "30",
+      "share": "4",
       "id": 2
     },
     {

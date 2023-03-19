@@ -5,7 +5,6 @@ import {
   Flex,
   Img,
   Icon,
-  Heading,
   Button,
   Textarea,
 } from "@chakra-ui/react"
@@ -18,7 +17,6 @@ import {
   Modal,
   ModalOverlay,
   ModalContent,
-  ModalHeader,
   ModalFooter,
   ModalBody,
   ModalCloseButton,
@@ -28,12 +26,9 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
-  MenuItemOption,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuDivider,
   Portal,
 } from "@chakra-ui/react"
+import { FiChevronRight } from "react-icons/fi";
 import { useNavigate } from "react-router-dom"
 import axios from "axios"
 import { useEffect, useState } from "react"
@@ -47,10 +42,15 @@ function MiddleBar() {
   let data = useSelector((storeData) => {
     return storeData.AuthReducer
   })
+  
+  let userReducer = useSelector((storeData) => {
+    return storeData.UserReducer
+  })
+  console.log(userReducer.name, "userReducer");
   let Questiondata = useSelector((storeData) => {
     return storeData.QuestionReducer
   })
-
+  // const style = { Modal: { sizes: { xl: { Content: { maxWidth: "56rem" }, }, }, }, };
   useEffect(() => {
     // `http://localhost:8080/users/${Number(data.token)}/?_embed=questions`
     axios.get(`http://localhost:8080/questions?_embed=answers`).then((res) => {
@@ -81,17 +81,17 @@ function MiddleBar() {
       <Box w="26%"></Box>
       <Box
         // ml="400px"
-        pl="20px"
+        border="1px solid rgb(222,224,225)"
+        pl="16px"
         pr="20px"
         display={"flex"}
         flexDirection="column"
         boxShadow="rgba(0, 0, 0, 0.04) 0px 1px 1px 0px"
         bg={"white"}
         width={"45%"}
-        // h={"100vh"}
-        // overflow="auto"
+       
       >
-        {/* <Box w={"59%"}></Box> */}
+     
         <Box
           display="flex"
           alignContent="center"
@@ -108,8 +108,9 @@ function MiddleBar() {
             placeItems="center"
             mt="auto"
             mb="auto"
+           
           >
-            <Icon viewBox="0 0 24 24" boxSize={4}>
+            <Icon  viewBox="0 0 24 24" boxSize={4}>
               <path
                 stroke="#fff"
                 strokeWidth="1.5"
@@ -133,6 +134,7 @@ function MiddleBar() {
         <Box>
           <Flex flexDirection={"column"}>
             {Questiondata.map((e, i) => {
+              console.log(e, "datajjj")
               return (
                 <Box
                   key={i}
@@ -145,6 +147,8 @@ function MiddleBar() {
                       onClick={() => {
                         navigate(`/answer/${e.id}`)
                       }}
+                     
+                      
                     >
                       <Text
                         color="#282829"
@@ -161,6 +165,7 @@ function MiddleBar() {
                       borderRadius="100%"
                       w="40px"
                       h="40px"
+                     
                       _hover={{
                         background: "rgb(228,230,230)",
                       }}
@@ -173,6 +178,7 @@ function MiddleBar() {
                   <Box>
                     <Box as="span" color={"#939598"} fontSize="13px">
                       <Box
+                       
                         as="span"
                         _hover={{ textDecoration: "underline" }}
                         fontWeight="bold"
@@ -192,29 +198,44 @@ function MiddleBar() {
                   <Box display="flex" justifyContent="space-between" mt={3}>
                     <Box>
                       <Button
-                        leftIcon={<BiEdit />}
                         colorScheme="blackAlpha"
                         variant="outline"
                         borderRadius="20px"
+                        borderColor={"rgb(224,224,224)"}
                         onClick={onOpen}
+                        color="rgb(99,100,102)"
                       >
+                      <Icon  boxSize={6}>
+                      <g stroke-width="1.5" fill="none" fill-rule="evenodd"><path d="M18.571 5.429h0a2 2 0 0 1 0 2.828l-9.9 9.9-4.24 1.416 1.412-4.245 9.9-9.9h0a2 2 0 0 1 2.828 0Z" class="icon_svg-stroke" stroke="#666" stroke-linecap="round" stroke-linejoin="round"></path><path class="icon_svg-fill_as_stroke" fill="#666" d="m4.429 19.571 2.652-.884-1.768-1.768z"></path><path d="M14.5 19.5h5v-5m-10-10h-5v5" class="icon_svg-stroke" stroke="#666" stroke-linecap="round" stroke-linejoin="round"></path></g>
+                      </Icon>
                         Answer
                       </Button>
                       <Modal
                         initialFocusRef={initialRef}
                         isOpen={isOpen}
                         onClose={onClose}
+                        isCentered
+                        size="lg"
+                        h="200vh"
+                        
                       >
                         <ModalOverlay />
-                        <ModalContent>
-                          <ModalHeader>Create your account</ModalHeader>
+                        <ModalContent >
+                          <Flex mt="20px" alignItems={"center"} pl="17px" w={"60%"}>
+                         <Box>
+                         <Img borderRadius={30} h={"50px"} w={"50px"} src={userReducer.avatar}/>
+                         </Box> 
+                          <Box ml={"10px"}> <Text fontWeight={"bold"}>{userReducer.name}</Text>
+                          <Button mt={"5px"} borderColor="rgb(224,224,224)" borderRadius={30} size="sm" rightIcon={<FiChevronRight boxSize={6}/>} colorScheme='rgb(99,100,102)' variant='outline'>Choose credential</Button>
+                          </Box>
+                          </Flex>
                           <ModalCloseButton />
                           <ModalBody pb={6}>
                             <FormControl>
-                              <FormLabel>{e.question}</FormLabel>
+                              <FormLabel fontWeight={"bold"} fontSize="20px">{e.question}</FormLabel>
                               <Textarea
                                 ref={initialRef}
-                                placeholder="Enter Your Answer"
+                                placeholder="Write Your Answer"
                                 value={tA}
                                 name={e.id}
                                 onChange={(e) => {
@@ -222,10 +243,7 @@ function MiddleBar() {
                                   console.log(e.target.name)
                                 }}
                               />
-                              {/* <Input
-                                ref={initialRef}
-                                placeholder="First name"
-                              /> */}
+                              
                             </FormControl>
                           </ModalBody>
                           <ModalFooter>
@@ -237,17 +255,22 @@ function MiddleBar() {
                                 handleAnswerClick(e)
                                 onClose(e)
                               }}
+                              borderRadius="20px"
+                              pl="20px"
+                              pr="20px"
+                              
                             >
-                              Save
+                              Post
                             </Button>
-                            <Button onClick={onClose}>Cancel</Button>
+                           
                           </ModalFooter>
                         </ModalContent>
                       </Modal>
                       &nbsp; &nbsp;
+
                       <Button
                         leftIcon={
-                          <Icon viewBox="0 0 24 24">
+                          <Icon boxSize={6}>
                             <g
                               class="icon_svg-stroke"
                               stroke="#666"
@@ -268,13 +291,15 @@ function MiddleBar() {
                         }
                         bg="#fff"
                         borderRadius="20px"
+                        color="rgb(99,100,102)"
                       >
                         Follow
                       </Button>
                       &nbsp; &nbsp;
+
                       <Button
                         leftIcon={
-                          <Icon viewBox="0 0 24 24">
+                          <Icon boxSize={6}>
                             <g fill="none" fill-rule="evenodd">
                               <path
                                 d="m11.828 9.314 3.9-3.9a2 2 0 1 1 2.828 2.829l-3.9 3.9m-3.535 3.535-2.464 2.464-4.241 1.416 1.412-4.244 2.465-2.465"
@@ -301,14 +326,17 @@ function MiddleBar() {
                         }
                         bg="#fff"
                         borderRadius="20px"
+                        color="rgb(99,100,102)"
                       >
                         Pass
                       </Button>
                       &nbsp; &nbsp;
                     </Box>
+
+                    
                     <Box>
                       <Button bg="#fff" borderRadius="20px">
-                        <Icon viewBox="0 0 24 24">
+                        <Icon boxSize={6}>
                           <path
                             d="m12 20 9-11h-6V4H9v5H3z"
                             class="icon_svg-stroke icon_svg-fill"
@@ -323,7 +351,7 @@ function MiddleBar() {
                       <Menu>
                         <MenuButton>
                           <Button bg="#fff" borderRadius="100%">
-                            <Icon viewBox="0 0 24 24">
+                            <Icon boxSize={6}>
                               <path
                                 d="M11.25 11.25a1.06 1.06 0 1 0 1.5 1.5 1.06 1.06 0 0 0-1.5-1.5Zm-7 0a1.06 1.06 0 1 0 1.5 1.5 1.06 1.06 0 0 0-1.5-1.5Zm14 0a1.06 1.06 0 1 0 1.5 1.5 1.06 1.06 0 0 0-1.5-1.5Z"
                                 class="icon_svg-stroke"
