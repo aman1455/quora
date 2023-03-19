@@ -208,6 +208,8 @@ export default function Question() {
       post: posttext,
       imageUrl: imageUrl,
       date: Date(),
+      comment:0,
+      share:0,
     })
     setImageUrl("")
     handleCloseModal()
@@ -220,7 +222,7 @@ export default function Question() {
     setMenui(e)
   }
   return (
-    <Box p="4" m="auto" w="30%">
+    <Box p="4" m="auto" w="30%" shadow="md" borderWidth="1px" marginTop="2">
       <Flex direction="column" gap="1">
         <Flex gap="2">
           <Avatar
