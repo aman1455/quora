@@ -154,7 +154,6 @@ const LoginComp = () => {
         email: state.email,
         password: state.password,
         name: state.email.match(/^([^@]*)@/)[1],
-        
       })
       .then((json) => {
         console.log(json.data)

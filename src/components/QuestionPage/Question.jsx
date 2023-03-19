@@ -3,6 +3,7 @@ import { FiUpload } from "react-icons/fi"
 import "react-quill/dist/quill.snow.css"
 import { useRef } from "react"
 import "./Questions.css"
+import axios from "axios"
 import { useNavigate } from "react-router-dom"
 
 import {
@@ -49,9 +50,10 @@ import { useState } from "react"
 import { useDisclosure } from "@chakra-ui/react"
 import { Icon, createIcon } from "@chakra-ui/react"
 import { Divider } from "@chakra-ui/react"
-import { useSelector } from "react-redux"
+import { useSelector, useDispatch } from "react-redux"
 
 export default function Question() {
+  let dispatch = useDispatch()
   let navigate = useNavigate()
   let AuthData = useSelector((storeData) => {
     return storeData.AuthReducer
@@ -140,7 +142,9 @@ export default function Question() {
       }
     )
       .then((response) => response.json())
-      .then((data) => console.log(data))
+      .then((data) => {
+        console.log(data)
+      })
       .catch((error) => console.error(error))
   }
   const saveDataToDb2 = (data) => {
@@ -152,7 +156,18 @@ export default function Question() {
       body: JSON.stringify(data),
     })
       .then((response) => response.json())
-      .then((data) => console.log(data))
+      .then((data) => {
+        axios
+          .get(
+            `http://localhost:${process.env.REACT_APP_JSON_SERVER_PORT}/posts`
+          )
+          .then((res) => {
+            dispatch({
+              type: "post_data",
+              payload: res.data,
+            })
+          })
+      })
       .catch((error) => console.error(error))
   }
 
@@ -177,7 +192,7 @@ export default function Question() {
     saveDataToDb1({
       userId: Number(JSON.parse(localStorage.getItem("AuthData")).token),
       question: text,
-      date: Date().getDate(),
+      date: Date(),
     })
 
     handleCloseModal()
@@ -193,6 +208,8 @@ export default function Question() {
       post: posttext,
       imageUrl: imageUrl,
       date: Date(),
+      comment:0,
+      share:0,
     })
     setImageUrl("")
     handleCloseModal()
@@ -205,7 +222,7 @@ export default function Question() {
     setMenui(e)
   }
   return (
-    <Box p="4" m="auto" w="30%">
+    <Box p="4" m="auto" w="30%" shadow="md" borderWidth="1px" marginTop="2">
       <Flex direction="column" gap="1">
         <Flex gap="2">
           <Avatar

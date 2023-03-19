@@ -53,7 +53,7 @@ function MiddleBar() {
 
   useEffect(() => {
     // `http://localhost:8080/users/${Number(data.token)}/?_embed=questions`
-    axios.get(`http://localhost:8080/questions`).then((res) => {
+    axios.get(`http://localhost:8080/questions?_embed=answers`).then((res) => {
       console.log(res.data)
       dispatch({
         type: "Question_Data",
@@ -176,8 +176,13 @@ function MiddleBar() {
                         as="span"
                         _hover={{ textDecoration: "underline" }}
                         fontWeight="bold"
+                        onClick={() => {
+                          navigate(`/answer/${e.id}`)
+                        }}
                       >
-                        No answer yet
+                        {e.answers.length === 0
+                          ? "No answer yet"
+                          : e.answers.length + " " + " answers"}
                       </Box>{" "}
                       {"· "}
                       {e.date}
@@ -264,7 +269,7 @@ function MiddleBar() {
                         bg="#fff"
                         borderRadius="20px"
                       >
-                        Follow · 1
+                        Follow
                       </Button>
                       &nbsp; &nbsp;
                       <Button
