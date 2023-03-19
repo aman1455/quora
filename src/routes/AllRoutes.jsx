@@ -12,6 +12,7 @@ import AnswerPageApp from "../components/AnswersPage/AnswerPageApp"
 import Profile from "../components/Profile/profile"
 import DetailsPage from "../components/DetailsPage/DetailsPage"
 import Post from "../components/Postpage/Post"
+import Following from "../components/FollowingPage/Following"
 function AllRoutes() {
   return (
     <Routes>
@@ -73,6 +74,14 @@ function AllRoutes() {
           <PrivateRoute>
             <Profile />
           </PrivateRoute>
+        }
+      />
+      <Route
+        path="/Following"
+        element={
+         
+            <Following/>
+          
         }
       />
     </Routes>
