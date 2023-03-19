@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom"
 import LoginComp from "../components/Login/LoginComp"
 import PrivateRoute from "./Private"
+import { useState } from "react"
 import { Home } from "./home"
 import LoginRoute from "./LoginRoute"
 import Navbar from "../components/NavbarAndSidebar/Navbar"
@@ -18,6 +19,7 @@ import Allcompdetails from "../components/DetailsPage/Allcompdetails"
 import PageNotFound from "../components/PageNotFound/PageNotFound"
 // import Notifications from "../components/Notifications/Notifications"
 function AllRoutes() {
+  let [state, setState] = useState(true)
   return (
     <Routes>
       <Route
@@ -52,8 +54,8 @@ function AllRoutes() {
           <PrivateRoute>
             <Navbar />
             <Sidebar />
-            <Question />
-            <Post />
+            <Question state={state} setState={setState} />
+            <Post state={state} setState={setState} />
           </PrivateRoute>
         }
       />

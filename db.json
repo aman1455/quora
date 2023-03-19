@@ -35,7 +35,7 @@
         "id": 1,
         "name": "Books that influenced You",
         "image": "https://qph.cf2.quoracdn.net/main-custom-tc-1586670-1035x207-yakgmjqqvwyhvizdudzejxykynxvhwwq.jpeg",
-        "Description": "ONLY MENTIONS ABOUT THE BOOKS THAT INFLUENCED YOU (+COMICS & MEMES R INCLUDED 2)"
+        "Description": "ONLY MENTIONS ABOUT THE BOOKS THAT INFLUENCED YOU (+COMICS & MEMES R INCLUDED 2)ONLY MENTIONS ABOUT THE BOOKS THAT INFLUENCED YOU (+COMICS & MEMES R INCLUDED 2)ONLY MENTIONS ABOUT THE BOOKS THAT INFLUENCED YOU (+COMICS & MEMES R INCLUDED 2)"
       },
       {
         "id": 2,
@@ -454,6 +454,36 @@
       "questionId": 2,
       "answer": "Question 2-answer 2",
       "id": 4
+    },
+    {
+      "userId": 102,
+      "questionId": 1,
+      "answer": "HI",
+      "id": 5
+    },
+    {
+      "userId": 102,
+      "questionId": 1,
+      "answer": "hello arsh",
+      "id": 6
+    },
+    {
+      "userId": 102,
+      "questionId": 1,
+      "answer": "hello narayan",
+      "id": 7
+    },
+    {
+      "userId": 101,
+      "questionId": 1,
+      "answer": "Hell",
+      "id": 8
+    },
+    {
+      "userId": 102,
+      "questionId": 1,
+      "answer": "helllll",
+      "id": 9
     }
   ],
   "posts": [
@@ -478,6 +508,94 @@
       "comment": 0,
       "share": 0,
       "id": 2
+    },
+    {
+      "userId": 102,
+      "userName": "arshgoyal188",
+      "userImage": "https://lh3.googleusercontent.com/a/AGNmyxbLX1p5Ybxzskl2CmfmGTTKfX7sqmP_98xhxMZ8=s96-c",
+      "post": "<p><u>Hi </u><u style=\"color: inherit;\">harashma</u></p>",
+      "imageUrl": "",
+      "date": "Mon, Mar 20, 2023",
+      "comment": 0,
+      "share": 0,
+      "id": 3
+    },
+    {
+      "userId": 102,
+      "userName": "arshgoyal188",
+      "userImage": "https://lh3.googleusercontent.com/a/AGNmyxbLX1p5Ybxzskl2CmfmGTTKfX7sqmP_98xhxMZ8=s96-c",
+      "post": "<p>Hello</p>",
+      "imageUrl": "",
+      "date": "Mon, Mar 20, 2023",
+      "comment": 0,
+      "share": 0,
+      "id": 4
+    },
+    {
+      "userId": 102,
+      "userName": "arshgoyal188",
+      "userImage": "https://lh3.googleusercontent.com/a/AGNmyxbLX1p5Ybxzskl2CmfmGTTKfX7sqmP_98xhxMZ8=s96-c",
+      "post": "<p>HI Maharasha</p>",
+      "imageUrl": "",
+      "date": "Mon, Mar 20, 2023",
+      "comment": 0,
+      "share": 0,
+      "id": 5
+    },
+    {
+      "userId": 102,
+      "userName": "arshgoyal188",
+      "userImage": "https://lh3.googleusercontent.com/a/AGNmyxbLX1p5Ybxzskl2CmfmGTTKfX7sqmP_98xhxMZ8=s96-c",
+      "post": "<p>HEllo</p>",
+      "imageUrl": "",
+      "date": "Mon, Mar 20, 2023",
+      "comment": 0,
+      "share": 0,
+      "id": 6
+    },
+    {
+      "userId": 102,
+      "userName": "arshgoyal188",
+      "userImage": "https://lh3.googleusercontent.com/a/AGNmyxbLX1p5Ybxzskl2CmfmGTTKfX7sqmP_98xhxMZ8=s96-c",
+      "post": "<p>Hello <strong>Arsh</strong></p>",
+      "imageUrl": "",
+      "date": "Mon, Mar 20, 2023",
+      "comment": 0,
+      "share": 0,
+      "id": 7
+    },
+    {
+      "userId": 102,
+      "userName": "arshgoyal188",
+      "userImage": "https://lh3.googleusercontent.com/a/AGNmyxbLX1p5Ybxzskl2CmfmGTTKfX7sqmP_98xhxMZ8=s96-c",
+      "post": "<p><u>Hello fghjk</u></p>",
+      "imageUrl": "",
+      "date": "Mon, Mar 20, 2023",
+      "comment": 0,
+      "share": 0,
+      "id": 8
+    },
+    {
+      "userId": 102,
+      "userName": "arshgoyal188",
+      "userImage": "https://lh3.googleusercontent.com/a/AGNmyxbLX1p5Ybxzskl2CmfmGTTKfX7sqmP_98xhxMZ8=s96-c",
+      "post": "<p>Hello ghjkl;</p>",
+      "imageUrl": "",
+      "date": "Mon, Mar 20, 2023",
+      "comment": 0,
+      "share": 0,
+      "id": 9
+    },
+    {
+      "userId": 102,
+      "userName": "arshgoyal188",
+      "userImage": "https://lh3.googleusercontent.com/a/AGNmyxbLX1p5Ybxzskl2CmfmGTTKfX7sqmP_98xhxMZ8=s96-c",
+      "post": "<p>hioip;ghjkl</p>",
+      "imageUrl": "",
+      "date": "Mon, Mar 20, 2023",
+      "comment": 0,
+      "share": 0,
+      "id": 10
     }
   ],
   "pcomments": [
@@ -486,32 +604,74 @@
       "postId": 1,
       "commment": "H1",
       "id": 1
+    },
+    {
+      "userId": 102,
+      "postId": 1,
+      "commment": "Hello",
+      "id": 2
     }
   ],
   "pupvotes": [
     {
       "userId": 102,
       "postId": 1,
-      "upvote": false,
+      "upvote": true,
       "id": 1
     },
     {
-      "userId": 115875582956189680000,
+      "userId": 101,
       "postId": 1,
-      "upvote": false,
+      "upvote": true,
       "id": 2
     },
     {
-      "userId": 115,
-      "postId": 1,
+      "userId": 101,
+      "postId": 2,
       "upvote": true,
       "id": 3
     },
     {
-      "userId": 115,
+      "userId": 102,
       "postId": 2,
       "upvote": true,
       "id": 4
+    },
+    {
+      "userId": 102,
+      "postId": 3,
+      "upvote": true,
+      "id": 5
+    },
+    {
+      "userId": 102,
+      "postId": 4,
+      "upvote": true,
+      "id": 6
+    },
+    {
+      "userId": 102,
+      "postId": 5,
+      "upvote": true,
+      "id": 7
+    },
+    {
+      "userId": 102,
+      "postId": 9,
+      "upvote": true,
+      "id": 8
+    },
+    {
+      "userId": 102,
+      "postId": 10,
+      "upvote": true,
+      "id": 9
+    },
+    {
+      "userId": 101,
+      "postId": 3,
+      "upvote": false,
+      "id": 10
     }
   ],
   "pdownvotes": [],

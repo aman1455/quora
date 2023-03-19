@@ -53,7 +53,7 @@ import { Divider } from "@chakra-ui/react"
 import { useSelector, useDispatch } from "react-redux"
 import { formatDate } from "../Postpage/Postcard"
 
-export default function Question() {
+export default function Question({ state, setState }) {
   let dispatch = useDispatch()
   let navigate = useNavigate()
   let AuthData = useSelector((storeData) => {
@@ -167,6 +167,7 @@ export default function Question() {
               type: "post_data",
               payload: res.data,
             })
+            setState(!state)
           })
       })
     // .catch((error) => console.error(error))

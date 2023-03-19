@@ -45,8 +45,9 @@ function formatDate(dateString) {
   return date.toLocaleDateString(undefined, options)
 }
 
-function Post() {
+function Post({ state, setState }) {
   const [posts, setPosts] = useState([])
+  // const [state, setState] = useState(true)
   let data = useSelector((sData) => {
     return sData.PostReducer
   })
@@ -64,13 +65,19 @@ function Post() {
           type: "post_data",
           payload: data,
         })
+        console.log(state)
       })
-  }, [data])
-
+  }, [state])
   return (
     <Box maxW="40%" mx="auto">
       {posts.map((post) => (
-        <Postcard post={post} posts={posts} setPosts={setPosts} />
+        <Postcard
+          post={post}
+          posts={posts}
+          setPosts={setPosts}
+          setState={setState}
+          state={state}
+        />
       ))}
     </Box>
   )
