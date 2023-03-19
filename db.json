@@ -410,6 +410,22 @@
       "Description": "MEME - KNOWLEDGE - TIPS - ENTERTAINMENT - ENJOY 😎😜"
     }
   ],
+  "acomments": [
+    {
+      "userId": 101479065886207950000,
+      "questionId": 2,
+      "answerId": 5,
+      "answer": "Hello Brother",
+      "id": 1
+    },
+    {
+      "userId": 101479065886207950000,
+      "questionId": 2,
+      "answerId": 5,
+      "answer": "Hi brooo",
+      "id": 2
+    }
+  ],
   "questions": [
     {
       "userId": 101479065886207950000,
@@ -428,6 +444,12 @@
       "question": "Hi arsh",
       "date": "",
       "id": 3
+    },
+    {
+      "userId": 1,
+      "question": "Hello Narayan",
+      "date": "Sun Mar 19 2023 00:06:57 GMT+0530 (India Standard Time)",
+      "id": 4
     }
   ],
   "answers": [
@@ -496,6 +518,33 @@
       "comment":"30",
       "share":"4",
       "id": 2
+    },
+    {
+      "userId": 1,
+      "userName": "arshgoyal188",
+      "userImage": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fimgv3.fotor.com%2Fimages%2Fblog-cover-image%2F10-profile-picture-ideas-to-make-you-stand-out.jpg&tbnid=Sftxv-XsWOqEQM&vet=12ahUKEwjOl6md_-X9AhWZ5nMBHbMKCHIQMygTegUIARCEAg..i&imgrefurl=https%3A%2F%2Fwww.fotor.com%2Fblog%2Fprofile-picture-ideas%2F&docid=ZDKJjCOmeX62ZM&w=4500&h=2532&q=profile%20photo&ved=2ahUKEwjOl6md_-X9AhWZ5nMBHbMKCHIQMygTegUIARCEAg",
+      "post": "<p>Hello</p>",
+      "imageUrl": "",
+      "date": "Sat Mar 18 2023 23:52:06 GMT+0530 (India Standard Time)",
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "userName": "arshgoyal188",
+      "userImage": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fimgv3.fotor.com%2Fimages%2Fblog-cover-image%2F10-profile-picture-ideas-to-make-you-stand-out.jpg&tbnid=Sftxv-XsWOqEQM&vet=12ahUKEwjOl6md_-X9AhWZ5nMBHbMKCHIQMygTegUIARCEAg..i&imgrefurl=https%3A%2F%2Fwww.fotor.com%2Fblog%2Fprofile-picture-ideas%2F&docid=ZDKJjCOmeX62ZM&w=4500&h=2532&q=profile%20photo&ved=2ahUKEwjOl6md_-X9AhWZ5nMBHbMKCHIQMygTegUIARCEAg",
+      "post": "<p>Hello</p>",
+      "imageUrl": "",
+      "date": "Sat Mar 18 2023 23:52:42 GMT+0530 (India Standard Time)",
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "userName": "arshgoyal188",
+      "userImage": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fimgv3.fotor.com%2Fimages%2Fblog-cover-image%2F10-profile-picture-ideas-to-make-you-stand-out.jpg&tbnid=Sftxv-XsWOqEQM&vet=12ahUKEwjOl6md_-X9AhWZ5nMBHbMKCHIQMygTegUIARCEAg..i&imgrefurl=https%3A%2F%2Fwww.fotor.com%2Fblog%2Fprofile-picture-ideas%2F&docid=ZDKJjCOmeX62ZM&w=4500&h=2532&q=profile%20photo&ved=2ahUKEwjOl6md_-X9AhWZ5nMBHbMKCHIQMygTegUIARCEAg",
+      "post": "<p>Hello</p>",
+      "imageUrl": "",
+      "date": "Sat Mar 18 2023 23:52:55 GMT+0530 (India Standard Time)",
+      "id": 5
     }
   ],
   "read": [

@@ -39,7 +39,7 @@ function AllRoutes() {
             <Navbar />
             <Sidebar />
             <Question />
-            <Post/>
+            <Post />
           </PrivateRoute>
         }
       />
