@@ -12,6 +12,7 @@ import AnswerPageApp from "../components/AnswersPage/AnswerPageApp"
 import Profile from "../components/Profile/profile"
 import DetailsPage from "../components/DetailsPage/DetailsPage"
 import Post from "../components/Postpage/Post"
+import SpacePageComp from "../components/SpacePage/SpacePageComp"
 function AllRoutes() {
   return (
     <Routes>
@@ -28,6 +29,14 @@ function AllRoutes() {
         element={
           <PrivateRoute>
             <DetailsPage />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/spaces"
+        element={
+          <PrivateRoute>
+            <SpacePageComp />
           </PrivateRoute>
         }
       />
