@@ -154,11 +154,7 @@ const LoginComp = () => {
         email: state.email,
         password: state.password,
         name: state.email.match(/^([^@]*)@/)[1],
-        spaces: [],
-        questions: [],
-        answers: [],
-        notifications: [],
-        credentials: [],
+        
       })
       .then((json) => {
         console.log(json.data)
@@ -246,11 +242,6 @@ const LoginComp = () => {
                             email: data.email,
                             password: "",
                             name: data.email.match(/^([^@]*)@/)[1],
-                            spaces: [],
-                            questions: [],
-                            answers: [],
-                            notifications: [],
-                            credentials: [],
                             id: Number(data.sub),
                             avatar: data.picture,
                           })

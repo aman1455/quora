@@ -11,6 +11,7 @@ import Music from "../components/NavbarAndSidebar/SidebarOptions/Music"
 import AnswerPageApp from "../components/AnswersPage/AnswerPageApp"
 import Profile from "../components/Profile/profile"
 import DetailsPage from "../components/DetailsPage/DetailsPage"
+import {Post} from '../components/Postpage/Post'
 function AllRoutes() {
   return (
     <Routes>
@@ -38,6 +39,7 @@ function AllRoutes() {
             <Navbar />
             <Sidebar />
             <Question />
+            <Post/>
           </PrivateRoute>
         }
       />
