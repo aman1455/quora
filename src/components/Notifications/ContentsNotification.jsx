@@ -1,25 +1,31 @@
 import styled from "styled-components";
 
+import {Box, Img, Text, useColorModeValue} from "@chakra-ui/react";
 export const ContentsNotification = () => {
     return (
+        // rgb(158,160,163)
         <Container>
+
             <div className="heading">
-                <span>Notifications</span>
-                <p>Mark All As Read . Settings </p>
+                <Text as="span" color={useColorModeValue('rgb(99,100,102)', "rgb(213,214,214)") }>Notifications</Text>
+                <Text as="span" fontSize={"12px"} color={useColorModeValue('rgb(99,100,102)', "rgb(213,214,214)") }>Mark All As Read . Settings </Text>
             </div>
-            <div className="subdiv">
-                <img
-                    height="31rem"
-                    src="assets/Notifications/phsycology.jpeg"
+            <Box bg={"rgb(237,241,245)"} className="subdiv">
+                <Img
+                    // height="31rem"
+                    w="5%"
+                    h="5%"
+                    src="https://qph.cf2.quoracdn.net/main-thumb-ti-3751490-100-yothankzzxtnhmtkeotmxtmqwxrorwhi.jpeg"
                     alt=""
+                    borderRadius={"10%"}
                 />
-                <div className="text">
-                    <p>
+                <Box  className="text">
+                    <Text as={"p"} color={useColorModeValue('rgb(99,100,102)', "rgb(213,214,214)") }>
                         Human Psychology Facts . Posted in a Space you might.
                         Wed
-                    </p>
-                    <span> Why are some people always single? </span>
-                </div>
+                    </Text>
+                    <Text as={"span"} color={useColorModeValue('rgb(99,100,102)', "rgb(213,214,214)") }> Why are some people always single? </Text>
+                </Box>
                 <div className="hover">
                     <svg
                         className="dots"
@@ -36,8 +42,8 @@ export const ContentsNotification = () => {
                         ></path>
                     </svg>
                 </div>
-            </div>
-            <div className="subdiv">
+            </Box>
+            <Box bg={"rgb(237,241,245)"} pb="10px" className="subdiv">
                 <svg className="svg" width="24" height="24" viewBox="0 0 24 24">
                     <path
                         class="icon_svg-fill_as_stroke"
@@ -69,9 +75,9 @@ export const ContentsNotification = () => {
                         ></path>
                     </svg>
                 </div>
-            </div>
+            </Box>
 
-            <div className="subdiv">
+            <Box  bg={"rgb(237,241,245)"} className="subdiv">
                 <img
                     height="31rem"
                     src="assets/Notifications/round.jpeg"
@@ -103,7 +109,7 @@ export const ContentsNotification = () => {
                         ></path>
                     </svg>
                 </div>
-            </div>
+            </Box>
         </Container>
     );
 };

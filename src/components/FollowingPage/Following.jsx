@@ -7,7 +7,7 @@ import {
   Card,
   CardBody,
   Avatar,
-  Stack,
+  Stack,useColorModeValue
 } from "@chakra-ui/react"
 import React from "react"
 
@@ -15,7 +15,7 @@ export default function Following() {
   return (
     <Box display="flex">
       <Box w={"25%"}></Box>
-      <Box bg="#f1f2f2" w={"75%"}>
+      <Box bg={useColorModeValue('rgb(241,242,242)', "rgb(26,32,44)") } w={"75%"}>
         <Box boxSize="100px">
           <Image
             marginLeft="460px"
@@ -37,8 +37,8 @@ export default function Following() {
           </Text>
         </Box>
 
-        <Box bg="white" marginTop="30px" w="55%" marginLeft="150px">
-          <Heading as="h4" size="md" paddingTop="30px" marginLeft="20px">
+        <Box bg={useColorModeValue('rgb(241,242,242)', "rgb(26,32,44)") } marginTop="30px" w="55%" marginLeft="150px">
+          <Heading as="h4"  size="md" paddingTop="30px" marginLeft="20px">
             Discover Spaces
           </Heading>
           <Text
@@ -46,6 +46,7 @@ export default function Following() {
             fontWeight="medium"
             paddingTop="15px"
             marginLeft="30px"
+            pb={"20px"}
           >
             Spaces you might like
           </Text>

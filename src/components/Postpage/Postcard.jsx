@@ -13,7 +13,7 @@ import {
   MenuList,
   MenuItem,
   IconButton,
-  Icon,
+  Icon,useColorModeValue
 } from "@chakra-ui/react"
 import ReactQuill from "react-quill"
 import { useParams } from "react-router-dom"
@@ -327,9 +327,10 @@ export default function Postcard({
         setDownVoteCount(count)
         // console.log(count)
       })
-  }
+  } 
+  // rgb(168,170,173)
   return (
-    <Box key={post.id} p="2" shadow="md" borderWidth="1px" marginTop="2">
+    <Box  bg={useColorModeValue('white', "rgb(38,38,38)") } key={post.id} p="2" shadow="md" borderWidth="1px" marginTop="2">
       <Flex direction="column" gap="2">
         <Skeleton isLoaded={isLoading}>
           <Flex gap="2">
@@ -338,7 +339,7 @@ export default function Postcard({
               <Text fontSize="sm" fontWeight="bold">
                 {post.userName}
               </Text>
-              <Text fontSize="sm" color="gray.500">
+              <Text fontSize="sm" color={useColorModeValue('rgb(99,100,102)', "rgb(168,170,173)") }>
                 {formatDate(post.date)}
               </Text>
             </Flex>
@@ -394,10 +395,12 @@ export default function Postcard({
                     borderRightRadius="0"
                     borderLeftRadius="30"
                     border="1px"
-                    borderColor="rgb(222,224,225)"
+                    // borderColor="rgb(222,224,225)"
+                    borderColor={useColorModeValue('rgb(222,224,225)', "none") }
                     size="sm"
                     h="8"
                     onClick={handleupvote}
+                    bg={useColorModeValue('rgb(247,247,247)', "rgb(64,64,64)") } 
                   >
                     <Flex gap={2} alignItems={"center"}>
                       {" "}
@@ -413,7 +416,7 @@ export default function Postcard({
                       <Text
                         fontWeight="semibold"
                         fontSize="sm"
-                        color="rgb(99,100,102)"
+                        color={useColorModeValue('rgb(99,100,102)', "rgb(168,170,173)") }
                         fontFamily="sans-serif"
                       >
                         UpVote : {upvoteCount}
@@ -428,6 +431,7 @@ export default function Postcard({
                     borderColor="rgb(222,224,225)"
                     size="sm"
                     onClick={handledownvote}
+                    bg={useColorModeValue('rgb(247,247,247)', "rgb(64,64,64)") } 
                   >
                     <Icon viewBox="0 0 24 24" color="red.500" boxSize={5}>
                       <path
@@ -447,8 +451,8 @@ export default function Postcard({
                   borderRadius={30}
                   size="sm"
                 >
-                  <Flex gap={1}>
-                    <ChatIcon />
+                  <Flex gap={1} alignItems={"center"}>
+                    <ChatIcon color={useColorModeValue('rgb(99,100,102)', "rgb(168,170,173)") }/>
 
                     <Text fontWeight="light" fontSize="sm">
                       {post.pcomments.length || 0}

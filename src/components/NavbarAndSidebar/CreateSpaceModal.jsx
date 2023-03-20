@@ -14,7 +14,7 @@ import {
     ModalFooter,
     Box,
     Icon,
-    Text
+    Text,useColorModeValue
   } from '@chakra-ui/react';
 function CreateSpaceModal() {
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -32,7 +32,7 @@ function CreateSpaceModal() {
     return (
       <>
        
-         <Box p={2} display={'flex'} w={'150px'} mt={"20px"} bg={'rgb(236,237,237)' }  _hover={{
+         <Box p={2} display={'flex'} w={'150px'} mt={"20px"} bg={useColorModeValue('rgb(241,242,242)', "rgb(24,24,24)") }  _hover={{
                 background: 'rgb(228,230,230)',
                 color: 'teal.500',
               }}>

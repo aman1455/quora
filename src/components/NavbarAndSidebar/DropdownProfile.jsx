@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import {
@@ -16,9 +16,11 @@ import {
   Box,
   WrapItem,
   Avatar,
+  useColorMode,useColorModeValue
 } from "@chakra-ui/react"
-
+import Navbar from "./Navbar"
 import { SunIcon } from "@chakra-ui/icons"
+
 import { NavLink } from "react-router-dom"
 function DropdownProfile() {
   let dispatch = useDispatch()
@@ -26,11 +28,13 @@ function DropdownProfile() {
   let data = useSelector((storeData) => {
     return storeData.UserReducer
   })
-
+  const {  toggleColorMode } = useColorMode()
+  let [state, setState] = useState(true)
+   const bg = useColorModeValue("white", "black")
   return (
     <>
       <Menu hasArrow boxShadow={"rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;"}>
-        <MenuButton w={"65px"} as={Button} bg={"white"}>
+        <MenuButton w={"65px"} as={Button} bg={useColorModeValue('white', "rgb(38,38,38)") }>
           <Wrap>
             <WrapItem>
               <Avatar
@@ -197,8 +201,11 @@ function DropdownProfile() {
               w={"150px"}
               justifyContent={"space-between"}
             >
-              <Text>Dark mode</Text>
-              <Text>Off</Text>
+              <Text as={"button"} onClick={()=>{
+                toggleColorMode()
+                setState(!state)
+              }}>Dark mode</Text>
+              <Text fontWeight={"bold"} color="red">{state  ? "Off" : "On"}</Text>
             </Box>
           </MenuItem>
           <MenuItem h="45px">
@@ -223,6 +230,7 @@ function DropdownProfile() {
           </MenuItem>
         </MenuList>
       </Menu>
+      {/* <Navbar toggleColorMode={toggleColorMode} bg={bg}/> */}
     </>
     // Your content & stats
   )

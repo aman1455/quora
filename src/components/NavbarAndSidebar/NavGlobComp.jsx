@@ -3,7 +3,7 @@ import {
     Box,
     IconButton,
     Menu,
-    MenuButton,Button,MenuList,MenuItem, Text,MenuDivider, Center
+    MenuButton,Button,MenuList,MenuItem, Text,MenuDivider, Center,useColorModeValue
   } from '@chakra-ui/react';
   import { FiGlobe } from 'react-icons/fi';
 function NavGlobComp() {
@@ -15,7 +15,7 @@ function NavGlobComp() {
                 w="40px"
                 h="45px"
               >
-              <MenuButton   w="100%"  as={Button} bg={"white"}>
+              <MenuButton   w="100%"  as={Button} bg={useColorModeValue('white', "rgb(38,38,38)") }>
               <Center>
 
                 <IconButton
@@ -23,7 +23,7 @@ function NavGlobComp() {
                   color={"rgb(99,100,102)"}
                   fontSize="25"
                   aria-label="Search database"
-                  icon={<FiGlobe />}
+                  icon={<FiGlobe color={useColorModeValue('#666666', "rgb(177,179,182)") }/>}
                   
                 />
               </Center>
