@@ -372,16 +372,18 @@ export default function Postcard({
           <ReactQuill theme="bubble" value={post.post} readOnly={true} />
         )}
         {post.imageUrl !== "" && (
-          <Box boxSize="lg" w="100%">
-            <Image
-              src={post.imageUrl}
-              alt={post.userName}
-              objectFit="contain"
-              margin="0 auto"
-              h="100%"
-              w="100%"
-            />
-          </Box>
+          <Skeleton isLoaded={isLoading}>
+            <Box boxSize="lg" w="100%">
+              <Image
+                src={post.imageUrl}
+                alt={post.userName}
+                objectFit="contain"
+                margin="0 auto"
+                h="100%"
+                w="100%"
+              />
+            </Box>
+          </Skeleton>
         )}
         <Box width="100%" height="10">
           <Skeleton isLoaded={isLoading}>
