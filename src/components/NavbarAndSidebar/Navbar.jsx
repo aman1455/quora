@@ -79,13 +79,14 @@ function Navbar() {
           className="icon1"
         >
           <Box w={"10%"}>
+        <NavLink to="/"> 
             <Image
               src="https://www.vectorlogo.zone/logos/quora/quora-ar21.svg"
               alt="quora"
               w={"100%"}
             />
+        </NavLink>
           </Box>
-
           <Box display={"flex"} width={"25%"} justifyContent={"space-between"}>
             <NavLink
               to="/"

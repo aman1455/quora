@@ -44,7 +44,6 @@ function formatDate(dateString) {
   }
   return date.toLocaleDateString(undefined, options)
 }
-
 function Post({ state, setState }) {
   let [isLoading, setLoading] = useState(false)
   const [posts, setPosts] = useState([])
@@ -60,7 +59,7 @@ function Post({ state, setState }) {
     )
       .then((response) => response.json())
       .then((data) => {
-        // console.log(data, "This is Posts")
+       
         setPosts(data)
         dispatch({
           type: "post_data",

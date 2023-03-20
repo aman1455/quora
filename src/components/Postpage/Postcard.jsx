@@ -33,6 +33,7 @@ import {
   FormLabel,
   Input,
 } from "@chakra-ui/react"
+import { Skeleton } from '@chakra-ui/react'
 import { useDisclosure } from "@chakra-ui/react"
 import React from "react"
 import { useDispatch, useSelector } from "react-redux"
@@ -46,7 +47,7 @@ import {
   RepeatIcon,
   TriangleDownIcon,
 } from "@chakra-ui/icons"
-import { Skeleton } from "@chakra-ui/react"
+
 export function formatDate(dateString) {
   const date = new Date(dateString)
   const options = {
@@ -115,7 +116,7 @@ export default function Postcard({
         // console.log(downvoteCount)
         setPosts(res.data)
         setState(!state)
-
+       
         // console.log(res.data, "This is inside Card")
       })
   }
@@ -135,6 +136,7 @@ export default function Postcard({
                 upvote: false,
               })
               .then(() => {
+                
                 setUpvote(false)
                 updatePosts()
               })
@@ -162,6 +164,7 @@ export default function Postcard({
               setUpvote(true)
               handledownvotefalse()
               updatePosts()
+              
             })
         }
       })
@@ -272,7 +275,9 @@ export default function Postcard({
       })
       .then((res) => {
         // console.log(res.data)
+
         setTAC("")
+
         axios
           .get(
             `http://localhost:${process.env.REACT_APP_JSON_SERVER_PORT}/posts?_embed=pcomments&_embed=pupvotes&_embed=pdownvotes`
@@ -283,6 +288,7 @@ export default function Postcard({
               payload: res.data,
             })
             setPosts(res.data)
+           
             // console.log(res.data, "This is inside Card")
           })
       })
@@ -325,7 +331,9 @@ export default function Postcard({
       })
   }
   return (
+   
     <Box key={post.id} p="2" shadow="md" borderWidth="1px" marginTop="2">
+
       <Flex direction="column" gap="2">
         <Skeleton isLoaded={isLoading}>
           <Flex gap="2">
@@ -419,7 +427,7 @@ export default function Postcard({
                     borderLeftRadius="0"
                     border="1px"
                     borderLeft="0"
-                    borderColor="gray.500"
+                    borderColor="rgb(222,224,225)"
                     size="sm"
                     onClick={handledownvote}
                   >
@@ -530,5 +538,6 @@ export default function Postcard({
         </Box>
       </Flex>
     </Box>
+    
   )
 }
