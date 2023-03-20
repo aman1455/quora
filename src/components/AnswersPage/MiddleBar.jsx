@@ -1,13 +1,5 @@
 import React, { useRef } from "react"
-import {
-  Box,
-  Text,
-  Flex,
-  Img,
-  Icon,
-  Button,
-  Textarea,
-} from "@chakra-ui/react"
+import { Box, Text, Flex, Img, Icon, Button, Textarea } from "@chakra-ui/react"
 import CustomModal from "./customModal"
 import { CloseIcon } from "@chakra-ui/icons"
 import { BiEdit } from "react-icons/bi"
@@ -22,14 +14,8 @@ import {
   ModalBody,
   ModalCloseButton,
 } from "@chakra-ui/react"
-import {
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  Portal,
-} from "@chakra-ui/react"
-import { FiChevronRight } from "react-icons/fi";
+import { Menu, MenuButton, MenuList, MenuItem, Portal } from "@chakra-ui/react"
+import { FiChevronRight } from "react-icons/fi"
 import { useNavigate } from "react-router-dom"
 import axios from "axios"
 import { useEffect, useState } from "react"
@@ -69,6 +55,7 @@ function MiddleBar() {
         userId: Number(data.token),
         questionId: Number(e.target.name),
         answer: tA,
+        date: Date(),
       })
       .then((res) => {
         console.log(res.data)
@@ -91,9 +78,7 @@ function MiddleBar() {
         boxShadow="rgba(0, 0, 0, 0.04) 0px 1px 1px 0px"
         bg={"white"}
         width={"45%"}
-       
       >
-     
         <Box
           display="flex"
           alignContent="center"
@@ -110,9 +95,8 @@ function MiddleBar() {
             placeItems="center"
             mt="auto"
             mb="auto"
-           
           >
-            <Icon  viewBox="0 0 24 24" boxSize={4}>
+            <Icon viewBox="0 0 24 24" boxSize={4}>
               <path
                 stroke="#fff"
                 strokeWidth="1.5"
@@ -135,7 +119,9 @@ function MiddleBar() {
         </Box>
         <Box>
           <Flex flexDirection={"column"}>
-            {Questiondata.map((e, i) => {
+            {Questiondata.sort(function (a, b) {
+              return new Date(b.completeDate) - new Date(a.completeDate)
+            }).map((e, i) => {
               console.log(e, "datajjj")
               return (
                 <Box
@@ -149,8 +135,6 @@ function MiddleBar() {
                       onClick={() => {
                         navigate(`/answer/${e.id}`)
                       }}
-                     
-                      
                     >
                       <Text
                         color="#282829"
@@ -167,7 +151,6 @@ function MiddleBar() {
                       borderRadius="100%"
                       w="40px"
                       h="40px"
-                     
                       _hover={{
                         background: "rgb(228,230,230)",
                       }}
@@ -180,7 +163,6 @@ function MiddleBar() {
                   <Box>
                     <Box as="span" color={"#939598"} fontSize="13px">
                       <Box
-                       
                         as="span"
                         _hover={{ textDecoration: "underline" }}
                         fontWeight="bold"
@@ -208,7 +190,6 @@ function MiddleBar() {
                         handleAnswerClick={handleAnswerClick}
                       />
                       &nbsp; &nbsp;
-
                       <Button
                         leftIcon={
                           <Icon boxSize={6}>
@@ -237,7 +218,6 @@ function MiddleBar() {
                         Follow
                       </Button>
                       &nbsp; &nbsp;
-
                       <Button
                         leftIcon={
                           <Icon boxSize={6}>
@@ -274,7 +254,6 @@ function MiddleBar() {
                       &nbsp; &nbsp;
                     </Box>
 
-                    
                     <Box>
                       <Button bg="#fff" borderRadius="20px">
                         <Icon boxSize={6}>
