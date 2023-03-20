@@ -596,6 +596,17 @@
       "comment": 0,
       "share": 0,
       "id": 10
+    },
+    {
+      "userId": 102,
+      "userName": "arshgoyal188",
+      "userImage": "https://lh3.googleusercontent.com/a/AGNmyxbLX1p5Ybxzskl2CmfmGTTKfX7sqmP_98xhxMZ8=s96-c",
+      "post": "<p>http</p>",
+      "imageUrl": "",
+      "date": "Mon, Mar 20, 2023",
+      "comment": 0,
+      "share": 0,
+      "id": 11
     }
   ],
   "pcomments": [
@@ -616,7 +627,7 @@
     {
       "userId": 102,
       "postId": 1,
-      "upvote": true,
+      "upvote": false,
       "id": 1
     },
     {
@@ -628,13 +639,13 @@
     {
       "userId": 101,
       "postId": 2,
-      "upvote": true,
+      "upvote": false,
       "id": 3
     },
     {
       "userId": 102,
       "postId": 2,
-      "upvote": true,
+      "upvote": false,
       "id": 4
     },
     {
@@ -678,9 +689,46 @@
       "postId": 8,
       "upvote": false,
       "id": 11
+    },
+    {
+      "userId": 102,
+      "postId": 11,
+      "upvote": false,
+      "id": 12
     }
   ],
-  "pdownvotes": [],
+  "pdownvotes": [
+    {
+      "userId": 101,
+      "postId": 1,
+      "downvote": false,
+      "id": 1
+    },
+    {
+      "userId": 101,
+      "postId": 2,
+      "downvote": true,
+      "id": 2
+    },
+    {
+      "userId": 102,
+      "postId": 2,
+      "downvote": true,
+      "id": 3
+    },
+    {
+      "userId": 102,
+      "postId": 1,
+      "downvote": true,
+      "id": 4
+    },
+    {
+      "userId": 102,
+      "postId": 11,
+      "downvote": true,
+      "id": 5
+    }
+  ],
   "read": [
     {
       "id": 1,
