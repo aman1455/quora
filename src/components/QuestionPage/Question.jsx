@@ -223,6 +223,9 @@ export default function Question({ state, setState }) {
     // console.log(e)
     setMenui(e)
   }
+  let photoData = useSelector((storeData) => {
+    return storeData.UserReducer
+  })
   return (
     <Box p="4" m="auto" w="40%" shadow="md" borderWidth="1px" marginTop="2">
       <Flex direction="column" gap="1">
@@ -230,7 +233,11 @@ export default function Question({ state, setState }) {
           <Avatar
             size="md"
             name="Maharsh"
-            src="https://pbs.twimg.com/profile_images/1055577345862574081/-ZohIKC8_400x400.jpg"
+            src={
+              photoData.avatar
+                ? photoData.avatar
+                : "https://portal.staralliance.com/cms/aux-pictures/prototype-images/avatar-default.png/@@images/image.png"
+            }
           />
           <Button
             onClick={handleOpenModal1}
@@ -341,7 +348,11 @@ export default function Question({ state, setState }) {
                           <Avatar
                             size="sm"
                             name="Maharsh"
-                            src="https://pbs.twimg.com/profile_images/1055577345862574081/-ZohIKC8_400x400.jpg"
+                            src={
+                              photoData.avatar
+                                ? photoData.avatar
+                                : "https://portal.staralliance.com/cms/aux-pictures/prototype-images/avatar-default.png/@@images/image.png"
+                            }
                           />
                           <Menu>
                             <MenuButton
@@ -439,10 +450,14 @@ export default function Question({ state, setState }) {
                             <Avatar
                               size="md"
                               name="Maharsh"
-                              src="https://pbs.twimg.com/profile_images/1055577345862574081/-ZohIKC8_400x400.jpg"
+                              src={
+                                photoData.avatar
+                                  ? photoData.avatar
+                                  : "https://portal.staralliance.com/cms/aux-pictures/prototype-images/avatar-default.png/@@images/image.png"
+                              }
                             />
                             <Flex direction="column">
-                              <Text fontWeight="bold">Deshikatta</Text>
+                              <Text fontWeight="bold">{photoData.name}</Text>
                               <Menu>
                                 <MenuButton
                                   size="sm"

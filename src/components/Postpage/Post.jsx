@@ -65,10 +65,9 @@ function Post({ state, setState }) {
           type: "post_data",
           payload: data,
         })
-        setTimeout(()=>{
+        setTimeout(() => {
           setLoading(true)
-          
-        },1000)
+        }, 1000)
         console.log(state)
       })
   }, [state])
