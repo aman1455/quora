@@ -11,7 +11,7 @@ import {
   Text,
 } from "@chakra-ui/react"
 import ReadMore from "./ReadMore"
-import { Skeleton, SkeletonCircle, SkeletonText } from '@chakra-ui/react'
+import { Skeleton } from '@chakra-ui/react'
 function EachCard() {
   let [post, setPost] = useState([])
   let [isLoading, setLoading] = useState(false)
@@ -25,7 +25,7 @@ function EachCard() {
     setTimeout(()=>{
       
       setLoading(true)
-    },3000)
+    },1000)
     // console.log(jsondata, "data");
   }
 

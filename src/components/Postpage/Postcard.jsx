@@ -33,6 +33,7 @@ import {
   FormLabel,
   Input,
 } from "@chakra-ui/react"
+import { Skeleton } from '@chakra-ui/react'
 import { useDisclosure } from "@chakra-ui/react"
 import React from "react"
 import { useDispatch, useSelector } from "react-redux"
@@ -57,7 +58,7 @@ export function formatDate(dateString) {
   return date.toLocaleDateString(undefined, options)
 }
 
-export default function Postcard({ post, setPosts, posts, state, setState }) {
+export default function Postcard({ post, setPosts, posts, state, setState, isLoading, setLoading }) {
   let [tAC, setTAC] = useState("")
   const { isOpen, onOpen, onClose } = useDisclosure()
   let [upvoteCount, setUpVoteCount] = useState(0)
@@ -73,6 +74,7 @@ export default function Postcard({ post, setPosts, posts, state, setState }) {
   useEffect(() => {
     upvoteFinder()
     // downvoteFinder()
+   
   }, [posts])
   useEffect(() => {
     axios
@@ -93,6 +95,7 @@ export default function Postcard({ post, setPosts, posts, state, setState }) {
   //     })
   // }, [])
 
+  
   function updatePosts() {
     axios
       .get(
@@ -106,7 +109,7 @@ export default function Postcard({ post, setPosts, posts, state, setState }) {
         // console.log(downvoteCount)
         setPosts(res.data)
         setState(!state)
-
+       
         // console.log(res.data, "This is inside Card")
       })
   }
@@ -126,6 +129,7 @@ export default function Postcard({ post, setPosts, posts, state, setState }) {
                 upvote: false,
               })
               .then(() => {
+                
                 setUpvote(false)
                 updatePosts()
               })
@@ -151,6 +155,7 @@ export default function Postcard({ post, setPosts, posts, state, setState }) {
             .then(() => {
               setUpvote(true)
               updatePosts()
+              
             })
         }
       })
@@ -215,7 +220,9 @@ export default function Postcard({ post, setPosts, posts, state, setState }) {
       })
       .then((res) => {
         // console.log(res.data)
+
         setTAC("")
+
         axios
           .get(
             `http://localhost:${process.env.REACT_APP_JSON_SERVER_PORT}/posts?_embed=pcomments&_embed=pupvotes&_embed=pdownvotes`
@@ -226,6 +233,7 @@ export default function Postcard({ post, setPosts, posts, state, setState }) {
               payload: res.data,
             })
             setPosts(res.data)
+           
             // console.log(res.data, "This is inside Card")
           })
       })
@@ -268,8 +276,11 @@ export default function Postcard({ post, setPosts, posts, state, setState }) {
   //     })
   // }
   return (
+   
     <Box key={post.id} p="2" shadow="md" borderWidth="1px" marginTop="2">
+
       <Flex direction="column" gap="2">
+      <Skeleton isLoaded={isLoading}  >
         <Flex gap="2">
           <Avatar name={post.userName} src={post.userImage} />
           <Flex height="50px" direction="column">
@@ -281,7 +292,9 @@ export default function Postcard({ post, setPosts, posts, state, setState }) {
             </Text>
           </Flex>
         </Flex>
+        </Skeleton>
         {!isPostExpanded(post.id) && (
+          <Skeleton isLoaded={isLoading}  >
           <Box overflow="hidden">
             <ReactQuill
               theme="bubble"
@@ -290,6 +303,7 @@ export default function Postcard({ post, setPosts, posts, state, setState }) {
               style={{ height: "35px", overflow: "hidden", width: "110%" }}
             />
           </Box>
+          </Skeleton>
         )}
         {post.post.length > 150 && (
           <Button
@@ -320,31 +334,35 @@ export default function Postcard({ post, setPosts, posts, state, setState }) {
         )}
         <Box width="100%" height="10">
           <Flex>
+          <Skeleton isLoaded={isLoading}  >
             <Flex dir="column" justifyContent={"space-between"}>
               <Box>
                 <Button
                   borderRightRadius="0"
                   borderLeftRadius="30"
                   border="1px"
-                  borderColor="gray.500"
+                  borderColor="rgb(222,224,225)"
                   size="sm"
                   h="8"
                   onClick={handleupvote}
+                  bg="rgb(247,247,247)"
+                  
                 >
-                  <Flex gap={2}>
-                    {" "}
-                    <Icon viewBox="0 0 24 24" color="red.500" boxSize={5}>
+                  <Flex gap={2} alignItems={"center"}>
+                    
+                    <Icon viewBox="0 0 24 24" color="red.500" boxSize={5} >
                       <path
                         fill={upvote ? "#2E69FF" : "none"}
                         d="M12 4 3 15h6v5h6v-5h6z"
                         width="1.5"
-                        stroke="#666"
+                        stroke="rgb(46,105,255)"
+                        fontWeight="bold"
                       />
                     </Icon>
                     <Text
                       fontWeight="semibold"
                       fontSize="sm"
-                      color="gray.500"
+                      color="rgb(99,100,102)"
                       fontFamily="sans-serif"
                     >
                       UpVote : {upvoteCount}
@@ -356,9 +374,10 @@ export default function Postcard({ post, setPosts, posts, state, setState }) {
                   borderLeftRadius="0"
                   border="1px"
                   borderLeft="0"
-                  borderColor="gray.500"
+                  borderColor="rgb(222,224,225)"
                   size="sm"
                   onClick={handledownvote}
+                  bg="rgb(247,247,247)"
                 >
                   <Icon viewBox="0 0 24 24" color="red.500" boxSize={5}>
                     <path
@@ -368,7 +387,7 @@ export default function Postcard({ post, setPosts, posts, state, setState }) {
                       d="m12 20 9-11h-6V4H9v5H3z"
                     />
                   </Icon>
-                  {downvoteCount}
+                  <Text as={"span"} color="rgb(99,100,102)">{downvoteCount}</Text>
                 </Button>
               </Box>
               <Button
@@ -377,9 +396,9 @@ export default function Postcard({ post, setPosts, posts, state, setState }) {
                 borderRadius={30}
                 size="sm"
               >
-                <Flex gap={1}>
-                  <ChatIcon />
-                  <Text fontWeight="light" fontSize="sm">
+                <Flex gap={1} alignItems="center">
+                  <ChatIcon color="rgb(99,100,102)"/>
+                  <Text fontWeight="light" color={"rgb(99,100,102)"}  fontSize="sm">
                     {post.pcomments.length || 0}
                   </Text>
                 </Flex>
@@ -423,14 +442,15 @@ export default function Postcard({ post, setPosts, posts, state, setState }) {
               </Modal>
 
               <Button variant="ghost" borderRadius={30} size="sm">
-                <Flex gap={1}>
-                  <RepeatIcon />
-                  <Text fontWeight="light" fontSize="sm">
+                <Flex gap={1} alignItems="center">
+                  <RepeatIcon color="rgb(99,100,102)"/>
+                  <Text color={"rgb(99,100,102)"} fontWeight="light" fontSize="sm">
                     {post.share}
                   </Text>
                 </Flex>
               </Button>
             </Flex>
+            </Skeleton>
             <Spacer />
             <Menu>
               <MenuButton
@@ -464,5 +484,6 @@ export default function Postcard({ post, setPosts, posts, state, setState }) {
         </Box>
       </Flex>
     </Box>
+    
   )
 }

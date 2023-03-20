@@ -428,6 +428,12 @@
       "question": "Question 4-user 1",
       "date": "Sun, Mar 19, 2023",
       "id": 4
+    },
+    {
+      "userId": 115,
+      "question": "what is chatgpt",
+      "date": "Mon, Mar 20, 2023",
+      "id": 5
     }
   ],
   "answers": [
@@ -484,6 +490,18 @@
       "questionId": 1,
       "answer": "helllll",
       "id": 9
+    },
+    {
+      "userId": 115,
+      "questionId": 1,
+      "answer": "yah thats is fine to fine",
+      "id": 10
+    },
+    {
+      "userId": 102,
+      "questionId": 1,
+      "answer": "yes",
+      "id": 11
     }
   ],
   "posts": [
@@ -672,6 +690,18 @@
       "postId": 3,
       "upvote": false,
       "id": 10
+    },
+    {
+      "userId": 115,
+      "postId": 1,
+      "upvote": true,
+      "id": 11
+    },
+    {
+      "userId": 115,
+      "postId": 2,
+      "upvote": false,
+      "id": 12
     }
   ],
   "pdownvotes": [],

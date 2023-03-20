@@ -44,8 +44,8 @@ function formatDate(dateString) {
   }
   return date.toLocaleDateString(undefined, options)
 }
-
 function Post({ state, setState }) {
+  let [isLoading, setLoading] = useState(false)
   const [posts, setPosts] = useState([])
   // const [state, setState] = useState(true)
   let data = useSelector((sData) => {
@@ -59,12 +59,16 @@ function Post({ state, setState }) {
     )
       .then((response) => response.json())
       .then((data) => {
-        // console.log(data, "This is Posts")
+       
         setPosts(data)
         dispatch({
           type: "post_data",
           payload: data,
         })
+        setTimeout(()=>{
+          setLoading(true)
+          
+        },1000)
         console.log(state)
       })
   }, [state])
@@ -77,6 +81,8 @@ function Post({ state, setState }) {
           setPosts={setPosts}
           setState={setState}
           state={state}
+          setLoading={setLoading}
+          isLoading={isLoading}
         />
       ))}
     </Box>
