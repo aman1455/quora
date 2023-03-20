@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import Tryquora from "../Try+Quora/TryQuora"
 import {
   Box,
   HStack,
@@ -81,13 +82,13 @@ function Navbar() {
           className="icon1"
         >
           <Box w={"10%"}>
-        <NavLink to="/"> 
-            <Image
-              src="https://www.vectorlogo.zone/logos/quora/quora-ar21.svg"
-              alt="quora"
-              w={"100%"}
-            />
-        </NavLink>
+            <NavLink to="/">
+              <Image
+                src="https://www.vectorlogo.zone/logos/quora/quora-ar21.svg"
+                alt="quora"
+                w={"100%"}
+              />
+            </NavLink>
           </Box>
           <Box display={"flex"} width={"25%"} justifyContent={"space-between"}>
             <NavLink
@@ -340,20 +341,9 @@ function Navbar() {
             alignItems={"center"}
           >
             <Box>
-              <Button
-                color={"rgb(99,100,102)"}
-                border={"1px solid rgb(224,224,224)"}
-                size="sm"
-                colorScheme="white"
-                borderRadius={"15px"}
-                _hover={{
-                  background: "rgb(228,230,230)",
-                  color: "teal.500",
-                }}
-              >
-                Try Quora+
-              </Button>
+              <Tryquora />
             </Box>
+
             <Box>
               <DropdownProfile />
             </Box>

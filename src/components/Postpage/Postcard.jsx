@@ -33,7 +33,7 @@ import {
   FormLabel,
   Input,
 } from "@chakra-ui/react"
-import { Skeleton } from '@chakra-ui/react'
+import { Skeleton } from "@chakra-ui/react"
 import { useDisclosure } from "@chakra-ui/react"
 import React from "react"
 import { useDispatch, useSelector } from "react-redux"
@@ -116,7 +116,7 @@ export default function Postcard({
         // console.log(downvoteCount)
         setPosts(res.data)
         setState(!state)
-       
+
         // console.log(res.data, "This is inside Card")
       })
   }
@@ -136,7 +136,6 @@ export default function Postcard({
                 upvote: false,
               })
               .then(() => {
-                
                 setUpvote(false)
                 updatePosts()
               })
@@ -164,7 +163,6 @@ export default function Postcard({
               setUpvote(true)
               handledownvotefalse()
               updatePosts()
-              
             })
         }
       })
@@ -288,7 +286,7 @@ export default function Postcard({
               payload: res.data,
             })
             setPosts(res.data)
-           
+
             // console.log(res.data, "This is inside Card")
           })
       })
@@ -331,9 +329,7 @@ export default function Postcard({
       })
   }
   return (
-   
     <Box key={post.id} p="2" shadow="md" borderWidth="1px" marginTop="2">
-
       <Flex direction="column" gap="2">
         <Skeleton isLoaded={isLoading}>
           <Flex gap="2">
@@ -464,11 +460,11 @@ export default function Postcard({
                 >
                   <ModalOverlay />
                   <ModalContent>
-                    <ModalHeader>Enter Answer</ModalHeader>
+                    <ModalHeader>Enter Comments</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody pb={6}>
                       <FormControl>
-                        <FormLabel>Enter Any Comment</FormLabel>
+                        <FormLabel>Enter Your Thoughts</FormLabel>
                         <Textarea
                           ref={initialRef}
                           placeholder="Enter Comment"
@@ -496,9 +492,13 @@ export default function Postcard({
                 </Modal>
 
                 <Button variant="ghost" borderRadius={30} size="sm">
-                  <Flex gap={1}>
-                    <RepeatIcon />
-                    <Text fontWeight="light" fontSize="sm">
+                  <Flex gap={1} alignItems="center">
+                    <RepeatIcon color="rgb(99,100,102)" />
+                    <Text
+                      color={"rgb(99,100,102)"}
+                      fontWeight="light"
+                      fontSize="sm"
+                    >
                       {post.share}
                     </Text>
                   </Flex>
@@ -538,6 +538,5 @@ export default function Postcard({
         </Box>
       </Flex>
     </Box>
-    
   )
 }
