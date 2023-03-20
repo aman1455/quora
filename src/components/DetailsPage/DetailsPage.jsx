@@ -26,6 +26,7 @@ function DetailsPage() {
   let data = useSelector((sdata) => {
     return sdata.AnswerReducer
   })
+
   // console.log(id)
   let url = `http://localhost:8080/questions/${id}/?_embed=answers&_embed=acomments`
   let dispatch = useDispatch()
@@ -46,6 +47,9 @@ function DetailsPage() {
   let userReducer = useSelector((storeData) => {
     return storeData.UserReducer
   })
+  let AuthData = useSelector((sData) => {
+    return sData.AuthReducer
+  })
   // console.log(data, "hello")
   const { isOpen, onOpen, onClose } = useDisclosure()
   const initialRef = React.useRef(null)
@@ -54,7 +58,9 @@ function DetailsPage() {
   function handleAnswerClick(e) {
     axios
       .post("http://localhost:8080/answers", {
-        userId: Number(data.userId),
+        avatar: userReducer.avatar,
+        name: userReducer.name,
+        userId: Number(AuthData.token),
         questionId: Number(data.id),
         answer: tA,
         date: Date(),

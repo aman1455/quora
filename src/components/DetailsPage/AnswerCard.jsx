@@ -14,6 +14,7 @@ import {
 } from "@chakra-ui/react"
 import { useSelector } from "react-redux"
 import ReadMore from "../NavbarAndSidebar/SidebarOptions/ReadMore"
+import axios from "axios"
 function AnswerCard() {
   let data = useSelector((sdata) => {
     return sdata.AnswerReducer
@@ -21,6 +22,7 @@ function AnswerCard() {
   let userReducer = useSelector((storeData) => {
     return storeData.UserReducer
   })
+
   console.log(data, "hello")
   console.log(userReducer, "userReducer")
   return (
@@ -54,11 +56,7 @@ function AnswerCard() {
                     >
                       <Flex mt="15px" alignItems="center">
                         <Box ml="17px" mr="10px" w={"5%"}>
-                          <Img
-                            borderRadius="25px"
-                            src={userReducer.avatar}
-                            w={"100%"}
-                          />
+                          <Img borderRadius="25px" src={e.avatar} w={"100%"} />
                         </Box>
                         <Box w="100%">
                           <Flex>
@@ -68,7 +66,7 @@ function AnswerCard() {
                               fontSize="14px"
                               color="black"
                             >
-                              {userReducer.name}
+                              {e.name}
                             </Text>
                             <Text
                               fontWeight="semibold"

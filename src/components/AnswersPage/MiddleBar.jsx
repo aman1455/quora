@@ -30,6 +30,9 @@ function MiddleBar() {
   let data = useSelector((storeData) => {
     return storeData.AuthReducer
   })
+  let UserData = useSelector((sData) => {
+    return sData.UserReducer
+  })
   // let Questiondata = useSelector((storeData) => {
   //   return storeData.QuestionReducer
   // })
@@ -52,6 +55,8 @@ function MiddleBar() {
     console.log(e.target.name)
     axios
       .post("http://localhost:8080/answers", {
+        name: UserData.name,
+        avatar: UserData.avatar,
         userId: Number(data.token),
         questionId: Number(e.target.name),
         answer: tA,
