@@ -419,7 +419,7 @@ export default function Postcard({
                     borderLeftRadius="0"
                     border="1px"
                     borderLeft="0"
-                    borderColor="gray.500"
+                    borderColor="rgb(222,224,225)"
                     size="sm"
                     onClick={handledownvote}
                   >
@@ -488,9 +488,13 @@ export default function Postcard({
                 </Modal>
 
                 <Button variant="ghost" borderRadius={30} size="sm">
-                  <Flex gap={1}>
-                    <RepeatIcon />
-                    <Text fontWeight="light" fontSize="sm">
+                  <Flex gap={1} alignItems="center">
+                    <RepeatIcon color="rgb(99,100,102)" />
+                    <Text
+                      color={"rgb(99,100,102)"}
+                      fontWeight="light"
+                      fontSize="sm"
+                    >
                       {post.share}
                     </Text>
                   </Flex>
