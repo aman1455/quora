@@ -407,7 +407,7 @@
   "questions": [
     {
       "userId": 102,
-      "question": "Question 1-user 1",
+      "question": "What 1-user 1",
       "date": "Sun Mar 19 2023 21:17:26 GMT+0530 (India Standard Time)",
       "id": 1
     },
@@ -672,6 +672,12 @@
       "postId": 3,
       "upvote": false,
       "id": 10
+    },
+    {
+      "userId": 102,
+      "postId": 8,
+      "upvote": false,
+      "id": 11
     }
   ],
   "pdownvotes": [],
