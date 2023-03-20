@@ -25,7 +25,7 @@ import {
   Spacer,
   Card,
   Center,
-  useToast,
+  useToast,useColorModeValue
 } from "@chakra-ui/react"
 
 import { RiDoorLockBoxFill } from "react-icons/ri"
@@ -50,7 +50,7 @@ export default function Tryquora() {
     <>
       <Center>
         <Button
-          color={"rgb(99,100,102)"}
+          color={useColorModeValue('#666666', "rgb(177,179,182)") }
           border={"1px solid rgb(224,224,224)"}
           size="sm"
           colorScheme="white"
@@ -64,12 +64,12 @@ export default function Tryquora() {
           Try Quora+
         </Button>
 
-        <Modal isOpen={isOpen} onClose={onClose} size="2xl">
+        <Modal  isOpen={isOpen} onClose={onClose} size="2xl">
           <ModalOverlay />
-          <ModalContent>
+          <ModalContent   bg={useColorModeValue('white', "rgb(24,24,24)") }>
             <ModalHeader>
               <Center>
-                <Image src="https://qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.subscriptions.quora_plus_identity_lightmode.png-26-2802edbeb349c0f5.png" />
+                <Image w="20%" src="https://qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.subscriptions.quora_plus_identity_lightmode.png-26-2802edbeb349c0f5.png" />
               </Center>
             </ModalHeader>
             <ModalCloseButton />
@@ -99,11 +99,11 @@ export default function Tryquora() {
                     <Flex mt="2px">
                       <Image
                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNtJieoET2TxpWE-aK1hieZHIBOediN8KiKA&usqp=CAU"
-                        w="50px"
-                        h="50px"
+                        w="35px"
+                        h="35px"
                       />
                     </Flex>
-                    <Flex>
+                    <Flex >
                       <Text color="black">Browse Quora ad‑free</Text>
                     </Flex>
                   </Card>
@@ -143,7 +143,7 @@ export default function Tryquora() {
                 </Flex>
               </Center>
               <Center>
-                <Flex mt="10px" gap="8px">
+                <Flex mt="10px" gap="8px" pt="10px">
                   <Box h="50px" w="265px" border="1px solid blue" p="2px">
                     <Radio isChecked={true}>
                       <Flex gap="8px">
@@ -193,14 +193,14 @@ export default function Tryquora() {
               <Center>
                 <Box
                   as="button"
-                  h="50px"
+                  h="40px"
                   w="540px"
-                  bg="#efcc00"
+                  bg="rgb(0,112,186)"
                   borderRadius="md"
                   mt="-30px"
                 >
                   <Center>
-                    <Heading size="md" color="blue.900">
+                    <Heading size="md" color="white">
                       PayPal
                     </Heading>
                   </Center>
@@ -209,13 +209,13 @@ export default function Tryquora() {
               <Center>
                 <Flex mb="10px">
                   _______________________________________
-                  <Text direction="row">OR</Text>
+                  <Text direction="row" color={"rgb(120,122,123)"}>OR</Text>
                   _______________________________________
                 </Flex>
               </Center>
 
               <Center>
-                <Card w="540px" h="60px" border="1px solid blue" padding="5px">
+                <Card w="540px" h="40px" border="1px solid blue" padding="5px">
                   <Flex>
                     <Center>
                       <BiCreditCardFront />
@@ -242,9 +242,9 @@ export default function Tryquora() {
               <ModalFooter>
                 <Box
                   as="button"
-                  h="50px"
+                  h="35px"
                   w="540px"
-                  bg="blue"
+                  bg="rgb(40,125,255)"
                   borderRadius="50px"
                   mt="-20px"
                   color="white"
@@ -254,7 +254,7 @@ export default function Tryquora() {
                   }}
                 >
                   <Center>
-                    <Heading size="md">Try 30 Days Free</Heading>
+                    <Heading size="sm">Try 30 Days Free</Heading>
                   </Center>
                 </Box>
               </ModalFooter>

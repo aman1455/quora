@@ -31,11 +31,11 @@ function EachCard() {
 
   return (
     <>
-      <div>
+      <div >
         {post.map((e) => {
           return (
            
-            <Card border="1px solid rgb(222,224,225)" w={"70%"} mb="15px">
+            <Card border="1px solid rgb(222,224,225)"   w={"70%"} mb="15px">
             <Skeleton isLoaded={isLoading}  >
               <Flex mt="15px">
                 <Box ml="17px" mr="10px" w={"7%"}>

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Box, Text, Flex, Img, color } from '@chakra-ui/react';
+import { Box, Text, Flex, Img, color, useColorMode, useColorModeValue } from '@chakra-ui/react';
 import CreateSpaceModal from './CreateSpaceModal';
 import { NavLink } from 'react-router-dom';
 function Sidebar() {
@@ -11,7 +11,7 @@ function Sidebar() {
         display={'flex'}
         h={'95vh'}
         w={'25%'}
-        bg={'rgb(241,242,242)'}
+        bg={useColorModeValue('rgb(241,242,242)', "rgb(24,24,24)") }
       >
         <Box w={'59%'}></Box>
         <Box>
@@ -23,7 +23,7 @@ function Sidebar() {
                 display={'flex'}
                 alignItems={'center'}
                 w="150px"
-                bg="rgb(241,242,242)"
+                bg={useColorModeValue('rgb(241,242,242)', "rgb(24,24,24)") }
                 _hover={{
                   background: 'rgb(228,230,230)',
                   color: 'teal.500',
@@ -48,7 +48,7 @@ function Sidebar() {
             <Box
               display={'flex'}
               alignItems={'center'}
-              bg="rgb(241,242,242)"
+              bg={useColorModeValue('rgb(241,242,242)', "rgb(24,24,24)") }
               w="150px"
               _hover={{
                 background: 'rgb(228,230,230)',
@@ -74,7 +74,7 @@ function Sidebar() {
               display={'flex'}
               alignItems={'center'}
               w="150px"
-              bg="rgb(241,242,242)"
+              bg={useColorModeValue('rgb(241,242,242)', "rgb(24,24,24)") }
               _hover={{
                 background: 'rgb(228,230,230)',
                 color: 'teal.500',
@@ -99,7 +99,7 @@ function Sidebar() {
               display={'flex'}
               alignItems={'center'}
               w="150px"
-              bg="rgb(241,242,242)"
+              bg={useColorModeValue('rgb(241,242,242)', "rgb(24,24,24)") }
               _hover={{
                 background: 'rgb(228,230,230)',
                 color: 'teal.500',
@@ -124,7 +124,7 @@ function Sidebar() {
               display={'flex'}
               alignItems={'center'}
               w="150px"
-              bg="rgb(241,242,242)"
+              bg={useColorModeValue('rgb(241,242,242)', "rgb(24,24,24)") }
               _hover={{
                 background: 'rgb(228,230,230)',
                 color: 'teal.500',
@@ -149,7 +149,7 @@ function Sidebar() {
               display={'flex'}
               alignItems={'center'}
               w="150px"
-              bg="rgb(241,242,242)"
+              bg={useColorModeValue('rgb(241,242,242)', "rgb(24,24,24)") }
               _hover={{
                 background: 'rgb(228,230,230)',
                 color: 'teal.500',
@@ -174,7 +174,7 @@ function Sidebar() {
               display={'flex'}
               alignItems={'center'}
               w="150px"
-              bg="rgb(241,242,242)"
+              bg={useColorModeValue('rgb(241,242,242)', "rgb(24,24,24)") }
               _hover={{
                 background: 'rgb(228,230,230)',
                 color: 'teal.500',
@@ -199,7 +199,7 @@ function Sidebar() {
               display={'flex'}
               alignItems={'center'}
               w="150px"
-              bg="rgb(241,242,242)"
+              bg={useColorModeValue('rgb(241,242,242)', "rgb(24,24,24)") }
               _hover={{
                 background: 'rgb(228,230,230)',
                 color: 'teal.500',

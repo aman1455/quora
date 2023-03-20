@@ -18,6 +18,7 @@ import SpacePageComp from "../components/SpacePage/SpacePageComp"
 import AnswerCard from "../components/DetailsPage/AnswerCard"
 import Allcompdetails from "../components/DetailsPage/Allcompdetails"
 import PageNotFound from "../components/PageNotFound/PageNotFound"
+import { Box,useColorModeValue } from "@chakra-ui/react"
 // import Notifications from "../components/Notifications/Notifications"
 function AllRoutes() {
   let [state, setState] = useState(true)
@@ -65,8 +66,10 @@ function AllRoutes() {
           <PrivateRoute>
             <Navbar />
             <Sidebar />
+          <Box  bg={useColorModeValue('rgb(241,242,242)', "rgb(24,24,24)") }>
             <Question state={state} setState={setState} />
             <Post state={state} setState={setState} />
+            </Box>
           </PrivateRoute>
         }
       />

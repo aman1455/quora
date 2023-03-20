@@ -434,6 +434,12 @@
       "question": "what is chatgpt",
       "date": "Mon, Mar 20, 2023",
       "id": 5
+    },
+    {
+      "userId": 115,
+      "question": "hi soumya",
+      "date": "Mon, Mar 20, 2023",
+      "id": 6
     }
   ],
   "answers": [
@@ -502,6 +508,18 @@
       "questionId": 1,
       "answer": "yes",
       "id": 11
+    },
+    {
+      "userId": 115,
+      "questionId": 6,
+      "answer": "yah thats me\n",
+      "id": 12
+    },
+    {
+      "userId": 115,
+      "questionId": 6,
+      "answer": "lets go",
+      "id": 13
     }
   ],
   "posts": [
@@ -639,6 +657,12 @@
       "postId": 1,
       "commment": "Hello",
       "id": 2
+    },
+    {
+      "userId": 102,
+      "postId": 2,
+      "commment": "hi",
+      "id": 3
     }
   ],
   "pupvotes": [
@@ -713,6 +737,12 @@
       "postId": 11,
       "upvote": false,
       "id": 12
+    },
+    {
+      "userId": 115,
+      "postId": 2,
+      "upvote": false,
+      "id": 13
     }
   ],
   "pdownvotes": [
@@ -745,6 +775,12 @@
       "postId": 11,
       "downvote": true,
       "id": 5
+    },
+    {
+      "userId": 115,
+      "postId": 2,
+      "downvote": false,
+      "id": 6
     }
   ],
   "read": [

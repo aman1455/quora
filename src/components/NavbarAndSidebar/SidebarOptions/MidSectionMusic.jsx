@@ -2,7 +2,9 @@ import React from 'react'
 import {
     Tabs,TabList,useTab,TabPanels,TabPanel,useMultiStyleConfig,Button,Box
   } from '@chakra-ui/react';
+
   import EachCard from '../SidebarOptions/EachCard'
+  import ImgComp from './ImgComp';
 function MidSectionMusic() {
     const CustomTab = React.forwardRef((props, ref) => {
         // 1. Reuse the `useTab` hook
@@ -31,7 +33,7 @@ function MidSectionMusic() {
       </TabList>
       <TabPanels>
         <TabPanel><EachCard/></TabPanel>
-        <TabPanel>2</TabPanel>
+        <TabPanel><ImgComp/></TabPanel>
       </TabPanels>
     </Tabs>
     </>
