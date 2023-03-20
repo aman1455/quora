@@ -46,6 +46,7 @@ import {
   RepeatIcon,
   TriangleDownIcon,
 } from "@chakra-ui/icons"
+import { Skeleton } from "@chakra-ui/react"
 export function formatDate(dateString) {
   const date = new Date(dateString)
   const options = {
@@ -57,7 +58,15 @@ export function formatDate(dateString) {
   return date.toLocaleDateString(undefined, options)
 }
 
-export default function Postcard({ post, setPosts, posts, state, setState }) {
+export default function Postcard({
+  post,
+  setPosts,
+  posts,
+  state,
+  setState,
+  isLoading,
+  setLoading,
+}) {
   let [tAC, setTAC] = useState("")
   const { isOpen, onOpen, onClose } = useDisclosure()
   let [upvoteCount, setUpVoteCount] = useState(0)
@@ -318,26 +327,30 @@ export default function Postcard({ post, setPosts, posts, state, setState }) {
   return (
     <Box key={post.id} p="2" shadow="md" borderWidth="1px" marginTop="2">
       <Flex direction="column" gap="2">
-        <Flex gap="2">
-          <Avatar name={post.userName} src={post.userImage} />
-          <Flex height="50px" direction="column">
-            <Text fontSize="sm" fontWeight="bold">
-              {post.userName}
-            </Text>
-            <Text fontSize="sm" color="gray.500">
-              {formatDate(post.date)}
-            </Text>
+        <Skeleton isLoaded={isLoading}>
+          <Flex gap="2">
+            <Avatar name={post.userName} src={post.userImage} />
+            <Flex height="50px" direction="column">
+              <Text fontSize="sm" fontWeight="bold">
+                {post.userName}
+              </Text>
+              <Text fontSize="sm" color="gray.500">
+                {formatDate(post.date)}
+              </Text>
+            </Flex>
           </Flex>
-        </Flex>
+        </Skeleton>
         {!isPostExpanded(post.id) && (
-          <Box overflow="hidden">
-            <ReactQuill
-              theme="bubble"
-              value={post.post}
-              readOnly={true}
-              style={{ height: "35px", overflow: "hidden", width: "110%" }}
-            />
-          </Box>
+          <Skeleton isLoaded={isLoading}>
+            <Box overflow="hidden">
+              <ReactQuill
+                theme="bubble"
+                value={post.post}
+                readOnly={true}
+                style={{ height: "35px", overflow: "hidden", width: "110%" }}
+              />
+            </Box>
+          </Skeleton>
         )}
         {post.post.length > 150 && (
           <Button
@@ -367,148 +380,153 @@ export default function Postcard({ post, setPosts, posts, state, setState }) {
           </Box>
         )}
         <Box width="100%" height="10">
-          <Flex>
-            <Flex dir="column" justifyContent={"space-between"}>
-              <Box>
-                <Button
-                  borderRightRadius="0"
-                  borderLeftRadius="30"
-                  border="1px"
-                  borderColor="gray.500"
-                  size="sm"
-                  h="8"
-                  onClick={handleupvote}
-                >
-                  <Flex gap={2}>
-                    {" "}
+          <Skeleton isLoaded={isLoading}>
+            <Flex>
+              <Flex dir="column" justifyContent={"space-between"}>
+                <Box>
+                  <Button
+                    borderRightRadius="0"
+                    borderLeftRadius="30"
+                    border="1px"
+                    borderColor="rgb(222,224,225)"
+                    size="sm"
+                    h="8"
+                    onClick={handleupvote}
+                  >
+                    <Flex gap={2} alignItems={"center"}>
+                      {" "}
+                      <Icon viewBox="0 0 24 24" color="red.500" boxSize={5}>
+                        <path
+                          fill={upvote ? "#2E69FF" : "none"}
+                          d="M12 4 3 15h6v5h6v-5h6z"
+                          width="1.5"
+                          stroke="rgb(46,105,255)"
+                          fontWeight="bold"
+                        />
+                      </Icon>
+                      <Text
+                        fontWeight="semibold"
+                        fontSize="sm"
+                        color="rgb(99,100,102)"
+                        fontFamily="sans-serif"
+                      >
+                        UpVote : {upvoteCount}
+                      </Text>
+                    </Flex>
+                  </Button>
+                  <Button
+                    borderRightRadius="30"
+                    borderLeftRadius="0"
+                    border="1px"
+                    borderLeft="0"
+                    borderColor="gray.500"
+                    size="sm"
+                    onClick={handledownvote}
+                  >
                     <Icon viewBox="0 0 24 24" color="red.500" boxSize={5}>
                       <path
-                        fill={upvote ? "#2E69FF" : "none"}
-                        d="M12 4 3 15h6v5h6v-5h6z"
+                        fill={downvote ? "#CB4B10" : "none"}
                         width="1.5"
                         stroke="#666"
+                        d="m12 20 9-11h-6V4H9v5H3z"
                       />
                     </Icon>
-                    <Text
-                      fontWeight="semibold"
-                      fontSize="sm"
-                      color="gray.500"
-                      fontFamily="sans-serif"
-                    >
-                      UpVote : {upvoteCount}
+                    {downvoteCount}
+                  </Button>
+                </Box>
+
+                <Button
+                  variant="ghost"
+                  onClick={onOpen}
+                  borderRadius={30}
+                  size="sm"
+                >
+                  <Flex gap={1}>
+                    <ChatIcon />
+
+                    <Text fontWeight="light" fontSize="sm">
+                      {post.pcomments.length || 0}
                     </Text>
                   </Flex>
                 </Button>
-                <Button
-                  borderRightRadius="30"
-                  borderLeftRadius="0"
-                  border="1px"
-                  borderLeft="0"
-                  borderColor="gray.500"
-                  size="sm"
-                  onClick={handledownvote}
+                <Modal
+                  initialFocusRef={initialRef}
+                  isOpen={isOpen}
+                  onClose={onClose}
                 >
-                  <Icon viewBox="0 0 24 24" color="red.500" boxSize={5}>
-                    <path
-                      fill={downvote ? "#CB4B10" : "none"}
-                      width="1.5"
-                      stroke="#666"
-                      d="m12 20 9-11h-6V4H9v5H3z"
-                    />
-                  </Icon>
-                  {downvoteCount}
-                </Button>
-              </Box>
-              <Button
-                variant="ghost"
-                onClick={onOpen}
-                borderRadius={30}
-                size="sm"
-              >
-                <Flex gap={1}>
-                  <ChatIcon />
-                  <Text fontWeight="light" fontSize="sm">
-                    {post.pcomments.length || 0}
-                  </Text>
-                </Flex>
-              </Button>
-              <Modal
-                initialFocusRef={initialRef}
-                isOpen={isOpen}
-                onClose={onClose}
-              >
-                <ModalOverlay />
-                <ModalContent>
-                  <ModalHeader>Enter Answer</ModalHeader>
-                  <ModalCloseButton />
-                  <ModalBody pb={6}>
-                    <FormControl>
-                      <FormLabel>Enter Any Comment</FormLabel>
-                      <Textarea
-                        ref={initialRef}
-                        placeholder="Enter Comment"
-                        value={tAC}
-                        onChange={(e) => {
-                          setTAC(e.target.value)
+                  <ModalOverlay />
+                  <ModalContent>
+                    <ModalHeader>Enter Answer</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody pb={6}>
+                      <FormControl>
+                        <FormLabel>Enter Any Comment</FormLabel>
+                        <Textarea
+                          ref={initialRef}
+                          placeholder="Enter Comment"
+                          value={tAC}
+                          onChange={(e) => {
+                            setTAC(e.target.value)
+                          }}
+                        />
+                      </FormControl>
+                    </ModalBody>
+                    <ModalFooter>
+                      <Button
+                        colorScheme="blue"
+                        mr={3}
+                        onClick={(e) => {
+                          handleCommentClick(e)
+                          onClose(e)
                         }}
-                      />
-                    </FormControl>
-                  </ModalBody>
-                  <ModalFooter>
-                    <Button
-                      colorScheme="blue"
-                      mr={3}
-                      onClick={(e) => {
-                        handleCommentClick(e)
-                        onClose(e)
-                      }}
-                    >
-                      Save
-                    </Button>
-                    <Button onClick={onClose}>Cancel</Button>
-                  </ModalFooter>
-                </ModalContent>
-              </Modal>
+                      >
+                        Save
+                      </Button>
+                      <Button onClick={onClose}>Cancel</Button>
+                    </ModalFooter>
+                  </ModalContent>
+                </Modal>
 
-              <Button variant="ghost" borderRadius={30} size="sm">
-                <Flex gap={1}>
-                  <RepeatIcon />
-                  <Text fontWeight="light" fontSize="sm">
-                    {post.share}
-                  </Text>
-                </Flex>
-              </Button>
+                <Button variant="ghost" borderRadius={30} size="sm">
+                  <Flex gap={1}>
+                    <RepeatIcon />
+                    <Text fontWeight="light" fontSize="sm">
+                      {post.share}
+                    </Text>
+                  </Flex>
+                </Button>
+              </Flex>
+              <Spacer />
+              <Menu>
+                <MenuButton
+                  as={IconButton}
+                  aria-label="Options"
+                  icon={<HamburgerIcon />}
+                  variant="ghost"
+                />
+                <MenuList>
+                  <MenuItem icon={<LinkIcon />} command="⌘T">
+                    Copy link
+                  </MenuItem>
+                  <MenuItem icon={<NotAllowedIcon />} command="⌘N">
+                    Not intrested in this
+                  </MenuItem>
+                  <MenuItem icon={<EditIcon />} command="⌘⇧N">
+                    Bookmark
+                  </MenuItem>
+                  <MenuItem icon={<TriangleDownIcon />} command="⌘O">
+                    Downvote
+                  </MenuItem>
+                  <MenuItem icon={<HamburgerIcon />} command="⌘L">
+                    Log
+                  </MenuItem>
+                  <MenuItem icon={<WarningTwoIcon />} command="⌘R">
+                    Report
+                  </MenuItem>
+                </MenuList>
+              </Menu>
             </Flex>
-            <Spacer />
-            <Menu>
-              <MenuButton
-                as={IconButton}
-                aria-label="Options"
-                icon={<HamburgerIcon />}
-                variant="ghost"
-              />
-              <MenuList>
-                <MenuItem icon={<LinkIcon />} command="⌘T">
-                  Copy link
-                </MenuItem>
-                <MenuItem icon={<NotAllowedIcon />} command="⌘N">
-                  Not intrested in this
-                </MenuItem>
-                <MenuItem icon={<EditIcon />} command="⌘⇧N">
-                  Bookmark
-                </MenuItem>
-                <MenuItem icon={<TriangleDownIcon />} command="⌘O">
-                  Downvote
-                </MenuItem>
-                <MenuItem icon={<HamburgerIcon />} command="⌘L">
-                  Log
-                </MenuItem>
-                <MenuItem icon={<WarningTwoIcon />} command="⌘R">
-                  Report
-                </MenuItem>
-              </MenuList>
-            </Menu>
-          </Flex>
+          </Skeleton>
         </Box>
       </Flex>
     </Box>
