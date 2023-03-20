@@ -4,6 +4,7 @@ import PrivateRoute from "./Private"
 import { useState } from "react"
 import { Home } from "./home"
 import LoginRoute from "./LoginRoute"
+import Following from "../components/FollowingPage/Following"
 import Navbar from "../components/NavbarAndSidebar/Navbar"
 import Sidebar from "../components/NavbarAndSidebar/Sidebar"
 import Question from "../components/QuestionPage/Question"
@@ -36,6 +37,16 @@ function AllRoutes() {
           <PrivateRoute>
             <Allcompdetails />
             {/* <AnswerCard/> */}
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/following"
+        element={
+          <PrivateRoute>
+            <Navbar />
+            <Sidebar />
+            <Following />
           </PrivateRoute>
         }
       />
@@ -95,11 +106,10 @@ function AllRoutes() {
         path="*"
         element={
           // <PrivateRoute>
-            <PageNotFound />
+          <PageNotFound />
           // </PrivateRoute>
         }
       />
-     
     </Routes>
   )
 }
