@@ -427,7 +427,7 @@ export default function Postcard({
                     borderLeftRadius="0"
                     border="1px"
                     borderLeft="0"
-                    borderColor="gray.500"
+                    borderColor="rgb(222,224,225)"
                     size="sm"
                     onClick={handledownvote}
                   >
