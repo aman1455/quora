@@ -496,9 +496,13 @@ export default function Postcard({
                 </Modal>
 
                 <Button variant="ghost" borderRadius={30} size="sm">
-                  <Flex gap={1}>
-                    <RepeatIcon />
-                    <Text fontWeight="light" fontSize="sm">
+                  <Flex gap={1} alignItems="center">
+                    <RepeatIcon color="rgb(99,100,102)" />
+                    <Text
+                      color={"rgb(99,100,102)"}
+                      fontWeight="light"
+                      fontSize="sm"
+                    >
                       {post.share}
                     </Text>
                   </Flex>
