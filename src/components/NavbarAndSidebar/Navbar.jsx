@@ -8,16 +8,32 @@ import {
   Button,
   Tooltip,
   Icon,
+  InputRightElement,
+  InputGroup,
+} from "@chakra-ui/react"
+import { useNavigate } from "react-router-dom"
+import {
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuItemOption,
+  MenuGroup,
+  MenuOptionGroup,
+  MenuDivider,
 } from "@chakra-ui/react"
 import { HiHome } from "react-icons/hi"
 // import { useRef } from "react";
+import { Search2Icon } from "@chakra-ui/icons"
 import { NavLink } from "react-router-dom"
 import DropdownProfile from "./DropdownProfile"
 import NavGlobComp from "./NavGlobComp"
 import axios from "axios"
 import { useDispatch, useSelector } from "react-redux"
 function Navbar() {
+  let navigate = useNavigate()
   let dispatch = useDispatch()
+  let [searchResults, setSearchResults] = useState([])
   useEffect(() => {
     let IdData = JSON.parse(localStorage.getItem("AuthData")).token
     // console.log(IdData + "Hello")
@@ -30,6 +46,21 @@ function Navbar() {
     })
   }, [])
 
+  function searchItems(value) {
+    if (value !== "") {
+      axios.get(`http://localhost:8080/questions`).then((res) => {
+        let arr = res.data.filter((e, i) => {
+          if (e.question.toLowerCase().includes(value.toLowerCase())) {
+            return e
+          }
+        })
+        setSearchResults(arr)
+        console.log(arr)
+      })
+    } else {
+      setSearchResults([])
+    }
+  }
   return (
     <>
       <HStack
@@ -257,12 +288,46 @@ function Navbar() {
             </NavLink>
           </Box>
 
-          <Box w={"40%"} p={"10px"}>
+          <Box w={"40%"} p={"10px"} display="flex">
             <Input
-              ocusBorderColor="black.500"
+              focusBorderColor="black.500"
               type="text"
               placeholder="Search Quora"
+              onChange={(e) => {
+                searchItems(e.target.value)
+              }}
             />
+            <Menu>
+              <MenuButton>
+                <Button>
+                  <Search2Icon color="black.300" />
+                </Button>
+              </MenuButton>
+
+              <MenuList>
+                {/* MenuItems are not rendered unless Menu is open */}
+                {searchResults.length !== 0 ? (
+                  <>
+                    {searchResults.map((e, i) => {
+                      return (
+                        <MenuItem
+                          onClick={() => {
+                            navigate(`/answer/${e.id}`)
+                          }}
+                        >
+                          {e.question}
+                        </MenuItem>
+                      )
+                    })}
+                  </>
+                ) : (
+                  <>
+                    {" "}
+                    <MenuItem>No Results</MenuItem>
+                  </>
+                )}
+              </MenuList>
+            </Menu>
           </Box>
 
           <Box
