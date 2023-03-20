@@ -446,57 +446,24 @@
       "date": "Mon, Mar 20, 2023",
       "completeDate": "Mon Mar 20 2023 16:59:38 GMT+0530 (India Standard Time)",
       "id": 6
+    },
+    {
+      "userId": 101,
+      "question": "What is Water",
+      "date": "Mon, Mar 20, 2023",
+      "completeDate": "Mon Mar 20 2023 17:58:56 GMT+0530 (India Standard Time)",
+      "id": 7
     }
   ],
   "answers": [
     {
-      "userId": 101,
-      "questionId": 2,
-      "answer": "According to MyAnimeList, the most popular anime of all time is \"Fullmetal Alchemist: Brotherhood.\"",
-      "date": "Mon Mar 20 2023 17:00:19 GMT+0530 (India Standard Time)",
+      "avatar": "https://lh3.googleusercontent.com/a/AGNmyxbA8EubN3e4R8M2NXWJFshIaYnOQPocMV_kMSPH=s96-c",
+      "name": "Narayan",
+      "userId": 102,
+      "questionId": 7,
+      "answer": "It is nectar",
+      "date": "Mon Mar 20 2023 18:31:13 GMT+0530 (India Standard Time)",
       "id": 1
-    },
-    {
-      "userId": 101,
-      "questionId": 3,
-      "answer": "Anime refers to animated television shows and movies from Japan, while manga refers to Japanese comics. Anime is typically based on manga, but it can also be original content.",
-      "date": "Mon Mar 20 2023 17:00:30 GMT+0530 (India Standard Time)",
-      "id": 2
-    },
-    {
-      "userId": 101,
-      "questionId": 4,
-      "answer": "Some of the most critically acclaimed anime films include \"Akira,\" \"Grave of the Fireflies,\" \"Spirited Away,\" \"Your Name,\" and \"A Silent Voice.\"\n\n",
-      "date": "Mon Mar 20 2023 17:00:44 GMT+0530 (India Standard Time)",
-      "id": 3
-    },
-    {
-      "userId": 101,
-      "questionId": 5,
-      "answer": "There are many iconic anime characters, but some of the most recognizable include Goku from \"Dragon Ball,\" Naruto from \"Naruto,\" and Sailor Moon from \"Sailor Moon.\"",
-      "date": "Mon Mar 20 2023 17:00:56 GMT+0530 (India Standard Time)",
-      "id": 4
-    },
-    {
-      "userId": 101,
-      "questionId": 6,
-      "answer": "Anime has had a significant impact on popular culture worldwide, particularly in the areas of fashion, music, and gaming. Many anime series have also been adapted into live-action films and television shows.\n\n\n\n\n\n",
-      "date": "Mon Mar 20 2023 17:01:10 GMT+0530 (India Standard Time)",
-      "id": 5
-    },
-    {
-      "userId": 101,
-      "questionId": 6,
-      "answer": "Anime has had a significant influence on popular culture worldwide, and it has impacted various aspects of society. Here are some ways in which anime has influenced popular culture:\n\nFashion: Many anime series feature unique and trendy styles that have inspired fashion trends in Japan and around the world. Anime has influenced streetwear fashion, cosplay, and even high fashion.\n\nMusic: Anime series often have their own unique soundtracks, and some anime songs have become popular hits. Japanese anime music has also influenced the J-pop and J-rock music scenes.\n\nGaming: Anime and manga have inspired numerous video games and visual novels, including some of the most popular RPGs, fighting games, and visual novels.\n\nFilm and television: Many anime series have been adapted into live-action films and television shows, both in Japan and Hollywood. For example, the Hollywood adaptation of \"Ghost in the Shell\" featured Scarlett Johansson in the lead role.\n\nCultural exchange: Anime has played a role in promoting Japanese culture and language to a global audience. Many anime fans have become interested in learning Japanese, visiting Japan, and experiencing Japanese culture. Conversely, anime has also been influenced by other cultures, such as the influence of Western animation on Japanese anime.",
-      "date": "Mon Mar 20 2023 17:06:07 GMT+0530 (India Standard Time)",
-      "id": 6
-    },
-    {
-      "userId": 101,
-      "questionId": 6,
-      "answer": "Yes it does effect it",
-      "date": "Mon Mar 20 2023 17:18:12 GMT+0530 (India Standard Time)",
-      "id": 7
     }
   ],
   "posts": [
