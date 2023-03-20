@@ -57,6 +57,7 @@ function DetailsPage() {
         userId: Number(data.userId),
         questionId: Number(data.id),
         answer: tA,
+        date: Date(),
       })
       .then((res) => {
         // console.log(res.data)
@@ -130,7 +131,7 @@ function DetailsPage() {
                     ></path>
                   </g>
                 </Icon>
-                Edit draft
+                Answer
               </Button>
               <Modal
                 initialFocusRef={initialRef}
@@ -381,7 +382,7 @@ function DetailsPage() {
                       ></path>
                     </g>
                   </Icon>
-                  Edit draft
+                  Answer
                 </Button>
                 <Modal
                   initialFocusRef={initialRef}

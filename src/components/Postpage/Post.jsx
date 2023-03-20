@@ -59,7 +59,6 @@ function Post({ state, setState }) {
     )
       .then((response) => response.json())
       .then((data) => {
-       
         setPosts(data)
         dispatch({
           type: "post_data",
@@ -71,19 +70,24 @@ function Post({ state, setState }) {
         console.log(state)
       })
   }, [state])
+
   return (
     <Box maxW="40%" mx="auto">
-      {posts.map((post) => (
-        <Postcard
-          post={post}
-          posts={posts}
-          setPosts={setPosts}
-          setState={setState}
-          state={state}
-          setLoading={setLoading}
-          isLoading={isLoading}
-        />
-      ))}
+      {posts
+        .sort(function (a, b) {
+          return new Date(b.completeDate) - new Date(a.completeDate)
+        })
+        .map((post) => (
+          <Postcard
+            post={post}
+            posts={posts}
+            setPosts={setPosts}
+            setState={setState}
+            state={state}
+            setLoading={setLoading}
+            isLoading={isLoading}
+          />
+        ))}
     </Box>
   )
 }

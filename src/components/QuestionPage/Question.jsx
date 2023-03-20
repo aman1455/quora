@@ -195,8 +195,9 @@ export default function Question({ state, setState }) {
       userId: Number(JSON.parse(localStorage.getItem("AuthData")).token),
       question: text,
       date: formatDate(Date()),
+      completeDate: Date(),
     })
-
+    setText("")
     handleCloseModal()
   }
   const handleSubmit2 = (e) => {
@@ -210,10 +211,12 @@ export default function Question({ state, setState }) {
       post: posttext,
       imageUrl: imageUrl,
       date: formatDate(Date()),
+      completeDate: Date(),
       comment: 0,
       share: 0,
     })
     setImageUrl("")
+    setPostText("")
     handleCloseModal()
   }
   const handleCloseModal = () => {
