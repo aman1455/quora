@@ -72,7 +72,7 @@ export default function Postcard({ post, setPosts, posts, state, setState }) {
   })
   useEffect(() => {
     upvoteFinder()
-    // downvoteFinder()
+    downvoteFinder()
   }, [posts])
   useEffect(() => {
     axios
@@ -83,15 +83,15 @@ export default function Postcard({ post, setPosts, posts, state, setState }) {
         setUpvote(res.data[0].upvote || false)
       })
   }, [])
-  // useEffect(() => {
-  //   axios
-  //     .get(
-  //       `http://localhost:8080/pdownvotes?postId=${post.id}&userId=${AuthData.token}`
-  //     )
-  //     .then((res) => {
-  //       setDownvote(res.data[0].downvote || false)
-  //     })
-  // }, [])
+  useEffect(() => {
+    axios
+      .get(
+        `http://localhost:8080/pdownvotes?postId=${post.id}&userId=${AuthData.token}`
+      )
+      .then((res) => {
+        setDownvote(res.data[0].downvote || false)
+      })
+  }, [])
 
   function updatePosts() {
     axios
@@ -138,6 +138,7 @@ export default function Postcard({ post, setPosts, posts, state, setState }) {
               })
               .then(() => {
                 setUpvote(true)
+                handledownvotefalse()
                 updatePosts()
               })
           }
@@ -150,56 +151,103 @@ export default function Postcard({ post, setPosts, posts, state, setState }) {
             })
             .then(() => {
               setUpvote(true)
+              handledownvotefalse()
               updatePosts()
             })
         }
       })
   }
+  function handledownvotefalse() {
+    axios
+      .get(
+        `http://localhost:8080/pdownvotes?postId=${post.id}&userId=${AuthData.token}`
+      )
+      .then((res) => {
+        if (res.data.length === 1) {
+          if (res.data[0].downvote) {
+            axios
+              .patch(`http://localhost:8080/pdownvotes/${res.data[0].id}`, {
+                // userId: Number(post.userId),
+                // postId: Number(post.id),
+                downvote: false,
+              })
+              .then(() => {
+                setDownvote(false)
+                updatePosts()
+              })
+          }
+        }
+      })
+  }
   function handledownvote() {
-    setDownvote(!downvote)
-    // axios
-    //   .get(
-    //     `http://localhost:8080/pdownvotes?postId=${post.id}&userId=${AuthData.token}`
-    //   )
-    //   .then((res) => {
-    //     // console.log(res.data)
-    //     if (res.data.length === 1) {
-    //       if (res.data[0].upvote) {
-    //         axios
-    //           .patch(`http://localhost:8080/pdownvotes/${res.data[0].id}`, {
-    //             // userId: Number(post.userId),
-    //             // postId: Number(post.id),
-    //             downvote: false,
-    //           })
-    //           .then(() => {
-    //             setDownvote(false)
-    //             updatePosts()
-    //           })
-    //       } else {
-    //         axios
-    //           .patch(`http://localhost:8080/pdownvotes/${res.data[0].id}`, {
-    //             // userId: Number(post.userId),
-    //             // postId: Number(post.id),
-    //             downvote: true,
-    //           })
-    //           .then(() => {
-    //             setDownvote(true)
-    //             updatePosts()
-    //           })
-    //       }
-    //     } else {
-    //       axios
-    //         .post(`http://localhost:8080/pdownvotes`, {
-    //           userId: Number(AuthData.token),
-    //           postId: Number(post.id),
-    //           downvote: true,
-    //         })
-    //         .then(() => {
-    //           setDownvote(true)
-    //           updatePosts()
-    //         })
-    //     }
-    //   })
+    // setDownvote(!downvote)
+    axios
+      .get(
+        `http://localhost:8080/pdownvotes?postId=${post.id}&userId=${AuthData.token}`
+      )
+      .then((res) => {
+        // console.log(res.data)
+        if (res.data.length === 1) {
+          if (res.data[0].downvote) {
+            axios
+              .patch(`http://localhost:8080/pdownvotes/${res.data[0].id}`, {
+                // userId: Number(post.userId),
+                // postId: Number(post.id),
+                downvote: false,
+              })
+              .then(() => {
+                setDownvote(false)
+                updatePosts()
+              })
+          } else {
+            axios
+              .patch(`http://localhost:8080/pdownvotes/${res.data[0].id}`, {
+                // userId: Number(post.userId),
+                // postId: Number(post.id),
+                downvote: true,
+              })
+              .then(() => {
+                setDownvote(true)
+                handleupvotefalse()
+                updatePosts()
+              })
+          }
+        } else {
+          axios
+            .post(`http://localhost:8080/pdownvotes`, {
+              userId: Number(AuthData.token),
+              postId: Number(post.id),
+              downvote: true,
+            })
+            .then(() => {
+              setDownvote(true)
+              handleupvotefalse()
+              updatePosts()
+            })
+        }
+      })
+  }
+  function handleupvotefalse() {
+    axios
+      .get(
+        `http://localhost:8080/pupvotes?postId=${post.id}&userId=${AuthData.token}`
+      )
+      .then((res) => {
+        if (res.data.length === 1) {
+          if (res.data[0].upvote) {
+            axios
+              .patch(`http://localhost:8080/pupvotes/${res.data[0].id}`, {
+                // userId: Number(post.userId),
+                // postId: Number(post.id),
+                upvote: false,
+              })
+              .then(() => {
+                setUpvote(false)
+                updatePosts()
+              })
+          }
+        }
+      })
   }
   function handleExpandClick(postId) {
     setExpandedPost((prevExpandedPostId) =>
@@ -251,22 +299,22 @@ export default function Postcard({ post, setPosts, posts, state, setState }) {
         // console.log(count)
       })
   }
-  // function downvoteFinder() {
-  //   axios
-  //     .get(`http://localhost:8080/posts/${post.id}?_embed=pdownvotes`)
-  //     .then((res) => {
-  //       let count = 0
-  //       // console.log(res.data, "Inside Upvote finder")
-  //       res.data.pdownvotes.forEach((e, i) => {
-  //         if (e.downvote === true) {
-  //           count++
-  //           // console.log(count)
-  //         }
-  //       })
-  //       setDownVoteCount(count)
-  //       // console.log(count)
-  //     })
-  // }
+  function downvoteFinder() {
+    axios
+      .get(`http://localhost:8080/posts/${post.id}?_embed=pdownvotes`)
+      .then((res) => {
+        let count = 0
+        // console.log(res.data, "Inside Upvote finder")
+        res.data.pdownvotes.forEach((e, i) => {
+          if (e.downvote === true) {
+            count++
+            // console.log(count)
+          }
+        })
+        setDownVoteCount(count)
+        // console.log(count)
+      })
+  }
   return (
     <Box key={post.id} p="2" shadow="md" borderWidth="1px" marginTop="2">
       <Flex direction="column" gap="2">

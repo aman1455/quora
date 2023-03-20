@@ -616,7 +616,7 @@
     {
       "userId": 102,
       "postId": 1,
-      "upvote": true,
+      "upvote": false,
       "id": 1
     },
     {
@@ -628,7 +628,7 @@
     {
       "userId": 101,
       "postId": 2,
-      "upvote": true,
+      "upvote": false,
       "id": 3
     },
     {
@@ -680,7 +680,32 @@
       "id": 11
     }
   ],
-  "pdownvotes": [],
+  "pdownvotes": [
+    {
+      "userId": 101,
+      "postId": 1,
+      "downvote": false,
+      "id": 1
+    },
+    {
+      "userId": 101,
+      "postId": 2,
+      "downvote": true,
+      "id": 2
+    },
+    {
+      "userId": 102,
+      "postId": 2,
+      "downvote": false,
+      "id": 3
+    },
+    {
+      "userId": 102,
+      "postId": 1,
+      "downvote": false,
+      "id": 4
+    }
+  ],
   "read": [
     {
       "id": 1,
