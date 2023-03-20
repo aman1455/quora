@@ -16,8 +16,9 @@ import {
   Box,
   WrapItem,
   Avatar,
+  useColorMode,useColorModeValue
 } from "@chakra-ui/react"
-
+import Navbar from "./Navbar"
 import { SunIcon } from "@chakra-ui/icons"
 import { NavLink } from "react-router-dom"
 function DropdownProfile() {
@@ -197,7 +198,7 @@ function DropdownProfile() {
               w={"150px"}
               justifyContent={"space-between"}
             >
-              <Text>Dark mode</Text>
+              <Text as={"button"} >Dark mode</Text>
               <Text>Off</Text>
             </Box>
           </MenuItem>
@@ -223,6 +224,7 @@ function DropdownProfile() {
           </MenuItem>
         </MenuList>
       </Menu>
+      
     </>
     // Your content & stats
   )

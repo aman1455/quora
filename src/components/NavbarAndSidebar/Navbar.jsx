@@ -10,6 +10,7 @@ import {
   Icon,
   InputRightElement,
   InputGroup,
+  
 } from "@chakra-ui/react"
 import { useNavigate } from "react-router-dom"
 import {
@@ -61,6 +62,7 @@ function Navbar() {
       setSearchResults([])
     }
   }
+ 
   return (
     <>
       <HStack
