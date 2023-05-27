@@ -28,10 +28,23 @@ const LoginComp = () => {
     password: "",
   })
 
+  // For User Testing Purpose
+  // useEffect(() => {
+  //   fetch(`${process.env.REACT_APP_JSON_SERVER}/users`)
+  //     .then((res) => {
+  //       return res.json()
+  //     })
+  //     .then((res) => {
+  //       console.log(res)
+  //     })
+  // }, [])
+
+  // Error Settings
   const [error, setError] = useState({
     email: "",
     password: "",
   })
+
   const initialRef = React.useRef()
   const { isOpen, onOpen, onClose } = useDisclosure()
 
@@ -74,7 +87,7 @@ const LoginComp = () => {
   }
   function validateEmail() {
     axios
-      .get(`http://localhost:8080/users?email=${state.email}`)
+      .get(`${process.env.REACT_APP_JSON_SERVER}/users?email=${state.email}`)
       .then((json) => {
         // console.log(json.data)
         if (json.data.length > 0) {
@@ -94,7 +107,7 @@ const LoginComp = () => {
   function validatePassword() {
     axios
       .get(
-        `http://localhost:8080/users?email=${state.email}&password=${state.password}`
+        `${process.env.REACT_APP_JSON_SERVER}/users?email=${state.email}&password=${state.password}`
       )
       .then((json) => {
         // console.log(json.data)
@@ -133,7 +146,7 @@ const LoginComp = () => {
   }
   function validateSignInEmail() {
     axios
-      .get(`http://localhost:8080/users?email=${state.email}`)
+      .get(`${process.env.REACT_APP_JSON_SERVER}/users?email=${state.email}`)
       .then((json) => {
         // console.log(json.data)
         if (json.data.length > 0) {
@@ -151,7 +164,7 @@ const LoginComp = () => {
   function postCredentials() {
     console.log(state.email.match(/^([^@]*)@/)[1])
     axios
-      .post(`http://localhost:8080/users`, {
+      .post(`${process.env.REACT_APP_JSON_SERVER}/users`, {
         email: state.email,
         password: state.password,
         name: state.email.match(/^([^@]*)@/)[1],
@@ -231,14 +244,16 @@ const LoginComp = () => {
                   //   data
                   // )
                   axios
-                    .get(`http://localhost:8080/users?email=${data.email}`)
+                    .get(
+                      `${process.env.REACT_APP_JSON_SERVER}/users?email=${data.email}`
+                    )
                     .then((json) => {
                       if (json.data.length > 0) {
                         dispatch({ type: "authIt", token: json.data[0].id })
                         navigate("/")
                       } else {
                         axios
-                          .post(`http://localhost:8080/users`, {
+                          .post(`${process.env.REACT_APP_JSON_SERVER}/users`, {
                             email: data.email,
                             password: "",
                             name: data.email.match(/^([^@]*)@/)[1],

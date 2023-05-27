@@ -55,7 +55,7 @@ function Post({ state, setState }) {
 
   useEffect(() => {
     fetch(
-      `http://localhost:${process.env.REACT_APP_JSON_SERVER_PORT}/posts?_embed=pcomments&_embed=pupvotes&_embed=pdownvotes`
+      `${process.env.REACT_APP_JSON_SERVER}/posts?_embed=pcomments&_embed=pupvotes&_embed=pdownvotes`
     )
       .then((response) => response.json())
       .then((data) => {

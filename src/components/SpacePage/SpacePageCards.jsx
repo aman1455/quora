@@ -6,7 +6,7 @@ export default function SpacePageCards() {
   const [spaces, setspaces] = useState({})
   const [isLoading, setIsLoading] = useState(true)
   useEffect(() => {
-    fetch(`http://localhost:${process.env.REACT_APP_JSON_SERVER_PORT}/Spaces`)
+    fetch(`${process.env.REACT_APP_JSON_SERVER}/Spaces`)
       .then((response) => response.json())
       .then((data) => {
         setspaces(data)

@@ -28,12 +28,12 @@ function DetailsPage() {
   })
 
   // console.log(id)
-  let url = `http://localhost:8080/questions/${id}/?_embed=answers&_embed=acomments`
+  let url = `${process.env.REACT_APP_JSON_SERVER}/questions/${id}/?_embed=answers&_embed=acomments`
   let dispatch = useDispatch()
   useEffect(() => {
     axios
       .get(
-        `http://localhost:8080/questions/${id}?_embed=answers&_embed=acomments`
+        `${process.env.REACT_APP_JSON_SERVER}/questions/${id}?_embed=answers&_embed=acomments`
       )
       .then((res) => {
         // console.log(res.data)
@@ -57,7 +57,7 @@ function DetailsPage() {
   let [tAC, setTAC] = useState("")
   function handleAnswerClick(e) {
     axios
-      .post("http://localhost:8080/answers", {
+      .post(`${process.env.REACT_APP_JSON_SERVER}/answers`, {
         avatar: userReducer.avatar,
         name: userReducer.name,
         userId: Number(AuthData.token),
@@ -72,7 +72,7 @@ function DetailsPage() {
   }
   function handleCommentClick(e) {
     axios
-      .post("http://localhost:8080/acomments", {
+      .post(`${process.env.REACT_APP_JSON_SERVER}/acomments`, {
         userId: Number(data.userId),
         questionId: Number(data.id),
         answerId: Number(e.target.name),
@@ -83,7 +83,7 @@ function DetailsPage() {
         setTAC("")
         axios
           .get(
-            `http://localhost:8080/questions/${id}?_embed=answers&_embed=acomments`
+            `${process.env.REACT_APP_JSON_SERVER}/questions/${id}?_embed=answers&_embed=acomments`
           )
           .then((res) => {
             dispatch({

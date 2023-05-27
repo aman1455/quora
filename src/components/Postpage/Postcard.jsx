@@ -13,7 +13,8 @@ import {
   MenuList,
   MenuItem,
   IconButton,
-  Icon,useColorModeValue
+  Icon,
+  useColorModeValue,
 } from "@chakra-ui/react"
 import ReactQuill from "react-quill"
 import { useParams } from "react-router-dom"
@@ -87,7 +88,7 @@ export default function Postcard({
   useEffect(() => {
     axios
       .get(
-        `http://localhost:8080/pupvotes?postId=${post.id}&userId=${AuthData.token}`
+        `${process.env.REACT_APP_JSON_SERVER}/pupvotes?postId=${post.id}&userId=${AuthData.token}`
       )
       .then((res) => {
         setUpvote(res.data[0].upvote || false)
@@ -96,7 +97,7 @@ export default function Postcard({
   useEffect(() => {
     axios
       .get(
-        `http://localhost:8080/pdownvotes?postId=${post.id}&userId=${AuthData.token}`
+        `${process.env.REACT_APP_JSON_SERVER}/pdownvotes?postId=${post.id}&userId=${AuthData.token}`
       )
       .then((res) => {
         setDownvote(res.data[0].downvote || false)
@@ -106,7 +107,7 @@ export default function Postcard({
   function updatePosts() {
     axios
       .get(
-        `http://localhost:${process.env.REACT_APP_JSON_SERVER_PORT}/posts?_embed=pcomments&_embed=pupvotes&_embed=pdownvotes`
+        `${process.env.REACT_APP_JSON_SERVER}/posts?_embed=pcomments&_embed=pupvotes&_embed=pdownvotes`
       )
       .then((res) => {
         dispatch({
@@ -123,29 +124,35 @@ export default function Postcard({
   function handleupvote() {
     axios
       .get(
-        `http://localhost:8080/pupvotes?postId=${post.id}&userId=${AuthData.token}`
+        `${process.env.REACT_APP_JSON_SERVER}/pupvotes?postId=${post.id}&userId=${AuthData.token}`
       )
       .then((res) => {
         // console.log(res.data)
         if (res.data.length === 1) {
           if (res.data[0].upvote) {
             axios
-              .patch(`http://localhost:8080/pupvotes/${res.data[0].id}`, {
-                // userId: Number(post.userId),
-                // postId: Number(post.id),
-                upvote: false,
-              })
+              .patch(
+                `${process.env.REACT_APP_JSON_SERVER}/pupvotes/${res.data[0].id}`,
+                {
+                  // userId: Number(post.userId),
+                  // postId: Number(post.id),
+                  upvote: false,
+                }
+              )
               .then(() => {
                 setUpvote(false)
                 updatePosts()
               })
           } else {
             axios
-              .patch(`http://localhost:8080/pupvotes/${res.data[0].id}`, {
-                // userId: Number(post.userId),
-                // postId: Number(post.id),
-                upvote: true,
-              })
+              .patch(
+                `${process.env.REACT_APP_JSON_SERVER}/pupvotes/${res.data[0].id}`,
+                {
+                  // userId: Number(post.userId),
+                  // postId: Number(post.id),
+                  upvote: true,
+                }
+              )
               .then(() => {
                 setUpvote(true)
                 handledownvotefalse()
@@ -154,7 +161,7 @@ export default function Postcard({
           }
         } else {
           axios
-            .post(`http://localhost:8080/pupvotes`, {
+            .post(`${process.env.REACT_APP_JSON_SERVER}/pupvotes`, {
               userId: Number(AuthData.token),
               postId: Number(post.id),
               upvote: true,
@@ -170,17 +177,20 @@ export default function Postcard({
   function handledownvotefalse() {
     axios
       .get(
-        `http://localhost:8080/pdownvotes?postId=${post.id}&userId=${AuthData.token}`
+        `${process.env.REACT_APP_JSON_SERVER}/pdownvotes?postId=${post.id}&userId=${AuthData.token}`
       )
       .then((res) => {
         if (res.data.length === 1) {
           if (res.data[0].downvote) {
             axios
-              .patch(`http://localhost:8080/pdownvotes/${res.data[0].id}`, {
-                // userId: Number(post.userId),
-                // postId: Number(post.id),
-                downvote: false,
-              })
+              .patch(
+                `${process.env.REACT_APP_JSON_SERVER}/pdownvotes/${res.data[0].id}`,
+                {
+                  // userId: Number(post.userId),
+                  // postId: Number(post.id),
+                  downvote: false,
+                }
+              )
               .then(() => {
                 setDownvote(false)
                 updatePosts()
@@ -193,29 +203,35 @@ export default function Postcard({
     // setDownvote(!downvote)
     axios
       .get(
-        `http://localhost:8080/pdownvotes?postId=${post.id}&userId=${AuthData.token}`
+        `${process.env.REACT_APP_JSON_SERVER}/pdownvotes?postId=${post.id}&userId=${AuthData.token}`
       )
       .then((res) => {
         // console.log(res.data)
         if (res.data.length === 1) {
           if (res.data[0].downvote) {
             axios
-              .patch(`http://localhost:8080/pdownvotes/${res.data[0].id}`, {
-                // userId: Number(post.userId),
-                // postId: Number(post.id),
-                downvote: false,
-              })
+              .patch(
+                `${process.env.REACT_APP_JSON_SERVER}/pdownvotes/${res.data[0].id}`,
+                {
+                  // userId: Number(post.userId),
+                  // postId: Number(post.id),
+                  downvote: false,
+                }
+              )
               .then(() => {
                 setDownvote(false)
                 updatePosts()
               })
           } else {
             axios
-              .patch(`http://localhost:8080/pdownvotes/${res.data[0].id}`, {
-                // userId: Number(post.userId),
-                // postId: Number(post.id),
-                downvote: true,
-              })
+              .patch(
+                `${process.env.REACT_APP_JSON_SERVER}/pdownvotes/${res.data[0].id}`,
+                {
+                  // userId: Number(post.userId),
+                  // postId: Number(post.id),
+                  downvote: true,
+                }
+              )
               .then(() => {
                 setDownvote(true)
                 handleupvotefalse()
@@ -224,7 +240,7 @@ export default function Postcard({
           }
         } else {
           axios
-            .post(`http://localhost:8080/pdownvotes`, {
+            .post(`${process.env.REACT_APP_JSON_SERVER}/pdownvotes`, {
               userId: Number(AuthData.token),
               postId: Number(post.id),
               downvote: true,
@@ -240,17 +256,20 @@ export default function Postcard({
   function handleupvotefalse() {
     axios
       .get(
-        `http://localhost:8080/pupvotes?postId=${post.id}&userId=${AuthData.token}`
+        `${process.env.REACT_APP_JSON_SERVER}/pupvotes?postId=${post.id}&userId=${AuthData.token}`
       )
       .then((res) => {
         if (res.data.length === 1) {
           if (res.data[0].upvote) {
             axios
-              .patch(`http://localhost:8080/pupvotes/${res.data[0].id}`, {
-                // userId: Number(post.userId),
-                // postId: Number(post.id),
-                upvote: false,
-              })
+              .patch(
+                `${process.env.REACT_APP_JSON_SERVER}/pupvotes/${res.data[0].id}`,
+                {
+                  // userId: Number(post.userId),
+                  // postId: Number(post.id),
+                  upvote: false,
+                }
+              )
               .then(() => {
                 setUpvote(false)
                 updatePosts()
@@ -266,7 +285,7 @@ export default function Postcard({
   }
   function handleCommentClick(e) {
     axios
-      .post("http://localhost:8080/pcomments", {
+      .post(`${process.env.REACT_APP_JSON_SERVER}/pcomments`, {
         userId: Number(post.userId),
         postId: Number(post.id),
         commment: tAC,
@@ -278,7 +297,7 @@ export default function Postcard({
 
         axios
           .get(
-            `http://localhost:${process.env.REACT_APP_JSON_SERVER_PORT}/posts?_embed=pcomments&_embed=pupvotes&_embed=pdownvotes`
+            `${process.env.REACT_APP_JSON_SERVER}/posts?_embed=pcomments&_embed=pupvotes&_embed=pdownvotes`
           )
           .then((res) => {
             dispatch({
@@ -298,7 +317,9 @@ export default function Postcard({
 
   function upvoteFinder() {
     axios
-      .get(`http://localhost:8080/posts/${post.id}?_embed=pupvotes`)
+      .get(
+        `${process.env.REACT_APP_JSON_SERVER}/posts/${post.id}?_embed=pupvotes`
+      )
       .then((res) => {
         let count = 0
         // console.log(res.data, "Inside Upvote finder")
@@ -314,7 +335,9 @@ export default function Postcard({
   }
   function downvoteFinder() {
     axios
-      .get(`http://localhost:8080/posts/${post.id}?_embed=pdownvotes`)
+      .get(
+        `${process.env.REACT_APP_JSON_SERVER}/posts/${post.id}?_embed=pdownvotes`
+      )
       .then((res) => {
         let count = 0
         // console.log(res.data, "Inside Upvote finder")
@@ -327,10 +350,17 @@ export default function Postcard({
         setDownVoteCount(count)
         // console.log(count)
       })
-  } 
+  }
   // rgb(168,170,173)
   return (
-    <Box  bg={useColorModeValue('white', "rgb(38,38,38)") } key={post.id} p="2" shadow="md" borderWidth="1px" marginTop="2">
+    <Box
+      bg={useColorModeValue("white", "rgb(38,38,38)")}
+      key={post.id}
+      p="2"
+      shadow="md"
+      borderWidth="1px"
+      marginTop="2"
+    >
       <Flex direction="column" gap="2">
         <Skeleton isLoaded={isLoading}>
           <Flex gap="2">
@@ -339,7 +369,10 @@ export default function Postcard({
               <Text fontSize="sm" fontWeight="bold">
                 {post.userName}
               </Text>
-              <Text fontSize="sm" color={useColorModeValue('rgb(99,100,102)', "rgb(168,170,173)") }>
+              <Text
+                fontSize="sm"
+                color={useColorModeValue("rgb(99,100,102)", "rgb(168,170,173)")}
+              >
                 {formatDate(post.date)}
               </Text>
             </Flex>
@@ -396,11 +429,11 @@ export default function Postcard({
                     borderLeftRadius="30"
                     border="1px"
                     // borderColor="rgb(222,224,225)"
-                    borderColor={useColorModeValue('rgb(222,224,225)', "none") }
+                    borderColor={useColorModeValue("rgb(222,224,225)", "none")}
                     size="sm"
                     h="8"
                     onClick={handleupvote}
-                    bg={useColorModeValue('rgb(247,247,247)', "rgb(64,64,64)") } 
+                    bg={useColorModeValue("rgb(247,247,247)", "rgb(64,64,64)")}
                   >
                     <Flex gap={2} alignItems={"center"}>
                       {" "}
@@ -416,7 +449,10 @@ export default function Postcard({
                       <Text
                         fontWeight="semibold"
                         fontSize="sm"
-                        color={useColorModeValue('rgb(99,100,102)', "rgb(168,170,173)") }
+                        color={useColorModeValue(
+                          "rgb(99,100,102)",
+                          "rgb(168,170,173)"
+                        )}
                         fontFamily="sans-serif"
                       >
                         UpVote : {upvoteCount}
@@ -431,7 +467,7 @@ export default function Postcard({
                     borderColor="rgb(222,224,225)"
                     size="sm"
                     onClick={handledownvote}
-                    bg={useColorModeValue('rgb(247,247,247)', "rgb(64,64,64)") } 
+                    bg={useColorModeValue("rgb(247,247,247)", "rgb(64,64,64)")}
                   >
                     <Icon viewBox="0 0 24 24" color="red.500" boxSize={5}>
                       <path
@@ -452,7 +488,12 @@ export default function Postcard({
                   size="sm"
                 >
                   <Flex gap={1} alignItems={"center"}>
-                    <ChatIcon color={useColorModeValue('rgb(99,100,102)', "rgb(168,170,173)") }/>
+                    <ChatIcon
+                      color={useColorModeValue(
+                        "rgb(99,100,102)",
+                        "rgb(168,170,173)"
+                      )}
+                    />
 
                     <Text fontWeight="light" fontSize="sm">
                       {post.pcomments.length || 0}

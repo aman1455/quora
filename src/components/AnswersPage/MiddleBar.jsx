@@ -38,14 +38,16 @@ function MiddleBar() {
   // })
 
   function updateQuestions() {
-    axios.get(`http://localhost:8080/questions?_embed=answers`).then((res) => {
-      // console.log(res.data)
-      dispatch({
-        type: "Question_Data",
-        payload: res.data,
+    axios
+      .get(`${process.env.REACT_APP_JSON_SERVER}/questions?_embed=answers`)
+      .then((res) => {
+        // console.log(res.data)
+        dispatch({
+          type: "Question_Data",
+          payload: res.data,
+        })
+        setQuestionData(res.data)
       })
-      setQuestionData(res.data)
-    })
   }
   useEffect(() => {
     updateQuestions()
@@ -54,7 +56,7 @@ function MiddleBar() {
   function handleAnswerClick(e) {
     console.log(e.target.name)
     axios
-      .post("http://localhost:8080/answers", {
+      .post(`${process.env.REACT_APP_JSON_SERVER}/answers`, {
         name: UserData.name,
         avatar: UserData.avatar,
         userId: Number(data.token),

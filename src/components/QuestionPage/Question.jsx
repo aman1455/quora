@@ -132,24 +132,7 @@ export default function Question({ state, setState }) {
   }
 
   const saveDataToDb1 = (data) => {
-    fetch(
-      `http://localhost:${process.env.REACT_APP_JSON_SERVER_PORT}/questions`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      }
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        // console.log(data)
-      })
-      .catch((error) => console.error(error))
-  }
-  const saveDataToDb2 = (data) => {
-    fetch(`http://localhost:${process.env.REACT_APP_JSON_SERVER_PORT}/posts`, {
+    fetch(`${process.env.REACT_APP_JSON_SERVER}/questions`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -158,17 +141,27 @@ export default function Question({ state, setState }) {
     })
       .then((response) => response.json())
       .then((data) => {
-        axios
-          .get(
-            `http://localhost:${process.env.REACT_APP_JSON_SERVER_PORT}/posts`
-          )
-          .then((res) => {
-            dispatch({
-              type: "post_data",
-              payload: res.data,
-            })
-            setState(!state)
+        // console.log(data)
+      })
+      .catch((error) => console.error(error))
+  }
+  const saveDataToDb2 = (data) => {
+    fetch(`${process.env.REACT_APP_JSON_SERVER}/posts`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        axios.get(`${process.env.REACT_APP_JSON_SERVER}/posts`).then((res) => {
+          dispatch({
+            type: "post_data",
+            payload: res.data,
           })
+          setState(!state)
+        })
       })
     // .catch((error) => console.error(error))
   }
@@ -230,7 +223,15 @@ export default function Question({ state, setState }) {
     return storeData.UserReducer
   })
   return (
-    <Box p="4" bg={useColorModeValue('white', "rgb(38,38,38)") } m="auto" w="40%" shadow="md" borderWidth="1px" marginTop="2">
+    <Box
+      p="4"
+      bg={useColorModeValue("white", "rgb(38,38,38)")}
+      m="auto"
+      w="40%"
+      shadow="md"
+      borderWidth="1px"
+      marginTop="2"
+    >
       <Flex direction="column" gap="1">
         <Flex gap="2">
           <Avatar
@@ -248,7 +249,7 @@ export default function Question({ state, setState }) {
             w="100%"
             borderRadius="20"
             border="1px solid gray"
-            bg={useColorModeValue('white', "rgb(38,38,38)") }
+            bg={useColorModeValue("white", "rgb(38,38,38)")}
           >
             <Text fontWeight="light" color="gray">
               What do you want to ask or share?
@@ -256,8 +257,17 @@ export default function Question({ state, setState }) {
           </Button>
         </Flex>
         <ButtonGroup spacing="10px">
-          <Button onClick={handleOpenModal1} bg={useColorModeValue('white', "rgb(38,38,38)") } w="33.33%">
-            <Icon boxSize="6" fontWeight="bold" viewBox="0 0 24 24" color="red.500">
+          <Button
+            onClick={handleOpenModal1}
+            bg={useColorModeValue("white", "rgb(38,38,38)")}
+            w="33.33%"
+          >
+            <Icon
+              boxSize="6"
+              fontWeight="bold"
+              viewBox="0 0 24 24"
+              color="red.500"
+            >
               <path
                 fill="none"
                 stroke="rgb(168,170,173)"
@@ -265,7 +275,11 @@ export default function Question({ state, setState }) {
                 d="M7.5 4h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-3L9 22v-3H7.5a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3Z"
               />
             </Icon>
-            <Text fontWeight="bold" color={useColorModeValue('rgb(99,100,102)', "rgb(168,170,173)") } fontSize="l">
+            <Text
+              fontWeight="bold"
+              color={useColorModeValue("rgb(99,100,102)", "rgb(168,170,173)")}
+              fontSize="l"
+            >
               Ask
             </Text>
           </Button>
@@ -273,7 +287,7 @@ export default function Question({ state, setState }) {
             <Divider orientation="vertical" />
           </Center>
           <Button
-            bg={useColorModeValue('white', "rgb(38,38,38)") }
+            bg={useColorModeValue("white", "rgb(38,38,38)")}
             w="33.33%"
             onClick={() => {
               navigate("/answer")
@@ -293,14 +307,22 @@ export default function Question({ state, setState }) {
               ></path>
               <path d="M14.5 19.5h5v-5m-10-10h-5v5" stroke="#666"></path>
             </Icon>
-            <Text fontWeight="bold" color={useColorModeValue('rgb(99,100,102)', "rgb(168,170,173)") } fontSize="l">
+            <Text
+              fontWeight="bold"
+              color={useColorModeValue("rgb(99,100,102)", "rgb(168,170,173)")}
+              fontSize="l"
+            >
               Answer
             </Text>
           </Button>
           <Center height="30px">
             <Divider orientation="vertical" />
           </Center>
-          <Button onClick={handleOpenModal2} bg={useColorModeValue('white', "rgb(38,38,38)") } w="33.33%">
+          <Button
+            onClick={handleOpenModal2}
+            bg={useColorModeValue("white", "rgb(38,38,38)")}
+            w="33.33%"
+          >
             <Icon boxSize="6" viewBox="0 0 24 24" color="red.500">
               <path
                 fill="none"
@@ -309,7 +331,11 @@ export default function Question({ state, setState }) {
                 d="M18.571 5.429h0a2 2 0 0 1 0 2.828l-9.9 9.9-4.24 1.416 1.412-4.245 9.9-9.9a2 2 0 0 1 2.828 0Z"
               />
             </Icon>
-            <Text fontWeight="bold" color={useColorModeValue('rgb(99,100,102)', "rgb(168,170,173)") } fontSize="l">
+            <Text
+              fontWeight="bold"
+              color={useColorModeValue("rgb(99,100,102)", "rgb(168,170,173)")}
+              fontSize="l"
+            >
               Post
             </Text>
           </Button>
